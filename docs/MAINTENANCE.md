@@ -56,3 +56,22 @@ To update packages safely without regressions:
 - **Hosting Snapshots**: Platforms like Vercel and Netlify maintain instantaneous rollback capabilities — any previous successful deployment can be restored with 1 click in case of emergency.
 - **Configuration Backup**: Keep a secured copy of `.env.local` in an encrypted password vault (e.g. 1Password or Bitwarden).
 
+---
+
+## 5. Security Hardening & Dependency Baseline
+
+- **Zero Vulnerability Baseline**: Maintained with `npm audit` yielding 0 findings.
+- **Transitive Scoped Overrides**: The `@typescript-eslint/typescript-estree` `minimatch` dependency is strictly pinned to `^11.0.5` via the `overrides` section of `package.json` to resolve GHSA-g3hv-75wg-m249 while keeping ESLint 9 compatible.
+- **Security Headers**: Standard headers (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`) are enforced in `next.config.ts`.
+
+---
+
+## 6. Official Branch Network Configuration
+
+All showroom and branch entries are centrally managed in `src/config/site.config.ts`:
+1. **Flagship Showroom**: Al Murooj District, Imam Saud Rd, Riyadh (`https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb`)
+2. **3M Auto Care — Al Narjis**: Al Narjis District, Riyadh (`https://maps.app.goo.gl/25B4YhV9s8pP6W5d8`)
+3. **3M Auto Care — Al Shifa**: Al Shifa District, Riyadh (`https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb`)
+4. **3M Auto Care — Laban**: Dhahrat Laban District, Riyadh (`https://maps.app.goo.gl/25B4YhV9s8pP6W5d8`)
+5. **3M Auto Care — Khurais**: Khurais Road Center, Riyadh (`https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb`)
+

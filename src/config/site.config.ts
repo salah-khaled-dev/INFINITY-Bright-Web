@@ -219,41 +219,41 @@ export const SITE_CONFIG: SiteConfig = {
     },
     threeMBranches: [
       {
-        id: "rawdah-3m",
+        id: "narjis-3m",
         brand: "3m",
         name: {
-          en: "3M Auto Care — Al Rawdah Branch",
-          ar: "مركز 3M المعتمد — فرع الروضة",
+          en: "3M Auto Care — Al Narjis Branch",
+          ar: "مركز 3M المعتمد — فرع النرجس",
         },
         district: {
-          en: "Al Rawdah District, Khurais Rd",
-          ar: "حي الروضة، طريق خريص",
+          en: "Al Narjis District, Riyadh",
+          ar: "حي النرجس، الرياض",
         },
         mapUrl: "https://maps.app.goo.gl/25B4YhV9s8pP6W5d8",
       },
       {
-        id: "suwaidi-3m",
+        id: "shifa-3m",
         brand: "3m",
         name: {
-          en: "3M Auto Care — Al Suwaidi Branch",
-          ar: "مركز 3M المعتمد — فرع السويدي",
+          en: "3M Auto Care — Al Shifa Branch",
+          ar: "مركز 3M المعتمد — فرع الشفاء",
         },
         district: {
-          en: "Al Suwaidi District, Western Ring",
-          ar: "حي السويدي، الدائري الغربي",
+          en: "Al Shifa District, Riyadh",
+          ar: "حي الشفاء، الرياض",
         },
         mapUrl: "https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb",
       },
       {
-        id: "sahafah-3m",
+        id: "laban-3m",
         brand: "3m",
         name: {
-          en: "3M Auto Care — Al Sahafah Branch",
-          ar: "مركز 3M المعتمد — فرع الصحافة",
+          en: "3M Auto Care — Laban Branch",
+          ar: "مركز 3M المعتمد — فرع لبن",
         },
         district: {
-          en: "Al Sahafah District, King Fahd Rd",
-          ar: "حي الصحافة، طريق الملك فهد",
+          en: "Dhahrat Laban District, Riyadh",
+          ar: "حي لبن، الرياض",
         },
         mapUrl: "https://maps.app.goo.gl/25B4YhV9s8pP6W5d8",
       },
@@ -265,7 +265,7 @@ export const SITE_CONFIG: SiteConfig = {
           ar: "مركز 3M المعتمد — فرع خريص",
         },
         district: {
-          en: "Khurais Road Center",
+          en: "Khurais Road Center, Riyadh",
           ar: "طريق خريص، تقاطع النهضة",
         },
         mapUrl: "https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb",

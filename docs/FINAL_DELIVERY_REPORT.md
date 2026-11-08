@@ -257,14 +257,28 @@ Branches Count: 2
 
 ### 8.2 Dependency Security Audit (`npm audit`)
 - **Execution Command**: `npm audit`
-- **Result**: `8 moderate severity vulnerabilities`
-- **Detailed Origin**:
-  - All 8 vulnerabilities trace to `minimatch` (`7.0.0 - 11.0.0`) inside `@typescript-eslint/typescript-estree` (devDependencies only).
-  - **Zero production runtime vulnerabilities**.
-  - No critical or high vulnerabilities.
-- **Status**: **DOCUMENTED / ACCEPTABLE FOR DEPLOYMENT** (devDependencies do not ship in the client JavaScript bundle).
+- **Result**: `0 vulnerabilities found` (Exit Code `0` — **VERIFIED**)
+- **Remediation Details**:
+  - Targeted dependency override configured in `package.json`:
+    ```json
+    "overrides": {
+      "@typescript-eslint/typescript-estree": {
+        "minimatch": "^11.0.5"
+      }
+    }
+    ```
+  - Upgraded transitive devDependency from vulnerable `minimatch@10.2.6` (CVE / GHSA-g3hv-75wg-m249) to patched `minimatch@11.0.5`.
+  - Preserved `minimatch@3.1.5` for ESLint 9 core compatibility with zero lockfile regeneration or breaking changes.
+  - Zero TypeScript or ESLint errors; `npm run build` succeeds cleanly.
 
-### 8.3 Performance Optimization
+### 8.3 HTTP Security Hardening
+- Configured production security headers in `next.config.ts`:
+  - `X-Content-Type-Options: nosniff`
+  - `X-Frame-Options: SAMEORIGIN`
+  - `Referrer-Policy: strict-origin-when-cross-origin`
+  - `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+
+### 8.4 Performance Optimization
 - **Image Optimization**: All hero and service images converted to `.webp` and `.avif` formats. Next.js `<Image />` component enforces `sizes` and `priority` on above-the-fold assets.
 - **SSR Isolation**: Three.js WebGL showroom is dynamically imported with `ssr: false`, ensuring initial server HTML delivery remains lightweight and unblocked.
 
