@@ -69,9 +69,9 @@ To update packages safely without regressions:
 ## 6. Official Branch Network Configuration
 
 All showroom and branch entries are centrally managed in `src/config/site.config.ts`:
-1. **Flagship Showroom**: Al Murooj District, Imam Saud Rd, Riyadh (`https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb`)
-2. **3M Auto Care — Al Narjis**: Al Narjis District, Riyadh (`https://maps.app.goo.gl/25B4YhV9s8pP6W5d8`)
-3. **3M Auto Care — Al Shifa**: Al Shifa District, Riyadh (`https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb`)
-4. **3M Auto Care — Laban**: Dhahrat Laban District, Riyadh (`https://maps.app.goo.gl/25B4YhV9s8pP6W5d8`)
-5. **3M Auto Care — Khurais**: Khurais Road Center, Riyadh (`https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb`)
+1. **Flagship Showroom (Infinite Bright)**: Al Murooj District, Imam Saud Rd, Riyadh (`https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb`)
+2. **3M Auto Care — Al Narjis**: Al Narjis District, King Salman Rd, Riyadh (`https://maps.app.goo.gl/Dc79W7M6RvVegiuSA?g_st=awb`)
+3. **3M Auto Care — Al Shifa**: Al Shifa District (Al Marwah, Al Ajiri St), Riyadh (`https://www.google.com/maps/search/?api=1&query=3M+%D9%86%D9%88%D8%A7%D8%AF%D8%B1+%D8%A7%D9%84%D9%81%D8%B1%D8%B3%D8%A7%D9%86+%D8%B4%D8%A7%D8%B1%D8%B9+%D8%A7%D9%84%D8%A2%D8%AC%D8%B1%D9%8A+%D8%AD%D9%8A+%D8%A7%D9%84%D9%85%D8%B1%D9%88%D8%A9+%D8%A7%D9%84%D8%B4%D9%81%D8%A7%D8%A1+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6`)
+4. **3M Auto Care — Laban**: Dhahrat Laban District, Al Hayatham St, Riyadh (`https://maps.app.goo.gl/NfCMgkc5aVubVzmEA?g_st=awb`)
+5. **3M Auto Care — Khurais**: Khurais Road Center, Jabal Al Jolood St, Riyadh (`https://maps.app.goo.gl/M1PtDCTboRfgAWzW7?g_st=awb`)
 

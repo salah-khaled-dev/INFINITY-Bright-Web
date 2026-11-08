@@ -226,10 +226,10 @@ export const SITE_CONFIG: SiteConfig = {
           ar: "مركز 3M المعتمد — فرع النرجس",
         },
         district: {
-          en: "Al Narjis District, Riyadh",
-          ar: "حي النرجس، الرياض",
+          en: "Al Narjis District (King Salman Rd), Riyadh",
+          ar: "حي النرجس (طريق الملك سلمان الفرعي)، الرياض",
         },
-        mapUrl: "https://maps.app.goo.gl/25B4YhV9s8pP6W5d8",
+        mapUrl: "https://maps.app.goo.gl/Dc79W7M6RvVegiuSA?g_st=awb",
       },
       {
         id: "shifa-3m",
@@ -239,10 +239,10 @@ export const SITE_CONFIG: SiteConfig = {
           ar: "مركز 3M المعتمد — فرع الشفاء",
         },
         district: {
-          en: "Al Shifa District, Riyadh",
-          ar: "حي الشفاء، الرياض",
+          en: "Al Shifa District (Al Marwah, Al Ajiri St), Riyadh",
+          ar: "حي الشفاء (المروة — شارع الآجري)، الرياض",
         },
-        mapUrl: "https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=3M+%D9%86%D9%88%D8%A7%D8%AF%D8%B1+%D8%A7%D9%84%D9%81%D8%B1%D8%B3%D8%A7%D9%86+%D8%B4%D8%A7%D8%B1%D8%B9+%D8%A7%D9%84%D8%A2%D8%AC%D8%B1%D9%8A+%D8%AD%D9%8A+%D8%A7%D9%84%D9%85%D8%B1%D9%88%D8%A9+%D8%A7%D9%84%D8%B4%D9%81%D8%A7%D8%A1+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6",
       },
       {
         id: "laban-3m",
@@ -252,10 +252,10 @@ export const SITE_CONFIG: SiteConfig = {
           ar: "مركز 3M المعتمد — فرع لبن",
         },
         district: {
-          en: "Dhahrat Laban District, Riyadh",
-          ar: "حي لبن، الرياض",
+          en: "Dhahrat Laban District (Al Hayatham St), Riyadh",
+          ar: "حي ظهرة لبن (شارع الهياثم)، الرياض",
         },
-        mapUrl: "https://maps.app.goo.gl/25B4YhV9s8pP6W5d8",
+        mapUrl: "https://maps.app.goo.gl/NfCMgkc5aVubVzmEA?g_st=awb",
       },
       {
         id: "khurais-3m",
@@ -265,10 +265,10 @@ export const SITE_CONFIG: SiteConfig = {
           ar: "مركز 3M المعتمد — فرع خريص",
         },
         district: {
-          en: "Khurais Road Center, Riyadh",
-          ar: "طريق خريص، تقاطع النهضة",
+          en: "Khurais Road Center (Jabal Al Jolood St), Riyadh",
+          ar: "طريق خريص (شارع جبل الجلود)، الرياض",
         },
-        mapUrl: "https://maps.app.goo.gl/z4WR6VcKYwyj1ggx6?g_st=awb",
+        mapUrl: "https://maps.app.goo.gl/M1PtDCTboRfgAWzW7?g_st=awb",
       },
     ],
     heritage: {
