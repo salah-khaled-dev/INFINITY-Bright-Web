@@ -190,7 +190,7 @@ export function HeroVehicle({
   };
 
   // Signal scene ready on first rendered frame and trigger drive-in immediately
-  useFrame(() => {
+  useFrame(({ pointer }) => {
     if (!readyFiredRef.current) {
       frameCountRef.current += 1;
       if (frameCountRef.current >= 2) {
@@ -200,10 +200,11 @@ export function HeroVehicle({
       }
     }
 
-    // Natural, smooth scroll turntable interaction (never jumps)
+    // Natural, smooth scroll & cursor turntable interaction (never jumps)
     const scrollP = scrollProgressRef.current ?? 0;
     if (turntableGroupRef.current) {
-      const targetYaw = BASE_CAR_YAW + (reducedMotion ? 0 : scrollP * 0.26);
+      const mouseYaw = reducedMotion ? 0 : pointer.x * 0.32;
+      const targetYaw = BASE_CAR_YAW + mouseYaw + (reducedMotion ? 0 : scrollP * 0.26);
       turntableGroupRef.current.rotation.y +=
         (targetYaw - turntableGroupRef.current.rotation.y) * 0.08;
     }

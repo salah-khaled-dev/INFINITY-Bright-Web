@@ -1,12 +1,23 @@
 "use client";
 
-import React, { Component, Suspense, useCallback } from "react";
+import React, {
+  Component,
+  Suspense,
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import type { DevicePerformanceProfile } from "@/hooks/useDevicePerformance";
 import type { ThemeMode } from "@/types";
+import type { VehicleMaterialRig } from "@/lib/three/materials";
 import { HeroCamera } from "./HeroCamera";
-import { HeroStage } from "./HeroStage";
+import { HeroEnvironment, type StudioArchitectureRefs } from "./HeroEnvironment";
+import { HeroLighting, type HeroLightRefs } from "./HeroLighting";
+import { HeroThemeController } from "./HeroThemeController";
+import { HeroVehicle } from "./HeroVehicle";
 
 // Suppress transitive upstream deprecation warning between @react-three/fiber and three.js 0.187 (THREE.Clock -> THREE.Timer)
 if (typeof window !== "undefined") {
@@ -73,6 +84,45 @@ export default function HeroScene({
   onReady,
   onFatalError,
 }: HeroSceneProps) {
+  const ambientLightRef = useRef<THREE.AmbientLight | null>(null);
+  const keySpotLightRef = useRef<THREE.DirectionalLight | null>(null);
+  const fillLightRef = useRef<THREE.DirectionalLight | null>(null);
+  const rimLightRef = useRef<THREE.DirectionalLight | null>(null);
+  const yellowAccentLeftRef = useRef<THREE.PointLight | null>(null);
+  const yellowAccentRightRef = useRef<THREE.PointLight | null>(null);
+
+  const lightRefs: HeroLightRefs = useMemo(
+    () => ({
+      ambient: ambientLightRef,
+      keySpot: keySpotLightRef,
+      fillLight: fillLightRef,
+      rimLight: rimLightRef,
+      yellowAccentLeft: yellowAccentLeftRef,
+      yellowAccentRight: yellowAccentRightRef,
+    }),
+    []
+  );
+
+  const cycloramaMatRef = useRef<THREE.MeshStandardMaterial | null>(null);
+  const platformMatRef = useRef<THREE.MeshStandardMaterial | null>(null);
+  const simpleFloorMatRef = useRef<THREE.MeshStandardMaterial | null>(null);
+  const haloRingMatRef = useRef<THREE.MeshStandardMaterial | null>(null);
+  const outerRingMatRef = useRef<THREE.MeshStandardMaterial | null>(null);
+
+  const archRefs: StudioArchitectureRefs = useMemo(
+    () => ({
+      cycloramaMat: cycloramaMatRef,
+      platformMat: platformMatRef,
+      simpleFloorMat: simpleFloorMatRef,
+      haloRingMat: haloRingMatRef,
+      outerRingMat: outerRingMatRef,
+    }),
+    []
+  );
+
+  const aoShadowMatRef = useRef<THREE.MeshBasicMaterial | null>(null);
+  const [materialRig, setMaterialRig] = useState<VehicleMaterialRig | null>(null);
+
   const handleCreated = useCallback(
     ({ gl }: { gl: THREE.WebGLRenderer }) => {
       const dom = gl.domElement;
@@ -97,6 +147,7 @@ export default function HeroScene({
             stencil: false,
           }}
           camera={{ position: [0, 0.1, 4.35], fov: 28, near: 0.1, far: 40 }}
+          shadows={perf.tier === "high" || perf.tier === "medium"}
           onCreated={handleCreated}
           className="h-full w-full"
         >
@@ -107,11 +158,40 @@ export default function HeroScene({
             scrollProgressRef={scrollProgressRef}
           />
 
+          <HeroLighting
+            theme={theme}
+            shadowMapSize={perf.shadowMapSize}
+            enableShadows={perf.tier === "high" || perf.tier === "medium"}
+            lightRefs={lightRefs}
+          />
+
           <Suspense fallback={null}>
-            <HeroStage
+            <HeroEnvironment
+              theme={theme}
+              envResolution={perf.envResolution}
+              enableFloorReflector={perf.enableFloorReflector}
+              reflectorResolution={perf.reflectorResolution}
+              scrollProgressRef={scrollProgressRef}
+              archRefs={archRefs}
+            />
+
+            <HeroVehicle
+              theme={theme}
+              enableShadows={perf.tier === "high" || perf.tier === "medium"}
+              reducedMotion={reducedMotion}
+              scrollProgressRef={scrollProgressRef}
+              aoShadowMatRef={aoShadowMatRef}
+              onMaterialRigReady={setMaterialRig}
+              onSceneReady={onReady}
+            />
+
+            <HeroThemeController
               theme={theme}
               reducedMotion={reducedMotion}
-              onSceneReady={onReady}
+              materialRig={materialRig}
+              lightRefs={lightRefs}
+              archRefs={archRefs}
+              aoShadowMatRef={aoShadowMatRef}
             />
           </Suspense>
         </Canvas>

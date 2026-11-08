@@ -1,11 +1,7 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useRef } from "react";
 import { useTheme } from "@/components/providers/ThemeProvider";
-import { useDevicePerformance } from "@/hooks/useDevicePerformance";
 import { useReducedMotionPreference } from "@/hooks/useReducedMotion";
 import type { Dictionary } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -13,11 +9,6 @@ import type { Locale, ThemeMode } from "@/types";
 import { HeroContent } from "./HeroContent";
 import { HeroFallback } from "./HeroFallback";
 import { HeroMobile } from "./HeroMobile";
-
-// Dynamic client-only import so Three.js / R3F never blocks SSR or initial HTML stream
-const HeroScene = dynamic(() => import("./HeroScene"), {
-  ssr: false,
-});
 
 interface CinematicHeroProps {
   locale: Locale;
@@ -27,60 +18,8 @@ interface CinematicHeroProps {
 export function CinematicHero({ locale, dict }: CinematicHeroProps) {
   const { theme, mounted } = useTheme();
   const activeTheme: ThemeMode = mounted ? theme : "light";
-  const perf = useDevicePerformance();
   const reducedMotion = useReducedMotionPreference();
-
   const sectionRef = useRef<HTMLElement | null>(null);
-  const scrollProgressRef = useRef<number>(0);
-
-  const [sceneReady, setSceneReady] = useState<boolean>(false);
-  const [fatal3DError, setFatal3DError] = useState<boolean>(false);
-
-  // GSAP ScrollTrigger — natural, non-hijacking scroll scrub driving 3D camera & turntable
-  useEffect(() => {
-    if (reducedMotion || !sectionRef.current) {
-      scrollProgressRef.current = 0;
-      return;
-    }
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    const st = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top top",
-      end: "bottom top",
-      scrub: 0.45,
-      onUpdate: (self) => {
-        scrollProgressRef.current = self.progress;
-      },
-    });
-
-    const onResize = () => {
-      ScrollTrigger.refresh();
-    };
-    window.addEventListener("resize", onResize, { passive: true });
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-      st.kill();
-    };
-  }, [reducedMotion]);
-
-  const handleSceneReady = useCallback(() => {
-    setSceneReady(true);
-  }, []);
-
-  const handleFatal3DError = useCallback(() => {
-    setFatal3DError(true);
-  }, []);
-
-  const shouldRender3D =
-    perf.ready &&
-    !perf.isMobile &&
-    perf.webglSupported &&
-    perf.tier !== "fallback" &&
-    !fatal3DError;
-  const showFallback = !shouldRender3D || !sceneReady;
 
   return (
     <section
@@ -93,24 +32,12 @@ export function CinematicHero({ locale, dict }: CinematicHeroProps) {
           : "bg-[#050608] text-white"
       )}
     >
-      {/* Instant Vehicle Stage & Studio Backdrop */}
+      {/* Studio Visual Backdrop (Light Mode: Craftsmen Studio, Dark Mode: Obsidian Studio) */}
       <HeroFallback
         theme={activeTheme}
         locale={locale}
-        visible={showFallback}
+        visible={true}
       />
-
-      {/* Real-Time Interactive 3D Luxury Supercar Showroom */}
-      {shouldRender3D && (
-        <HeroScene
-          theme={activeTheme}
-          perf={perf}
-          reducedMotion={reducedMotion}
-          scrollProgressRef={scrollProgressRef}
-          onReady={handleSceneReady}
-          onFatalError={handleFatal3DError}
-        />
-      )}
 
       {/* Subtle Frame Guides on Large Monitors */}
       <div

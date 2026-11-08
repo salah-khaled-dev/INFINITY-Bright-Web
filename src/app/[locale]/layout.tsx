@@ -131,8 +131,8 @@ export default async function LocaleLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/hero/hero-desktop-light.webp"
-          type="image/webp"
+          href="/images/hero/hero-light-craftsmen.jpg"
+          type="image/jpeg"
         />
         <link
           rel="preload"

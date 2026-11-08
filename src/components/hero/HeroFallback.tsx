@@ -8,20 +8,18 @@ import type { Locale, ThemeMode } from "@/types";
 interface HeroFallbackProps {
   theme: ThemeMode;
   locale: Locale;
-  visible: boolean;
-  isLoading3D?: boolean;
-  loadingLabel?: string;
+  visible?: boolean;
 }
 
 /**
- * Instant High-Resolution Vehicle Stage & Graceful 3D Backdrop.
- * The Mercedes studio image is mounted immediately via SSR with priority,
- * guaranteeing ZERO loading delay and crisp automotive visual presence.
+ * Instant High-Resolution Vehicle Stage & Studio Visual.
+ * The studio image is mounted immediately via SSR with priority,
+ * guaranteeing ZERO loading delay, zero lag, and crisp automotive visual presence.
  */
 export function HeroFallback({
   theme,
   locale,
-  visible,
+  visible = true,
 }: HeroFallbackProps) {
   const isLight = theme === "light";
 
@@ -62,23 +60,23 @@ export function HeroFallback({
         )}
       />
 
-      {/* Immediate High-Res Light Mode Mercedes Studio Image */}
+      {/* Immediate High-Res Light Mode Craftsmen Studio Image */}
       <Image
-        src="/images/hero/hero-desktop-light.webp"
+        src="/images/hero/hero-light-craftsmen.jpg"
         alt={
           locale === "ar"
-            ? "سيارة مرسيدس رياضية فضية داخل استوديو إنفينيتي برايت النهاري"
-            : "Silver luxury Mercedes sports car inside INFINITE BRIGHT white studio"
+            ? "فنيو إنفينيتي برايت المحترفون أثناء تركيب أفلام حماية الطلاء PPF بدقة داخل الصالة المضيئة"
+            : "Professional INFINITE BRIGHT master technicians applying PPF protection inside the luxury studio"
         }
         fill
         priority
         sizes="100vw"
         className={cn(
           "object-cover transition-opacity duration-500",
-          "object-[50%_24%]",
+          "object-[50%_35%]",
           locale === "ar"
-            ? "md:object-[32%_38%] lg:object-[30%_38%]"
-            : "md:object-[68%_38%] lg:object-[70%_38%]",
+            ? "md:object-[35%_42%] lg:object-[32%_42%]"
+            : "md:object-[65%_42%] lg:object-[68%_42%]",
           isLight ? "opacity-100" : "opacity-0"
         )}
       />
