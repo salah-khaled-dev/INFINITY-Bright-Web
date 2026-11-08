@@ -35,7 +35,7 @@ export function SubpageHero({
   return (
     <section
       className={cn(
-        "relative min-h-[460px] w-full overflow-hidden border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)] pt-32 pb-16 sm:min-h-[500px] sm:pt-40 sm:pb-20 lg:min-h-[540px] lg:pt-44 lg:pb-24",
+        "relative min-h-[420px] w-full overflow-hidden border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)] pt-24 pb-12 sm:min-h-[500px] sm:pt-40 sm:pb-20 lg:min-h-[540px] lg:pt-44 lg:pb-24",
         className
       )}
     >
@@ -47,7 +47,7 @@ export function SubpageHero({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[75%_center] transition-transform duration-1000 ease-out hover:scale-105 sm:object-[68%_center] lg:object-[60%_center]"
+          className="object-cover object-[center_top] transition-transform duration-1000 ease-out hover:scale-105 sm:object-[68%_center] lg:object-[60%_center]"
         />
 
         {/* Directional Editorial Scrims */}
@@ -55,7 +55,7 @@ export function SubpageHero({
         <div
           className={cn(
             "absolute inset-0 sm:hidden",
-            "bg-gradient-to-t from-[var(--bg-canvas)] via-[var(--bg-canvas)]/92 via-60% to-[var(--bg-canvas)]/35"
+            "bg-gradient-to-t from-[var(--bg-canvas)] via-[var(--bg-canvas)]/85 via-50% to-transparent"
           )}
         />
 
@@ -96,7 +96,7 @@ export function SubpageHero({
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-display text-3xl leading-[1.14] font-extrabold tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-6xl rtl:leading-[1.24]">
+          <h1 className="font-display text-2xl leading-[1.22] font-extrabold tracking-tight text-[var(--text-primary)] sm:text-4xl lg:text-5xl rtl:leading-[1.28]">
             {headline}
           </h1>
 

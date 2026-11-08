@@ -46,18 +46,18 @@ export default async function ServicesPage({
         imageAlt={locale === "ar" ? "لاند كروزر داخل صالة إنفينيتي برايت الفاخرة" : "Land Cruiser inside Infinite Bright luxury studio"}
         badge={locale === "ar" ? "صالة الرياض · لاند كروزر" : "Riyadh Studio · Land Cruiser"}
       >
-        {/* Quick Jump Anchors */}
-        <div className="mt-8 flex flex-wrap gap-2.5">
+        {/* Quick Jump Anchors — Smooth Horizontal Swipe on Mobile, Wrap on Desktop */}
+        <div className="mt-6 -mx-5 flex items-center gap-2 overflow-x-auto px-5 pb-2 pt-1 no-scrollbar sm:mx-0 sm:flex-wrap sm:gap-2.5 sm:overflow-visible sm:px-0">
           {SERVICES_DATA.map((svc) => (
             <a
               key={svc.id}
               href={`#${svc.id}`}
-              className="rounded-full border border-[var(--border-subtle)] bg-[var(--bg-canvas)]/90 px-4 py-2 text-xs font-bold text-[var(--text-secondary)] shadow-sm backdrop-blur-sm transition-all hover:border-[#FBE90A] hover:bg-[#FBE90A] hover:text-[#060608]"
+              className="inline-flex shrink-0 items-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-surface)]/90 px-3.5 py-1.5 text-xs font-bold text-[var(--text-secondary)] shadow-sm backdrop-blur-md transition-all hover:border-[#FBE90A] hover:bg-[#FBE90A] hover:text-[#060608] sm:px-4 sm:py-2"
             >
-              <span className="me-1.5 font-mono text-[11px] text-[var(--brand-accent-label)]">
+              <span className="me-1.5 font-mono text-[11px] font-extrabold text-[var(--brand-accent-label)]">
                 {svc.index}
               </span>
-              {dict.servicesCatalog[svc.id].title}
+              <span className="whitespace-nowrap">{dict.servicesCatalog[svc.id].title}</span>
             </a>
           ))}
         </div>

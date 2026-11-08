@@ -105,8 +105,8 @@ export function Navbar({ locale, dict }: NavbarProps) {
             : "border-b border-[var(--border-subtle)] bg-[var(--bg-glass)] py-3 sm:py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl dark:shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
         )}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-8 lg:px-10">
-          <div className="flex items-center gap-2 sm:gap-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3.5 sm:gap-3 sm:px-8 lg:px-10">
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
             {/* Mobile Back Button (Visible when visiting subpages on mobile) */}
             {!isHome && (
               <button
@@ -119,19 +119,22 @@ export function Navbar({ locale, dict }: NavbarProps) {
                   }
                 }}
                 aria-label={locale === "ar" ? "الرجوع" : "Back"}
+                title={locale === "ar" ? "الرجوع" : "Back"}
                 className={cn(
-                  "inline-flex h-9 items-center gap-1.5 rounded-full border px-3 text-xs font-bold transition-all lg:hidden",
+                  "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition-all sm:w-auto sm:px-3 sm:gap-1.5 lg:hidden",
                   overDarkHero
                     ? "border-white/20 bg-white/10 text-white hover:border-[#FBE90A]"
                     : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[#FBE90A]"
                 )}
               >
                 {locale === "ar" ? (
-                  <ArrowRight className="h-3.5 w-3.5" />
+                  <ArrowRight className="h-4 w-4" />
                 ) : (
-                  <ArrowLeft className="h-3.5 w-3.5" />
+                  <ArrowLeft className="h-4 w-4" />
                 )}
-                <span>{locale === "ar" ? "رجوع" : "Back"}</span>
+                <span className="hidden sm:inline text-xs font-bold">
+                  {locale === "ar" ? "رجوع" : "Back"}
+                </span>
               </button>
             )}
 
@@ -144,7 +147,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
               <BrandLogo
                 forceDarkSurface={overDarkHero}
                 priority
-                className="h-8 transition-transform duration-300 group-hover:scale-[1.02] sm:h-11"
+                className="h-7 transition-transform duration-300 group-hover:scale-[1.02] sm:h-9 lg:h-11"
               />
             </Link>
           </div>
@@ -184,14 +187,14 @@ export function Navbar({ locale, dict }: NavbarProps) {
           </nav>
 
           {/* Header Action Buttons */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            {/* WhatsApp Quick Button (Desktop & Tablet — Official Green) */}
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+            {/* WhatsApp Quick Button (Desktop & Tablet only — mobile uses floating quick chat) */}
             <a
               href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${dict.whatsapp} (${BUSINESS_CONFIG.contact.phoneDisplay})`}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-emerald-500/35 bg-emerald-500/10 text-[#25D366] transition-all duration-300 hover:scale-105 hover:bg-[#25D366] hover:text-white sm:h-10 sm:w-10"
+              className="hidden sm:inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-emerald-500/35 bg-emerald-500/10 text-[#25D366] transition-all duration-300 hover:scale-105 hover:bg-[#25D366] hover:text-white sm:h-10 sm:w-10"
             >
               <WhatsAppIcon className="h-4 w-4" />
             </a>
@@ -227,14 +230,14 @@ export function Navbar({ locale, dict }: NavbarProps) {
               href={switchedLocalePath}
               aria-label={locale === "en" ? "التبديل إلى العربية" : "Switch to English"}
               className={cn(
-                "inline-flex h-9 items-center gap-1.5 rounded-full border px-3 text-xs font-semibold transition-all duration-300 sm:h-10 sm:px-3.5",
+                "inline-flex h-9 shrink-0 items-center gap-1 rounded-full border px-2.5 text-xs font-semibold transition-all duration-300 sm:h-10 sm:px-3.5 sm:gap-1.5",
                 overDarkHero
                   ? "border-white/20 bg-white/5 text-white hover:border-[#FBE90A] hover:text-[#FBE90A]"
                   : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--border-strong)]"
               )}
             >
               <Globe className="h-3.5 w-3.5 opacity-80" />
-              <span>{locale === "en" ? dict.switchToAr : dict.switchToEn}</span>
+              <span>{locale === "en" ? "AR" : "EN"}</span>
             </Link>
 
             {/* Theme Switcher */}
@@ -245,7 +248,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
                 mounted && theme === "dark" ? dict.lightMode : dict.darkMode
               }
               className={cn(
-                "inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border transition-all duration-300 sm:h-10 sm:w-10",
+                "inline-flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border transition-all duration-300 sm:h-10 sm:w-10",
                 overDarkHero
                   ? "border-white/20 bg-white/5 text-white hover:border-[#FBE90A] hover:text-[#FBE90A]"
                   : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--border-strong)]"
@@ -267,14 +270,14 @@ export function Navbar({ locale, dict }: NavbarProps) {
               <ArrowUpRight className="h-3.5 w-3.5 rtl:-scale-x-100" />
             </Link>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - ALWAYS FULLY VISIBLE & SHRINK-0 */}
             <button
               type="button"
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-expanded={mobileOpen}
               aria-label={mobileOpen ? dict.closeMenu : dict.openMenu}
               className={cn(
-                "inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border transition-colors sm:h-10 sm:w-10 lg:hidden",
+                "inline-flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border transition-colors sm:h-10 sm:w-10 lg:hidden",
                 overDarkHero
                   ? "border-white/20 bg-white/5 text-white hover:border-[#FBE90A]"
                   : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)]"
@@ -354,7 +357,12 @@ export function Navbar({ locale, dict }: NavbarProps) {
                     >
                       <Link
                         href={item.href}
-                        onClick={() => setMobileOpen(false)}
+                        onClick={() => {
+                          setMobileOpen(false);
+                          if (pathname === item.href) {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }
+                        }}
                         className={cn(
                           "flex items-center justify-between rounded-2xl border p-4 text-base font-bold transition-all",
                           active
