@@ -1,0 +1,1126 @@
+{
+  "meta": {
+    "home": {
+      "title": "INFINITE BRIGHT | Premium Automotive Protection & Detailing in Riyadh",
+      "description": "INFINITE BRIGHT (Part of Nawader El-Forsan Trading Est. — 15+ years in Saudi Arabia, Authorized 3M Dealer & XPEL Partner). Open Lifetime PPF Warranty, 10-Year Thermal Insulation Warranty, Paint Guarantee & 50% Accident Replacement Care."
+    },
+    "about": {
+      "title": "About INFINITE BRIGHT | Nawader El-Forsan Trading Est. (15+ Years in KSA)",
+      "description": "Discover INFINITE BRIGHT, part of Nawader El-Forsan Trading Establishment with over 15 years in Saudi Arabia as an Authorized 3M Dealer and contracted XPEL partner."
+    },
+    "services": {
+      "title": "Services | Lifetime PPF, 10-Year Ultra Core 85% & Core Plus 65% Tinting — INFINITE BRIGHT",
+      "description": "Explore our six specialized disciplines backed by an Open Lifetime PPF Warranty, Safe Removal Paint Guarantee, 50% Accident Care, and 10-Year Thermal Insulation Warranty."
+    },
+    "gallery": {
+      "title": "Before & After Gallery | INFINITE BRIGHT Riyadh",
+      "description": "Inspect real Before & After transformations inside the INFINITE BRIGHT showroom: paint polishing, Ultra Core 85% window tinting, PPF armor, and ceramic finishes."
+    },
+    "contact": {
+      "title": "Contact & Riyadh Locations | INFINITE BRIGHT & Authorized 3M Branches",
+      "description": "Connect with INFINITE BRIGHT (+966 53 442 2257) — Flagship in Riyadh Al Murooj (Imam Saud Rd) plus our 4 Authorized 3M Branches (Laban, Al Narjis, Khurais, Al Shifa)."
+    },
+    "terms": {
+      "title": "Terms, Conditions & Official Warranties | INFINITE BRIGHT",
+      "description": "Official Terms & Conditions of INFINITE BRIGHT (Nawader El-Forsan Trading Est.): Open Lifetime PPF Warranty, 10-Year Thermal Warranty, Paint Guarantee, and 50% Accident Benefit."
+    },
+    "privacy": {
+      "title": "Privacy Policy | INFINITE BRIGHT — Nawader El-Forsan Trading Est.",
+      "description": "Privacy Policy and client data protection standards at INFINITE BRIGHT and Nawader El-Forsan Trading Establishment."
+    },
+    "colorStudio": {
+      "title": "CAR COLOR STUDIO | Interactive Paint Customization — INFINITE BRIGHT",
+      "description": "Customize your vehicle's exterior paint color in real time inside the INFINITE BRIGHT Car Color Studio: 12 color families, Glossy, Matte, Satin & Metallic finishes, and Before/After comparison."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "colorStudio": "Color Studio",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "contactCta": "Book Consultation",
+    "whatsapp": "WhatsApp",
+    "callUs": "Call Direct",
+    "switchToAr": "العربية",
+    "switchToEn": "EN",
+    "lightMode": "Switch to light mode",
+    "darkMode": "Switch to dark mode",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "directLine": "Official Direct Line"
+  },
+  "hero": {
+    "brand": "INFINITE BRIGHT",
+    "headline": "THE ULTIMATE LUXURY SHIELD FOR YOUR VEHICLE.",
+    "description": "Advanced automotive protection, ultra heat insulation, and certified paint protection films engineered to preserve your vehicle's prestigious finish for years.",
+    "primaryCta": "EXPLORE OUR SERVICES",
+    "secondaryCta": "CONTACT US",
+    "whatsappLabel": "CHAT ON WHATSAPP",
+    "scrollCue": "Discover the craft",
+    "disciplinesTag": "PAINT PROTECTION FILM · ADVANCED THERMAL INSULATION · CERAMIC & CONCOURS DETAILING",
+    "studioControls": {
+      "cameraLabel": "Camera",
+      "cameras": {
+        "hero": "3/4 Hero",
+        "front": "Front",
+        "profile": "Profile",
+        "detail": "Paint Close-Up"
+      },
+      "finishLabel": "Finish",
+      "finishes": {
+        "glossy": "Glossy",
+        "matte": "Matte",
+        "satin": "Satin",
+        "metallic": "Metallic"
+      },
+      "loadingStudio": "Preparing 3D Architectural Showroom...",
+      "interactiveHint": "Interactive 3D Showroom"
+    }
+  },
+  "brandStory": {
+    "eyebrow": "01 // HERITAGE & MANIFESTO",
+    "heritageBadge": "Part of Nawader El-Forsan Trading Est. · 15+ Years in Saudi Arabia",
+    "partnersBadge": "Authorized 3M Dealer & Contracted XPEL Partner",
+    "headline": "Over 15 years of accredited automotive preservation across the Kingdom.",
+    "lead": "INFINITE BRIGHT is the flagship luxury automotive protection marque of Nawader El-Forsan Trading Establishment—proudly serving vehicle owners across the Kingdom of Saudi Arabia for over 15 years as an Authorized 3M Dealer and officially contracted partner with XPEL.",
+    "body": "Inside our flagship showroom in Riyadh (Al Murooj District — Imam Saud Road) and across our four official 3M branches, we back our craftsmanship with unmatched client guarantees: an Open Lifetime Warranty on PPF protection, Safe Removal & Re-installation OEM Paint Guarantee, 50% Accident Replacement Support, and a 10-Year Warranty on Ultra Core (85%) and Core Plus (65%) thermal insulation.",
+    "quote": "True protection unites globally accredited film engineering with ironclad lifetime peace of mind.",
+    "pillars": {
+      "optical": {
+        "title": "Nawader El-Forsan Est.",
+        "desc": "Backed by an established Saudi trading organization with more than 15 years of trusted market leadership."
+      },
+      "climate": {
+        "title": "Authorized 3M & XPEL",
+        "desc": "Official dealership and contractual partnerships guaranteeing genuine films engineered for extreme Gulf heat."
+      },
+      "bespoke": {
+        "title": "Lifetime & Accident Warranties",
+        "desc": "Open lifetime PPF warranty, 100% factory paint guarantee on removal, and 50% accident replacement benefit."
+      }
+    },
+    "cta": "Explore Our Story & Guarantees"
+  },
+  "servicesSection": {
+    "eyebrow": "02 // CORE DISCIPLINES",
+    "headline": "Seven specialized systems. One uncompromising finish.",
+    "subheadline": "From Full-Body, Half-Front, and 40cm Front-End Lifetime PPF armor to our Interactive Car Color Studio and 10-Year Thermal Glazing.",
+    "viewAllCta": "Explore Full Service Specifications",
+    "inquireService": "Inquire About This Service",
+    "featuredGroups": {
+      "ppf": {
+        "index": "01",
+        "tag": "FULL · HALF-FRONT · 40CM FRONT — LIFETIME WARRANTY",
+        "title": "Paint Protection Film",
+        "subtitle": "Full-Body, Half-Front, or 40cm Front-End packages backed by an Open Lifetime Warranty, Paint Guarantee & 50% Accident Care.",
+        "highlights": [
+          "Tailored packages: Full-Body, Half-Front (Full Hood/Fenders/Bumper), or 40cm Front-End",
+          "Open Lifetime Warranty on accredited XPEL & 3M PPF with 100% OEM Paint Guarantee",
+          "Accident Care Advantage: post-collision film replacement at only 50% cost"
+        ]
+      },
+      "tinting": {
+        "index": "02",
+        "tag": "10-YEAR WARRANTY — LIVE TINT SHADE SIMULATOR",
+        "title": "Window Tinting & Heat Insulation",
+        "subtitle": "Two 10-year warranted thermal series: Ultra Core (85% heat insulation, all shades) and Core Plus (65% heat insulation).",
+        "highlights": [
+          "Official 10-Year Warranty on all thermal insulation & tinting packages",
+          "Ultra Core Series: 85% heat insulation — available in all tint shades (70% to 05%)",
+          "Core Plus Series: 65% heat insulation — signal-safe non-metallized clarity"
+        ]
+      },
+      "colorChange": {
+        "index": "03",
+        "tag": "NEW — INTERACTIVE LIVE COLOR CONFIGURATOR",
+        "title": "Bespoke Car Color Change",
+        "subtitle": "Transform your vehicle in Mirror Gloss, Satin Matte, or Metallic shades with 100% factory paint safety.",
+        "highlights": [
+          "Interactive studio configurator: enter your car model & preview colors live",
+          "Curated luxury palette in Mirror Gloss, Satin Matte, and Metallic Pearl finishes",
+          "Seamless wrapped edges backed by our Removal & OEM Paint-Safe Guarantee"
+        ]
+      },
+      "ceramic": {
+        "index": "04",
+        "tag": "MOLECULAR GLOSS MATRIX",
+        "title": "Nano Ceramic Coating",
+        "subtitle": "Covalent liquid-glass bonding for extreme hydrophobicity and mirror depth.",
+        "highlights": [
+          "High-contact-angle water beading and effortless wash release",
+          "Chemical resistance against bird droppings, salt, and oxidation",
+          "Deepened wet-look gloss across paintwork, wheels, and calipers"
+        ]
+      },
+      "detailing": {
+        "index": "05",
+        "tag": "BEFORE & AFTER POLISHING",
+        "title": "Automotive Polishing & Paint Protection",
+        "subtitle": "Dramatic multi-stage swirl removal, oxidation recovery, and bespoke interior preservation.",
+        "highlights": [
+          "Precision swirl, haze, and micro-mar correction under inspection arches",
+          "Delicate care for matte Nappa leather, Alcantara, and carbon trim",
+          "Comprehensive surface sealing for lasting showroom poise"
+        ]
+      }
+    }
+  },
+  "servicesCatalog": {
+    "ppf": {
+      "title": "Paint Protection Film (PPF) — Full / Half-Front / 40cm Front",
+      "shortDesc": "Full-Body, Half-Front, or 40cm Front-End self-healing armor with Open Lifetime Warranty, Paint Guarantee & 50% Accident Care.",
+      "fullDesc": "Our accredited Paint Protection Film programs (Authorized 3M & Contracted XPEL Partner) are offered in three tailored coverage packages: Full-Body Armor, Half-Front Protection (Full Hood + Full Bumper + Headlights + Full Front Fenders + Full A-Pillars + Door Handle Cups + Door Edges + Fuel Tank Flap), and Front-End 40cm Protection (40cm of Hood & Fenders + Full Bumper + Headlights + A-Pillars + Door Handle Cups + Door Edges)—all backed by our Open Lifetime Warranty, OEM Paint Guarantee, and 50% Accident Support.",
+      "process": [
+        "Select Full-Body, Half-Front Complete, or Front-End (40cm) coverage architecture",
+        "Clean-bay installation with seamless edge wrapping & guaranteed factory-paint safety",
+        "Activation of Open Lifetime Warranty & 50% Accident Care coverage"
+      ],
+      "idealFor": "New deliveries, luxury SUVs, grand tourers, and highway commuters seeking tailored lifetime protection."
+    },
+    "window-tinting": {
+      "title": "Automotive Window Tinting (10-Year Warranty)",
+      "shortDesc": "10-year warranted window tinting in two tiers: Ultra Core with 85% heat insulation (all shades) and Core Plus with 65% heat insulation.",
+      "fullDesc": "We offer two dedicated nano-ceramic window tinting packages backed by a full 10-Year Warranty: Ultra Core delivering 85% thermal insulation across every tint shade (from deep privacy to clear windshield protection), and Core Plus delivering 65% thermal insulation with zero GPS/5G interference.",
+      "process": [
+        "Consultation to select Ultra Core (85% all shades) or Core Plus (65%)",
+        "Contour heat-forming to match compound glass curvature seamlessly",
+        "Registration of official 10-Year Warranty against fading or peeling"
+      ],
+      "idealFor": "Drivers seeking sleek OEM+ privacy, warranted thermal relief, and crystal night visibility."
+    },
+    "heat-insulation": {
+      "title": "Heat Insulation (10-Year Warranty)",
+      "shortDesc": "High-rejection solar barriers backed by a 10-Year Warranty: Ultra Core (85% rejection, all shades) and Core Plus (65% rejection).",
+      "fullDesc": "Engineered specifically to conquer intense Saudi summer heat with a 10-Year Official Warranty. Choose our flagship Ultra Core tier (85% heat insulation, available in all shades including clear windshield film) or Core Plus (65% heat insulation) to protect fine cabin interiors.",
+      "process": [
+        "Full glazing evaluation including panoramic roof and front windscreen",
+        "Installation of Ultra Core (85% all shades) or Core Plus (65%) film",
+        "10-Year Warranty issuance guaranteeing lasting thermal performance"
+      ],
+      "idealFor": "All vehicles operating in Saudi Arabia's sun-drenched climate and panoramic-roof cabins."
+    },
+    "ceramic-coating": {
+      "title": "Nano Ceramic Coating",
+      "shortDesc": "Semi-permanent molecular glass shield delivering jewel-like gloss, hydrophobic self-cleaning, and UV stability.",
+      "fullDesc": "Bonding directly at the microscopic pores of your vehicle's clearcoat, our Nano Ceramic Coating forms a slick, chemically resilient barrier. Water, mud, and road film bead into tight spheres and sheet away effortlessly, maintaining deep reflections wash after wash.",
+      "process": [
+        "Thorough iron removal, clay decontamination, and panel prep wipe",
+        "Controlled cross-hatch suede application in dust-managed lighting",
+        "Dedicated formulations available for paint, forged wheels, calipers, and glass"
+      ],
+      "idealFor": "Owners desiring liquid-glass depth, effortless maintenance washes, and long-term chemical resistance."
+    },
+    "paint-protection": {
+      "title": "Automotive Paint Protection",
+      "shortDesc": "Holistic clearcoat preservation combining corrective refinement with warranted hybrid protection architectures.",
+      "fullDesc": "Our comprehensive Automotive Paint Protection programs combine lifetime-warranted PPF impact coverage (with full OEM paint-safe removal guarantee) and full-body ceramic sealing—preserving factory paint integrity across every panel.",
+      "process": [
+        "Paint surface evaluation under multi-kelvin inspection arches",
+        "Targeted correction of swirl marks and clearcoat oxidation",
+        "Layered physical and chemical protection backed by our Paint Guarantee"
+      ],
+      "idealFor": "Collectors and discerning drivers seeking balanced, end-to-end exterior preservation."
+    },
+    "car-detailing": {
+      "title": "Car Polishing & Detailing",
+      "shortDesc": "Museum-grade Before & After exterior paint correction and artisan interior rejuvenation.",
+      "fullDesc": "From safe pH-neutral decontamination to multi-stage machine polishing that erases cobweb swirls and oxidation haze, our detailing studio restores mirror-black reflections exteriorly and supple matte freshness across Nappa leather, Alcantara, and carbon fiber.",
+      "process": [
+        "Safe contact wash, wheel barrel & brake caliper decontamination",
+        "Multi-stage machine polishing to eliminate swirl marks and dullness",
+        "Cabin sanitization, matte leather nourishment, and Alcantara grooming"
+      ],
+      "idealFor": "Restoring swirled or weathered paintwork, pre-PPF preparation, and concourse presentation."
+    },
+    "color-change": {
+      "title": "Bespoke Car Color Change",
+      "shortDesc": "Luxury exterior color transformation in Mirror Gloss, Satin Matte, or Metallic shades with 100% OEM paint safety.",
+      "fullDesc": "Redefine your vehicle's road presence inside the INFINITE BRIGHT studio. Our bespoke Color PPF and luxury color-change films deliver deep paint-like Mirror Gloss, stealth Satin Matte, and Metallic finishes with tucked invisible edges—backed by our Safe Removal & Re-installation Guarantee preserving 100% of your original factory paint.",
+      "process": [
+        "Live color & finish visualization in our interactive studio configurator",
+        "Surgical decontamination and seamless edge-tucked clean-bay installation",
+        "Multi-angle light-tunnel inspection & OEM Paint-Safe Warranty registration"
+      ],
+      "idealFor": "Discerning owners seeking an exclusive bespoke exterior shade while safeguarding factory paint."
+    }
+  },
+  "ppfPackages": {
+    "eyebrow": "ACCREDITED PPF COVERAGE ARCHITECTURES",
+    "headline": "Select the Precision Protection Package Built for Your Drive.",
+    "description": "Three engineered Paint Protection Film coverage packages tailored to shield vulnerable impact and touch zones—each backed by our Open Lifetime Warranty, OEM Paint Guarantee, and 50% Accident Care:",
+    "blueprintTitle": "Interactive Vehicle Coverage Blueprint",
+    "blueprintHint": "Select any package to illuminate protected panels in studio yellow on the blueprint",
+    "protectedZonesLabel": "Included Protected Panels:",
+    "warrantyStrip": "Includes: Open Lifetime Warranty · OEM Paint Guarantee · 50% Accident Support",
+    "packages": {
+      "front": {
+        "badge": "FRONT IMPACT DEFENSE",
+        "title": "Front-End Protection (40cm)",
+        "subtitle": "Targeted highway sandblast and stone-chip armor across leading front surfaces and daily door touchpoints.",
+        "zones": [
+          "40cm of Hood & Front Fenders",
+          "Full Front Bumper",
+          "Headlights",
+          "Vehicle A-Pillars",
+          "Door Handle Cups",
+          "Door Edges"
+        ],
+        "cta": "Book Front-End (40cm) Package"
+      },
+      "half": {
+        "badge": "MOST POPULAR — SEAMLESS FRONT",
+        "title": "Half-Front Complete Protection",
+        "subtitle": "Complete front-clip armor with zero visible seam lines across the hood or fenders, plus daily high-touch zones and fuel flap.",
+        "zones": [
+          "Full Hood",
+          "Full Front Bumper",
+          "Headlights",
+          "Full Front Fenders",
+          "Full A-Pillars",
+          "Door Handle Cups",
+          "Door Edges",
+          "Fuel Tank Flap"
+        ],
+        "cta": "Book Half-Front Package"
+      },
+      "full": {
+        "badge": "360° COMPLETE ARMOR",
+        "title": "Full-Body PPF Protection",
+        "subtitle": "Uncompromising bumper-to-bumper self-healing protection enveloping every painted exterior panel.",
+        "zones": [
+          "Full Hood, Front Bumper & Rear Bumper",
+          "Full Front Fenders, Rear Quarters & All Four Doors",
+          "Painted Roof, Trunk Lid & Spoilers",
+          "Headlights, Mirrors & Full A-Pillars",
+          "Door Handle Cups, Door Edges & Fuel Tank Flap"
+        ],
+        "cta": "Book Full-Body Protection"
+      }
+    }
+  },
+  "colorConfigurator": {
+    "eyebrow": "CAR COLOR STUDIO // LIVE PAINT CUSTOMIZATION",
+    "headline": "Customize Your Vehicle Paint Color & Finish in Real Time.",
+    "description": "Explore 12 professional automotive color categories (48 curated shades) or dial in any custom HEX / RGB color, switch live between Glossy, Matte, Satin, and Metallic finishes, and inspect with our Before / After split slider—recoloring strictly painted body panels while keeping glass, wheels, lights, and studio lighting 100% authentic.",
+    "openFullStudioCta": "Open Dedicated Car Color Studio",
+    "vehicleInputLabel": "Your Vehicle Make & Model (Optional)",
+    "vehiclePlaceholder": "Type your car model (e.g., Camry 2026 / Land Cruiser / Lexus / Patrol / BMW)",
+    "quickPresetsLabel": "Popular KSA Models:",
+    "categoriesLabel": "Color Categories (12 Families)",
+    "categories": {
+      "all": "All Colors",
+      "black": "Black",
+      "white": "White",
+      "gray": "Gray",
+      "silver": "Silver",
+      "red": "Red",
+      "blue": "Blue",
+      "green": "Green",
+      "yellow": "Yellow",
+      "orange": "Orange",
+      "purple": "Purple",
+      "brown": "Brown",
+      "special": "Special"
+    },
+    "paletteLabel": "Professional Color Palette",
+    "finishLabel": "Paint Finish Selection (Live Optical Physics)",
+    "finishes": {
+      "glossy": {
+        "title": "Glossy",
+        "desc": "Strong mirror reflections & deep liquid gloss"
+      },
+      "matte": {
+        "title": "Matte",
+        "desc": "Soft non-reflective stealth matte texture"
+      },
+      "satin": {
+        "title": "Satin",
+        "desc": "Balanced silky sheen across body contours"
+      },
+      "metallic": {
+        "title": "Metallic",
+        "desc": "Sparkling micro-flake metallic particles"
+      }
+    },
+    "customColorLabel": "Custom HEX / RGB Color Picker",
+    "customColorName": "Bespoke Custom Color",
+    "hexInputLabel": "HEX Code",
+    "rgbLabel": "RGB Values",
+    "selectedInfoTitle": "Selected Paint Specification",
+    "colorCodeLabel": "Swatch Code",
+    "copyHex": "Copy HEX",
+    "copiedHex": "Copied!",
+    "compareToggle": "Before / After Slider",
+    "compareActive": "Exit Compare",
+    "beforeBadge": "ORIGINAL PAINT (BEFORE)",
+    "afterBadge": "CUSTOM FINISH (AFTER)",
+    "dragCompareHint": "Drag slider across the vehicle to compare Original vs Custom Paint",
+    "resetButton": "Reset to Original",
+    "saveConfigButton": "Save Configuration",
+    "savedToast": "Configuration Saved!",
+    "savedConfigsTitle": "Saved Paint Configurations",
+    "savedEmptyHint": "Click 'Save Configuration' to bookmark your favorite color & finish combinations here.",
+    "removeSaved": "Remove",
+    "downloadSnapshot": "Download Preview",
+    "liveSpecTitle": "CAR COLOR STUDIO · LIVE ENGINE",
+    "defaultVehicleBadge": "Body-Only Segmentation Recoloring Engine",
+    "paintSafeBadge": "100% OEM Paint-Safe Guarantee",
+    "ctaWhatsapp": "Request This Paint / Wrap Service"
+  },
+  "tintSimulator": {
+    "eyebrow": "INTERACTIVE WINDOW TINT SIMULATOR",
+    "headline": "Select Any Tint Shade & Preview It Live on the Vehicle.",
+    "description": "Test every VLT tint level from optically clear 70% to VIP 05% alongside our 10-year warranted Ultra Core (85%) and Core Plus (65%) thermal series directly on the showroom vehicle:",
+    "tierLabel": "1. Select Thermal Package (10-Year Warranty)",
+    "shadeLabel": "2. Tap Any Tint Shade to Preview Live on Glass",
+    "vehicleInputPlaceholder": "Your car make & model (optional — e.g., Land Cruiser / Lexus / S-Class)",
+    "metrics": {
+      "heatRejection": "Heat Insulation",
+      "vlt": "Visible Light (VLT)",
+      "uvRejection": "UV Rejection",
+      "warranty": "Official Warranty",
+      "tenYears": "10 Years"
+    },
+    "ctaWhatsapp": "Book This Shade & Package via WhatsApp",
+    "shades": [
+      {
+        "id": "untinted",
+        "code": "UNTINTED",
+        "name": "Untinted Factory Glass (Before)",
+        "vlt": "88%",
+        "tintColor": "rgba(16, 22, 28, 0)",
+        "highlightBoost": 1,
+        "note": "Exposed cabin glass with zero infrared thermal barrier"
+      },
+      {
+        "id": "vlt70",
+        "code": "70% · CLEAR",
+        "name": "Crystal Clear Thermal — 70% (00)",
+        "vlt": "70%",
+        "tintColor": "rgba(16, 36, 48, 0.17)",
+        "highlightBoost": 0.96,
+        "note": "Virtually invisible clarity ideal for front windscreens & panoramic roofs"
+      },
+      {
+        "id": "vlt50",
+        "code": "50% · (01)",
+        "name": "Refined Light — 50% (01)",
+        "vlt": "50%",
+        "tintColor": "rgba(10, 16, 23, 0.38)",
+        "highlightBoost": 0.92,
+        "note": "Subtle executive factory poise with effortless night visibility"
+      },
+      {
+        "id": "vlt35",
+        "code": "35% · (02)",
+        "name": "Balanced Medium — 35% (02)",
+        "vlt": "35%",
+        "tintColor": "rgba(8, 11, 16, 0.57)",
+        "highlightBoost": 0.88,
+        "note": "Our signature balance of refined cabin privacy and crisp optical clarity"
+      },
+      {
+        "id": "vlt20",
+        "code": "20% · SPORT",
+        "name": "Sport Charcoal — 20%",
+        "vlt": "20%",
+        "tintColor": "rgba(6, 8, 12, 0.72)",
+        "highlightBoost": 0.84,
+        "note": "Commanding athletic aesthetic with superior solar glare relief"
+      },
+      {
+        "id": "vlt15",
+        "code": "15% · (03)",
+        "name": "Deep Privacy — 15% (03)",
+        "vlt": "15%",
+        "tintColor": "rgba(5, 6, 10, 0.83)",
+        "highlightBoost": 0.8,
+        "note": "High rear-cabin privacy shielding passengers and valuables from view"
+      },
+      {
+        "id": "vlt05",
+        "code": "05% · VIP",
+        "name": "VIP Limousine Dark — 05% (04)",
+        "vlt": "05%",
+        "tintColor": "rgba(3, 4, 6, 0.93)",
+        "highlightBoost": 0.76,
+        "note": "Maximum limousine blackout privacy and intense sunlight defense"
+      }
+    ]
+  },
+  "ppfExperience": {
+    "eyebrow": "03 // FEATURED EXPERIENCE — OPEN LIFETIME PPF",
+    "headline": "Lifetime Accredited Armor. Guaranteed Paint Safety.",
+    "description": "Every INFINITE BRIGHT PPF installation comes with an Open Lifetime Warranty, a Removal & Re-installation Guarantee protecting your original factory paint, and our exclusive Accident Warranty replacing collision-damaged protection at just 50% of the service cost.",
+    "specs": [
+      {
+        "code": "GUARANTEE 01",
+        "title": "Open Lifetime PPF Warranty",
+        "detail": "Unrestricted lifetime warranty coverage on film clarity, adhesion, and yellowing resistance."
+      },
+      {
+        "code": "GUARANTEE 02",
+        "title": "Removal & OEM Paint Guarantee",
+        "detail": "We guarantee safe removal and re-installation with 100% protection of original factory paintwork."
+      },
+      {
+        "code": "GUARANTEE 03",
+        "title": "50% Accident Replacement Benefit",
+        "detail": "Following any collision or impact, replacing protection on repaired panels costs the client only 50% of the service fee."
+      }
+    ],
+    "cta": "Configure Lifetime PPF Consultation"
+  },
+  "heatExperience": {
+    "eyebrow": "04 // THERMAL GLAZING — 10-YEAR WARRANTY",
+    "headline": "Fierce Sunlight Outside. 10 Years of Warranted Coolness.",
+    "description": "Both of our specialized thermal insulation tiers include an official 10-Year Warranty—giving you lasting heat rejection, UV protection, and exact shade selection.",
+    "tiersHeading": "Official Thermal Packages (10-Year Warranty)",
+    "tiersSubheading": "Compare our two certified window tinting & heat rejection series:",
+    "tiers": {
+      "ultraCore": {
+        "name": "Ultra Core",
+        "badge": "10-YEAR WARRANTY · ALL SHADES AVAILABLE",
+        "rejectionValue": "85%",
+        "rejectionLabel": "Heat Insulation",
+        "shadesNote": "Available in all shades: 05% · 15% · 20% · 35% · 50% · 70% (Clear)",
+        "desc": "Maximum 85% thermal insulation backed by a full 10-Year Warranty. Available across every tint shade—from deep privacy tints to clear front-windshield protection—with zero signal disruption.",
+        "cta": "Book Ultra Core 85%"
+      },
+      "corePlus": {
+        "name": "Core Plus",
+        "badge": "10-YEAR WARRANTY · BALANCED PERFORMANCE",
+        "rejectionValue": "65%",
+        "rejectionLabel": "Heat Insulation",
+        "shadesNote": "Multiple refined shades backed by a 10-Year Warranty",
+        "desc": "High-efficiency 65% solar heat rejection with an official 10-Year Warranty, engineered to cool cabin temperatures rapidly and protect leather interiors from UV aging.",
+        "cta": "Book Core Plus 65%"
+      }
+    },
+    "benefits": [
+      {
+        "title": "10-Year Official Warranty",
+        "detail": "Full ten-year guarantee against color shift, bubbling, peeling, or loss of thermal rejection."
+      },
+      {
+        "title": "Up to 85% Rejection in All Shades",
+        "detail": "Ultra Core offers complete VLT shade freedom including optically clear windshield protection."
+      },
+      {
+        "title": "Zero Signal Disruption",
+        "detail": "Metal-free nano construction preserves 5G, GPS navigation, keyless entry, and sensors."
+      },
+      {
+        "title": "UV Interior Preservation",
+        "detail": "Shields dashboard leather, contrast stitching, and carbon inlays from fading and cracking."
+      }
+    ],
+    "cta": "Compare Ultra Core & Core Plus"
+  },
+  "ceramicExperience": {
+    "eyebrow": "05 // NANO CERAMIC EXPERIENCE",
+    "headline": "Liquid Obsidian Depth. Effortless Hydrophobics.",
+    "description": "When microscopic clearcoat valleys are leveled and sealed beneath a crystalline ceramic matrix, light reflects uninterrupted. Water beads into high-tension spheres that roll off the surface, carrying dust and road grime away with minimal effort.",
+    "features": [
+      {
+        "label": "HYDROPHOBIC TENSION",
+        "title": "Self-Cleaning Water Behavior",
+        "detail": "Extreme contact angle repels rain, wash water, and road spray."
+      },
+      {
+        "label": "MIRROR AMPLIFICATION",
+        "title": "Deepened Colour Saturation",
+        "detail": "Produces rich wet-look depth especially dramatic on black and dark metallic paint."
+      },
+      {
+        "label": "ENVIRONMENTAL SHIELD",
+        "title": "Oxidation & Fallout Defense",
+        "detail": "Guards clearcoat against acidic contaminants, UV dulling, and harsh wash chemicals."
+      }
+    ],
+    "cta": "Request Ceramic Treatment"
+  },
+  "warrantySection": {
+    "eyebrow": "06 // GOLDEN WARRANTY & CLIENT ADVANTAGES",
+    "headline": "Ironclad Warranties Built Around Client Peace of Mind.",
+    "description": "Backed by Nawader El-Forsan Trading Establishment's 15+ years in Saudi Arabia, every vehicle receives industry-leading protection guarantees:",
+    "ctaWhatsapp": "Inquire About Warranties",
+    "ctaTerms": "View Full Warranty Terms",
+    "items": [
+      {
+        "metric": "10 YEARS",
+        "title": "10-Year Thermal Insulation Warranty",
+        "detail": "Comprehensive 10-year official warranty across Ultra Core (85%) and Core Plus (65%) window films against peeling, bubbling, or thermal degradation.",
+        "tag": "Thermal & Tinting Guarantee"
+      },
+      {
+        "metric": "LIFETIME",
+        "title": "Open Lifetime PPF Warranty",
+        "detail": "Open lifetime warranty on our accredited Paint Protection Film installations for enduring clarity, self-healing performance, and yellowing defense.",
+        "tag": "Open Lifetime Protection"
+      },
+      {
+        "metric": "PAINT SAFE",
+        "title": "Removal, Re-install & Paint Guarantee",
+        "detail": "Full removal and re-installation warranty guaranteeing 100% safety of your vehicle's original factory paintwork with zero adhesive harm.",
+        "tag": "100% OEM Paint Guarantee"
+      },
+      {
+        "metric": "50% ONLY",
+        "title": "Accident Replacement Advantage",
+        "detail": "Exclusive client privilege: after any collision or impact, replacing the protective film on affected panels costs you only 50% of the service price.",
+        "tag": "Post-Collision Client Care"
+      }
+    ]
+  },
+  "whyUs": {
+    "eyebrow": "07 // WHY INFINITE BRIGHT",
+    "headline": "Over 15 years of accredited Saudi heritage and studio discipline.",
+    "description": "Operating under Nawader El-Forsan Trading Establishment, INFINITE BRIGHT pairs over a decade and a half of Kingdom-wide trust with unmatched client warranties.",
+    "values": [
+      {
+        "number": "01",
+        "title": "15+ Years in Saudi Arabia",
+        "detail": "Proven expertise protecting luxury vehicles against Saudi Arabia's demanding solar load and highway conditions."
+      },
+      {
+        "number": "02",
+        "title": "Authorized 3M & XPEL Partner",
+        "detail": "Official dealership and contracted supply chains ensure authentic films and uncompromising material longevity."
+      },
+      {
+        "number": "03",
+        "title": "Paint Guarantee & 50% Accident Care",
+        "detail": "We guarantee OEM paint safety upon film removal and support clients post-impact with 50% off replacement protection."
+      },
+      {
+        "number": "04",
+        "title": "Riyadh-Wide Branch Network",
+        "detail": "Flagship Al Murooj INFINITE BRIGHT showroom supported by 4 official 3M branches across Laban, Al Narjis, Khurais, and Al Shifa."
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "08 // VISUAL ARCHIVE — BEFORE & AFTER",
+    "headline": "Proven Transformations in High Definition.",
+    "description": "Inspect real Before & After studio transformations across paint polishing, Ultra Core 85% window tinting, and full PPF & ceramic protection inside INFINITE BRIGHT.",
+    "filters": {
+      "all": "All Works",
+      "before-after": "Before & After",
+      "ppf": "PPF & Paint Armor",
+      "thermal": "Tinting & Thermal",
+      "ceramic": "Nano Ceramic",
+      "detailing": "Polishing & Detailing"
+    },
+    "beforeAfterShowcase": {
+      "heading": "Interactive Before & After Studio Comparison",
+      "subheading": "Slide left and right to compare untreated surfaces against finished INFINITE BRIGHT protection, polishing, and window tinting.",
+      "dragHint": "Drag Slider to Compare (Before / After)",
+      "cases": [
+        {
+          "id": "polishing",
+          "beforeSrc": "/images/before-after/polishing-before.jpg",
+          "afterSrc": "/images/before-after/polishing-after.jpg",
+          "title": "Before & After Polishing",
+          "subtitle": "Complete elimination of cobweb wash swirls, micro-scratches, and oxidation haze to restore deep liquid-black clarity.",
+          "beforeBadge": "BEFORE POLISHING",
+          "afterBadge": "AFTER POLISHING",
+          "specTag": "Multi-Stage Paint Correction"
+        },
+        {
+          "id": "tinting",
+          "beforeSrc": "/images/before-after/tinting-before.jpg",
+          "afterSrc": "/images/before-after/tinting-after.jpg",
+          "title": "Before & After Window Tinting",
+          "subtitle": "Transformation from exposed untinted glass to sleek Ultra Core 85% thermal insulation backed by a 10-Year Warranty.",
+          "beforeBadge": "BEFORE TINTING",
+          "afterBadge": "AFTER ULTRA CORE 85%",
+          "specTag": "Ultra Core 85% · 10-Year Warranty"
+        },
+        {
+          "id": "protection",
+          "beforeSrc": "/images/before-after/protection-before.jpg",
+          "afterSrc": "/images/before-after/protection-after.jpg",
+          "title": "Before & After Paint Protection",
+          "subtitle": "Surface restoration followed by Open-Lifetime XPEL / 3M Paint Protection Film and hydrophobic nano ceramic sealing.",
+          "beforeBadge": "BEFORE PROTECTION",
+          "afterBadge": "AFTER PPF & CERAMIC",
+          "specTag": "Lifetime PPF + Paint & 50% Accident Warranty"
+        }
+      ]
+    },
+    "viewFullArchive": "Open Full Gallery",
+    "openLightbox": "Inspect photograph",
+    "closeLightbox": "Close viewer",
+    "prevImage": "Previous photograph",
+    "nextImage": "Next photograph",
+    "items": {
+      "baPolishing": {
+        "title": "Before & After Paint Polishing",
+        "category": "Before & After · Polishing",
+        "caption": "Side-by-side showroom split revealing swirl and haze removal under linear inspection arches."
+      },
+      "baTinting": {
+        "title": "Before & After Ultra Core 85% Tinting",
+        "category": "Before & After · Thermal Tinting",
+        "caption": "Untinted solar-exposed cabin glass compared with sleek 10-year warranted Ultra Core 85% thermal glazing."
+      },
+      "baProtection": {
+        "title": "Before & After Full Paint Protection",
+        "category": "Before & After · PPF & Ceramic",
+        "caption": "Weathered rear bodywork restored and sealed beneath lifetime-warranted PPF and nano ceramic."
+      },
+      "obsidianGt": {
+        "title": "Full-Body Optical Armor",
+        "category": "Paint Protection Film",
+        "caption": "Mirror-black grand tourer finished under linear architectural inspection lighting."
+      },
+      "ppfFender": {
+        "title": "Clean-Bay Fender Laydown",
+        "category": "PPF Installation",
+        "caption": "Precision slip alignment and squeegee tension across sculpted front bodywork."
+      },
+      "ceramicGlaze": {
+        "title": "Molecular Ceramic Application",
+        "category": "Nano Ceramic Coating",
+        "caption": "Controlled suede block application creating liquid-glass reflection depth."
+      },
+      "waterBeading": {
+        "title": "High-Angle Hydrophobic Beading",
+        "category": "Ceramic Surface Physics",
+        "caption": "Uniform spherical water tension on cured ceramic-protected obsidian clearcoat."
+      },
+      "inspectionArch": {
+        "title": "Swirl-Free Clearcoat Clarity",
+        "category": "Paint Protection",
+        "caption": "Multi-angle light tunnel verification along front fender and headlamp contours."
+      },
+      "wheelCaliper": {
+        "title": "Forged Wheel & Caliper Shield",
+        "category": "High-Temp Ceramic",
+        "caption": "Heat-resistant ceramic protection safeguarding satin spokes and brake calipers against brake dust."
+      },
+      "interiorStitch": {
+        "title": "Alcantara & Nappa Preservation",
+        "category": "Interior Detailing",
+        "caption": "Matte factory finish conditioning for bolstered leather, contrast stitching, and carbon trim."
+      },
+      "lightTunnelGt": {
+        "title": "Architectural Sanctuary Finish",
+        "category": "Studio Showcase",
+        "caption": "Deep distortion-free reflections captured inside dark studio light portals."
+      },
+      "satinTint": {
+        "title": "Spectral Window Glazing",
+        "category": "Window Tinting",
+        "caption": "Refined charcoal tint harmonizing satin bodywork with glare-free cabin privacy."
+      },
+      "solarInsulation": {
+        "title": "Solar Rejection Glazing",
+        "category": "Heat Insulation",
+        "caption": "Infrared thermal barrier maintaining cool cabin poise against intense horizon sun."
+      },
+      "concourseWash": {
+        "title": "Light-Tunnel Gloss Refinement",
+        "category": "Car Detailing",
+        "caption": "Mirror-polished rear haunches inspected beneath architectural light portals in the INFINITE BRIGHT bay."
+      },
+      "porscheProfile": {
+        "title": "Inspection-Arch Hood Reflection",
+        "category": "Paint Refinement",
+        "caption": "Liquid-obsidian hood clarity reflecting studio inspection arches inside the showroom."
+      }
+    }
+  },
+  "branchesSection": {
+    "eyebrow": "09 // RIYADH LOCATIONS & GROUP NETWORK",
+    "headline": "INFINITE BRIGHT Flagship & Our Authorized 3M Branches.",
+    "description": "Visit our flagship INFINITE BRIGHT showroom in Al Murooj District (Imam Saud Road), or click any of our four official 3M branch cards below to open its Google Maps location directly.",
+    "flagshipBadge": "FLAGSHIP SHOWROOM — INFINITE BRIGHT",
+    "flagshipTitle": "INFINITE BRIGHT — Al Murooj Showroom",
+    "flagshipAddress": "Riyadh — Al Murooj District, Imam Saud Rd",
+    "flagshipDesc": "Our primary architectural studio equipped with multi-angle inspection lighting for Lifetime PPF installations, 10-Year Ultra Core 85% & Core Plus 65% thermal tinting, nano ceramic coatings, and concourse polishing.",
+    "openMapCta": "Open Location in Google Maps",
+    "threeMGroupBadge": "NAWADER EL-FORSAN TRADING EST. — 3M BRANCHES",
+    "threeMHeading": "Authorized 3M Branches Under Our Establishment",
+    "threeMNote": "Click any branch card below to open its exact Google Maps location (these four branches operate under official 3M branding as part of Nawader El-Forsan Trading Est.):",
+    "directionsLabel": "Click for Location"
+  },
+  "contactSection": {
+    "eyebrow": "10 // PRIVATE CONSULTATION",
+    "headline": "Commission Your Vehicle's Protection.",
+    "description": "Speak directly with our specialists via phone or WhatsApp, or visit our Al Murooj flagship showroom or any of our 4 official 3M branches in Riyadh.",
+    "directCallLabel": "Official Telephone",
+    "whatsappLabel": "Direct WhatsApp Concierge",
+    "whatsappAction": "Chat on WhatsApp",
+    "callAction": "Call +966 53 442 2257",
+    "studioInfoTitle": "Flagship Studio Details",
+    "emailLabel": "Email",
+    "addressLabel": "Flagship Location",
+    "hoursLabel": "Hours",
+    "configurableHint": "Al Murooj — Imam Saud Rd",
+    "form": {
+      "title": "Prepare a Tailored Inquiry",
+      "subtitle": "Complete your vehicle details below to launch a structured consultation message directly on WhatsApp.",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Enter your name",
+      "phoneLabel": "Mobile Number",
+      "phonePlaceholder": "+966 5X XXX XXXX",
+      "vehicleLabel": "Vehicle Make & Model",
+      "vehiclePlaceholder": "e.g., Porsche 911 GT3 / Mercedes S-Class / Land Cruiser",
+      "serviceLabel": "Primary Service of Interest",
+      "servicePlaceholder": "Select a service or thermal tier",
+      "extraOptions": {
+        "bundleFull35": "Full-Body PPF + Thermal Tint + Interior/Screens/Wheels Nano + Gift (35% OFF)",
+        "bundleHalf35": "Half-Front PPF + Full Thermal Tint + Nano Care Suite + Gift (35% OFF)",
+        "bundleFront35": "Front-End PPF + Thermal Tint + Interior & Wheels Nano + Gift (35% OFF)",
+        "ultraCore": "Thermal Tinting — Ultra Core (85% · 10-Year Warranty)",
+        "corePlus": "Thermal Tinting — Core Plus (65% · 10-Year Warranty)",
+        "ppfXpel3m": "Full-Body PPF Armor (Open Lifetime + 50% Accident Warranty)",
+        "ppfHalf": "Half-Front Complete PPF (Full Hood/Fenders/Bumper + Fuel Flap)",
+        "ppfFront": "Front-End 40cm PPF (40cm Hood/Fenders + Full Bumper & Lights)"
+      },
+      "notesLabel": "Preferred Branch or Shade Notes (Optional)",
+      "notesPlaceholder": "Preferred branch (Al Murooj / Laban / Al Narjis / Khurais / Al Shifa), tint shade, or questions...",
+      "submitWhatsapp": "Send Inquiry via WhatsApp",
+      "successTitle": "WhatsApp Consultation Ready",
+      "successBody": "Your tailored inquiry has been opened in WhatsApp. You may also call us directly anytime at +966 53 442 2257.",
+      "resetButton": "Prepare Another Inquiry",
+      "errors": {
+        "nameMin": "Please enter your name (at least 2 characters).",
+        "phoneMin": "Please enter a valid mobile number (at least 8 digits).",
+        "vehicleMin": "Please specify your vehicle make or model.",
+        "serviceRequired": "Please select a service discipline."
+      },
+      "whatsappTemplate": {
+        "greeting": "Hello INFINITE BRIGHT, I would like to request a vehicle protection consultation:",
+        "name": "Name",
+        "phone": "Mobile",
+        "vehicle": "Vehicle",
+        "service": "Service",
+        "notes": "Notes"
+      }
+    }
+  },
+  "exclusiveBundles": {
+    "eyebrow": "EXCLUSIVE VIP PROTECTION BUNDLES // 35% OFF + COMPLIMENTARY GIFT",
+    "headline": "All-Inclusive Protection, Thermal & Nano Packages — 35% OFF.",
+    "description": "Three curated multi-system bundles uniting our Lifetime-Warranted PPF, 10-Year Thermal Glazing, and Interior/Wheels/Screen Nano Ceramic protection—each including a complimentary studio gift and an exclusive 35% discount:",
+    "discountBadge": "35% OFF",
+    "giftHighlightLabel": "Includes Complimentary Exclusive Gift",
+    "includesLabel": "Complete Package Inclusions:",
+    "warrantyNote": "Open Lifetime PPF Warranty · 10-Year Thermal Warranty · OEM Paint & 50% Accident Care",
+    "vehiclePlaceholder": "Enter your vehicle model to claim 35% OFF (optional — e.g., Camry / Land Cruiser / Lexus)",
+    "bundles": [
+      {
+        "id": "full-royal-bundle",
+        "tierTag": "ROYAL ALL-INCLUSIVE SUITE",
+        "title": "Full-Body PPF + Thermal Insulation + Complete Nano Suite",
+        "subtitle": "Ultimate 360° exterior, glazing, cabin leather, dashboard, display screen, and wheel protection.",
+        "featured": true,
+        "discount": "35% OFF",
+        "giftText": "+ Complimentary Exclusive Gift Included",
+        "items": [
+          "Full-Body Paint Protection Film (PPF) with Open Lifetime & Paint Warranty",
+          "Complete Window Thermal Insulation backed by a 10-Year Official Warranty",
+          "Interior Nano Ceramic for Seats & Dashboard against stains and UV cracking",
+          "Infotainment & Instrument Screen Protection against scratches & fingerprints",
+          "High-Temp Forged Wheel Nano Ceramic resisting brake-dust bonding",
+          "Complimentary Exclusive Gift from INFINITE BRIGHT"
+        ],
+        "cta": "Claim Full-Body Bundle (35% OFF)"
+      },
+      {
+        "id": "half-diamond-bundle",
+        "tierTag": "MOST POPULAR — EXECUTIVE VALUE",
+        "title": "Half-Front PPF + Full Thermal Insulation + Nano Services",
+        "subtitle": "Seamless full-hood & full-fender front armor paired with full-cabin solar glazing and complete nano care.",
+        "featured": false,
+        "discount": "35% OFF",
+        "giftText": "+ Complimentary Exclusive Gift Included",
+        "items": [
+          "Half-Front Complete PPF (Full Hood, Full Bumper, Headlights, Full Front Fenders, Full A-Pillars, Door Cups/Edges & Fuel Flap)",
+          "Full-Vehicle Thermal Insulation backed by a 10-Year Official Warranty",
+          "Complete Nano Ceramic Services (Interior Seats/Dashboard + Wheels + Screens)",
+          "Backed by Open Lifetime PPF, Paint Safety & 50% Accident Warranties",
+          "Complimentary Exclusive Gift from INFINITE BRIGHT"
+        ],
+        "cta": "Claim Half-Front Bundle (35% OFF)"
+      },
+      {
+        "id": "front-golden-bundle",
+        "tierTag": "GOLDEN ESSENTIAL SUITE",
+        "title": "Front-End PPF + Thermal Insulation + Interior & Wheel Nano",
+        "subtitle": "Targeted highway front-impact defense united with 10-year solar tinting and interior/wheel nano protection.",
+        "featured": false,
+        "discount": "35% OFF",
+        "giftText": "+ Complimentary Exclusive Gift Included",
+        "items": [
+          "Front-End PPF (40cm Hood & Fenders, Full Bumper, Headlights, A-Pillars, Door Handle Cups & Door Edges)",
+          "Thermal Window Insulation backed by a 10-Year Official Warranty",
+          "Interior Nano Ceramic for Seats & Dashboard",
+          "Wheel Nano Ceramic Protection against road grime and brake dust",
+          "Complimentary Exclusive Gift from INFINITE BRIGHT"
+        ],
+        "cta": "Claim Front-End Bundle (35% OFF)"
+      }
+    ]
+  },
+  "aboutPage": {
+    "eyebrow": "ABOUT INFINITE BRIGHT",
+    "headline": "Part of Nawader El-Forsan Trading Est. — Over 15 Years in Saudi Arabia.",
+    "intro": "INFINITE BRIGHT represents the luxury studio flagship of Nawader El-Forsan Trading Establishment—backed by more than 15 years of leadership in the Kingdom of Saudi Arabia as an Authorized 3M Dealer and officially contracted partner with XPEL.",
+    "corporate": {
+      "eyebrow": "CORPORATE CREDENTIALS & PARTNERSHIPS",
+      "headline": "Saudi Heritage United With Global Accreditations & Warranties",
+      "cards": [
+        {
+          "tag": "PARENT ORGANIZATION",
+          "title": "Nawader El-Forsan Trading Est.",
+          "detail": "INFINITE BRIGHT operates proudly under Nawader El-Forsan Trading Establishment, a trusted leader in automotive protection across Riyadh and Saudi Arabia."
+        },
+        {
+          "tag": "15+ YEARS IN KSA",
+          "title": "Over 15 Years in Saudi Arabia",
+          "detail": "More than 15 years of continuous Kingdom experience empowering us to stand behind Open Lifetime PPF and 10-Year Thermal Insulation warranties."
+        },
+        {
+          "tag": "OFFICIAL PARTNERSHIPS",
+          "title": "Authorized 3M Dealer & XPEL Partner",
+          "detail": "Officially contracted with XPEL and accredited as an Authorized 3M Dealer, backed by our OEM Paint Guarantee and 50% Accident Replacement Care."
+        }
+      ]
+    },
+    "storyTitle": "The Studio Ethos & Riyadh Network",
+    "storyP1": "Inside our flagship INFINITE BRIGHT showroom in Riyadh (Al Murooj District — Imam Saud Road), every installation is governed by precision inspection lighting and backed by our Removal & Re-installation OEM Paint Guarantee.",
+    "storyP2": "Alongside INFINITE BRIGHT, Nawader El-Forsan Trading Establishment operates four official 3M-branded branches in Laban, Al Narjis, Khurais, and Al Shifa—serving discerning owners across every quadrant of Riyadh.",
+    "methodologyEyebrow": "STUDIO PROTOCOL",
+    "methodologyHeadline": "Four Stages of Uncompromising Execution",
+    "steps": [
+      {
+        "step": "STAGE 01",
+        "title": "Forensic Surface Assessment",
+        "desc": "Every vehicle is inspected under multi-angle studio lighting to map clearcoat condition, trim edges, and vulnerable impact zones."
+      },
+      {
+        "step": "STAGE 02",
+        "title": "Clinical Decontamination",
+        "desc": "Safe pH-neutral pre-washes, ferrous fallout removal, and clay treatment strip away bonded contaminants without inducing wash marks."
+      },
+      {
+        "step": "STAGE 03",
+        "title": "Corrective Polishing",
+        "desc": "Precision machine polishing removes haze and swirl defects so protective films and ceramic coatings bond to pure, high-clarity paint."
+      },
+      {
+        "step": "STAGE 04",
+        "title": "Accredited Application & Warranty",
+        "desc": "Genuine XPEL & 3M PPF, Ultra Core 85% / Core Plus 65% window films, and nano ceramics are installed and registered with official warranty coverage."
+      }
+    ]
+  },
+  "servicesPage": {
+    "eyebrow": "COMPLETE SERVICE ARCHITECTURE",
+    "headline": "Lifetime PPF Protection & 10-Year Warranted Thermal Glazing.",
+    "intro": "Explore all six core INFINITE BRIGHT disciplines alongside our Ultra Core (85% all shades) & Core Plus (65%) thermal series and our Golden Warranty advantages.",
+    "processHeading": "Execution Protocol",
+    "idealForHeading": "Recommended Profile",
+    "bookThisService": "Consult via WhatsApp"
+  },
+  "galleryPage": {
+    "eyebrow": "BEFORE & AFTER PORTFOLIO",
+    "headline": "Real Transformations: Protection, Polishing & Tinting.",
+    "intro": "Explore interactive Before & After comparisons and high-resolution studio documentation of polishing, Ultra Core 85% window tinting, PPF armor, and ceramic finishes."
+  },
+  "contactPage": {
+    "eyebrow": "DIRECT CONCIERGE & BRANCHES",
+    "headline": "Visit Al Murooj Flagship or Click Any 3M Branch Map.",
+    "intro": "Connect directly via telephone or WhatsApp, or open instant Google Maps directions to our Imam Saud Rd flagship showroom and our 3M branches across Riyadh."
+  },
+  "termsPage": {
+    "eyebrow": "TERMS, CONDITIONS & WARRANTY POLICY",
+    "headline": "Official Terms, Conditions & Client Warranties",
+    "intro": "These Terms & Conditions govern automotive protection, thermal glazing, nano ceramic, and detailing services provided by INFINITE BRIGHT, operating under Nawader El-Forsan Trading Establishment in the Kingdom of Saudi Arabia.",
+    "sections": [
+      {
+        "title": "Corporate Identity & Scope of Services",
+        "body": "INFINITE BRIGHT (Flagship Showroom: Riyadh — Al Murooj District, Imam Saud Road) and its affiliated branches operate under Nawader El-Forsan Trading Establishment, serving the Kingdom of Saudi Arabia for over 15 years as an Authorized 3M Dealer and contracted XPEL partner."
+      },
+      {
+        "title": "Open Lifetime Warranty on Paint Protection Film (PPF)",
+        "body": "Clients receive an Open Lifetime Warranty on accredited Paint Protection Film (PPF) installations covering material yellowing, cracking, blistering, or delamination under normal care and safe washing practices."
+      },
+      {
+        "title": "10-Year Warranty on Thermal Insulation & Window Tinting",
+        "body": "All thermal insulation and automotive window tinting installations—including both Ultra Core (85% heat rejection across all shades) and Core Plus (65% heat rejection)—carry an official Ten (10) Year Warranty against peeling, bubbling, color fading, or loss of solar heat rejection performance."
+      },
+      {
+        "title": "Removal, Re-installation & OEM Factory Paint Guarantee",
+        "body": "We provide a full Removal & Re-installation Warranty guaranteeing the complete safety of your vehicle's original OEM factory paintwork. When removed at our authorized studio, original factory clearcoat is guaranteed against peeling or adhesive damage."
+      },
+      {
+        "title": "Exclusive 50% Accident Replacement Client Advantage",
+        "body": "As a dedicated privilege for INFINITE BRIGHT clients, if a protected vehicle experiences any collision or impact requiring replacement of Paint Protection Film on repaired or affected panels, the client pays only 50% of the standard service cost for those panels."
+      },
+      {
+        "title": "Vehicle Inspection & Official Support",
+        "body": "Every vehicle undergoes documented pre-service and post-service studio lighting inspection. For warranty service, appointments, or inquiries, contact our unified official line via phone or WhatsApp at +966 53 442 2257."
+      }
+    ]
+  },
+  "privacyPage": {
+    "eyebrow": "PRIVACY POLICY",
+    "headline": "Privacy Policy & Client Data Protection",
+    "intro": "INFINITE BRIGHT (Nawader El-Forsan Trading Establishment) respects your privacy and is committed to protecting personal and vehicle information in accordance with applicable regulations in the Kingdom of Saudi Arabia.",
+    "sections": [
+      {
+        "title": "Information Voluntarily Provided",
+        "body": "When preparing a consultation request through our website form, you enter your name, mobile number, vehicle model, and preferred service solely to format and initiate a direct WhatsApp conversation with our specialist team."
+      },
+      {
+        "title": "Purpose of Using Client Information",
+        "body": "Contact and vehicle details shared with us are used exclusively to provide tailored service consultations, schedule studio appointments across our Al Murooj flagship or 3M branches, and register your official Lifetime / 10-Year / Accident warranty records."
+      },
+      {
+        "title": "Strict Confidentiality & Non-Disclosure",
+        "body": "We never sell, rent, or trade client phone numbers or vehicle details to external marketing agencies or unauthorized third parties under any circumstances."
+      },
+      {
+        "title": "Browser Preferences & Local Storage",
+        "body": "Our website uses local browser storage (localStorage) strictly to remember your display theme preference (Dark Mode or Light Mode) and language choice (Arabic or English), without invasive advertising trackers."
+      },
+      {
+        "title": "Client Inquiries & Warranty Records",
+        "body": "Clients may request verification or updates to their registered warranty information at any time by calling or messaging our official customer care number: +966 53 442 2257."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Part of Nawader El-Forsan Trading Est. — Over 15 years in Saudi Arabia. Authorized 3M Dealer & Contracted XPEL Partner.",
+    "navigationHeading": "Navigation & Legal",
+    "servicesHeading": "Core Services",
+    "branchesHeading": "Riyadh Branches (Maps)",
+    "contactHeading": "Direct Contact",
+    "termsLink": "Terms & Conditions",
+    "privacyLink": "Privacy Policy",
+    "rights": "All rights reserved — Nawader El-Forsan Trading Est.",
+    "floatingWhatsappTooltip": "Chat on WhatsApp",
+    "crLabel": "Commercial Reg",
+    "workingHoursLabel": "Working Hours",
+    "workingHoursValue": "Daily: 12:00 PM – 10:00 PM"
+  },
+  "homeLight": {
+    "trustBar": {
+      "crLabel": "Commercial Reg:",
+      "crValue": "1010421626",
+      "workingHoursLabel": "Working Hours:",
+      "workingHoursValue": "Daily: 12:00 PM – 10:00 PM",
+      "heritage": "Nawader El-Forsan Trading Est. (15+ Years in KSA)",
+      "authorizedPartners": "Authorized 3M Dealer & Contracted XPEL Partner",
+      "warranties": "Lifetime PPF Warranty | 10-Year Heat Rejection"
+    },
+    "servicesGate": {
+      "eyebrow": "01 // Core Services",
+      "headline": "Comprehensive Protection & Care for Your Luxury Vehicle",
+      "description": "Explore our certified automotive protection solutions with direct links to specs, packages, and pricing.",
+      "viewAllServices": "View Full Services Catalog & Pricing",
+      "cards": {
+        "ppf": {
+          "title": "Paint Protection Film (PPF)",
+          "tag": "Open Lifetime Warranty",
+          "badge": "Most Popular in KSA",
+          "description": "Self-healing thermoplastic polyurethane films defending against stone chips and sandstorms, with 50% accident replacement coverage.",
+          "cta": "View PPF Packages & Warranty"
+        },
+        "tinting": {
+          "title": "Ultra Core Thermal Insulation",
+          "tag": "85% Heat Rejection — 10-Yr Warranty",
+          "badge": "Ultra Core & Core Plus",
+          "description": "Superior solar heat rejection calibrated for Saudi summer heat across all shades (85%), plus Core Plus tier (65%).",
+          "cta": "View Tint Shades & Heat Specs"
+        },
+        "ceramic": {
+          "title": "Interior & Exterior Nano Ceramic",
+          "tag": "9H Hardness & Deep Gloss",
+          "badge": "Advanced Surface Defense",
+          "description": "Hydrophobic liquid-glass coatings imparting deep mirror-finish gloss, chemical resistance, and interior leather protection.",
+          "cta": "View Nano Ceramic Details"
+        },
+        "bundles": {
+          "title": "Exclusive VIP Bundles (35% OFF)",
+          "tag": "Protection + Tint + Ceramic + Gift",
+          "badge": "Limited Time Offer",
+          "description": "All-in-one VIP package: full vehicle PPF, Ultra Core heat rejection, interior nano protection, wheels, and free special gift.",
+          "cta": "View Discount Bundles"
+        }
+      }
+    },
+    "teasers": {
+      "eyebrow": "02 // Interactive Tools & Showcase",
+      "headline": "Preview Transformations & Explore Studio Work",
+      "colorStudio": {
+        "tag": "3D Interactive Simulator",
+        "title": "Car Color Studio & Luxury Vinyl",
+        "description": "Experiment with custom wrap colors on a luxury vehicle in real time: 12 curated palettes with gloss, matte, and metallic finishes.",
+        "cta": "Open Color Studio Now"
+      },
+      "gallery": {
+        "tag": "Authentic Riyadh Studio Results",
+        "title": "Showcase Gallery (Before & After)",
+        "description": "Inspect high-resolution before-and-after photographs of vehicles protected and detailed in our Riyadh flagship showroom.",
+        "cta": "Browse Full Gallery"
+      }
+    },
+    "warranties": {
+      "eyebrow": "03 // Certified Warranties & Credentials",
+      "headline": "Absolute Peace of Mind Backed by Official Warranties",
+      "description": "We uphold the highest standard of transparency and provide legally backed warranty certificates protecting your vehicle investment.",
+      "items": [
+        {
+          "title": "Open Lifetime Warranty",
+          "desc": "On Paint Protection Films against yellowing, cracking, bubbling, and delamination."
+        },
+        {
+          "title": "10-Year Thermal Warranty",
+          "desc": "Ultra Core 85% heat rejection across all shades without discoloration or fading."
+        },
+        {
+          "title": "100% Original Paint Guarantee",
+          "desc": "Guaranteed damage-free removal and installation protecting original factory paint."
+        },
+        {
+          "title": "50% Accident Replacement Coverage",
+          "desc": "In unfortunate accidents, clients pay only 50% of the replacement film reapplication cost."
+        }
+      ],
+      "aboutCta": "About Our Heritage (+15 Years in KSA)",
+      "termsCta": "Official Terms & Warranty Policy"
+    },
+    "branches": {
+      "eyebrow": "04 // Riyadh Branches & Working Hours",
+      "headline": "Convenient Showroom & Certified Service Centers",
+      "description": "Visit our flagship showroom or one of our authorized 3M branches across Riyadh.",
+      "flagshipTitle": "INFINITE BRIGHT Flagship Showroom",
+      "flagshipDistrict": "Riyadh — Al Murooj District, Imam Saud Rd",
+      "hoursTitle": "Working Hours",
+      "hoursValue": "Daily: 12:00 PM – 10:00 PM",
+      "crTitle": "Commercial Registration",
+      "crValue": "1010421626",
+      "openMap": "Open in Google Maps",
+      "threeMTitle": "Authorized 3M Auto Care Centers",
+      "threeMList": "Branches: Laban · Al Narjis · Khurais · Al Shifa",
+      "allBranchesLink": "View All Branch Locations & Maps"
+    },
+    "quickContact": {
+      "eyebrow": "05 // Instant Concierge & Booking",
+      "headline": "Direct Personalized Service Tailored for You",
+      "description": "Connect directly via WhatsApp or phone. Our senior advisors are on hand to guide you to the perfect package.",
+      "whatsappButton": "Chat with Us on WhatsApp Now",
+      "callButton": "Call Us Directly",
+      "detailedFormPrompt": "Prefer submitting custom vehicle details?",
+      "detailedFormLink": "Go to Detailed Consultation Form"
+    }
+  }
+}

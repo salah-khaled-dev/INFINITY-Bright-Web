@@ -1,0 +1,60 @@
+import type { ServiceItem } from "@/types";
+
+export const SERVICES_DATA: ServiceItem[] = [
+  {
+    id: "ppf",
+    index: "01",
+    image: "/images/services/ppf-installation.jpg",
+    secondaryImage: "/images/services/paint-protection.jpg",
+    category: "ppf",
+    featured: true,
+  },
+  {
+    id: "window-tinting",
+    index: "02",
+    image: "/images/services/window-tinting.jpg",
+    secondaryImage: "/images/services/heat-insulation.jpg",
+    category: "thermal",
+    featured: true,
+  },
+  {
+    id: "heat-insulation",
+    index: "03",
+    image: "/images/services/heat-insulation.jpg",
+    secondaryImage: "/images/services/window-tinting.jpg",
+    category: "thermal",
+    featured: true,
+  },
+  {
+    id: "ceramic-coating",
+    index: "04",
+    image: "/images/services/ceramic-coating.jpg",
+    secondaryImage: "/images/services/water-beading.jpg",
+    category: "ceramic",
+    featured: true,
+  },
+  {
+    id: "paint-protection",
+    index: "05",
+    image: "/images/services/paint-protection.jpg",
+    secondaryImage: "/images/gallery/hood-reflection.jpg",
+    category: "ppf",
+    featured: false,
+  },
+  {
+    id: "car-detailing",
+    index: "06",
+    image: "/images/services/car-detailing.jpg",
+    secondaryImage: "/images/gallery/interior-detail.jpg",
+    category: "detailing",
+    featured: true,
+  },
+  {
+    id: "color-change",
+    index: "07",
+    image: "/images/services/color-change-studio.jpg",
+    secondaryImage: "/images/services/window-tinting.jpg",
+    category: "ppf",
+    featured: true,
+  },
+];
