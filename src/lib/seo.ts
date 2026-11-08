@@ -41,9 +41,11 @@ export function buildPageMetadata(
       type: "website",
       images: [
         {
-          url: "/images/hero/hero-main.jpg",
-          width: 1376,
-          height: 768,
+          url: `${baseUrl}/images/hero/hero-main.jpg`,
+          secureUrl: `${baseUrl}/images/hero/hero-main.jpg`,
+          width: 1200,
+          height: 630,
+          type: "image/jpeg",
           alt: BUSINESS_CONFIG.brandName[locale],
         },
       ],
@@ -52,7 +54,7 @@ export function buildPageMetadata(
       card: "summary_large_image",
       title: pageMeta.title,
       description: pageMeta.description,
-      images: ["/images/hero/hero-main.jpg"],
+      images: [`${baseUrl}/images/hero/hero-main.jpg`],
     },
   };
 }

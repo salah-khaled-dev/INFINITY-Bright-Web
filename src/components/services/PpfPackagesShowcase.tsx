@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CheckCircle2, Shield, ShieldCheck, Sparkles } from "lucide-react";
+import { CheckCircle2, Shield, ShieldCheck, Sparkles, Check, X, Minus } from "lucide-react";
 import { buildWhatsAppUrl } from "@/config/business";
 import type { Dictionary } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -11,6 +11,138 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { LuxuryIconBadge } from "@/components/ui/LuxuryIconBadge";
 
 type PackageKey = "front" | "half" | "full";
+
+interface ComparisonRow {
+  name: { ar: string; en: string };
+  isWarranty?: boolean;
+  front: { status: "full" | "partial" | "none"; label: { ar: string; en: string } };
+  half: { status: "full" | "partial" | "none"; label: { ar: string; en: string } };
+  full: { status: "full" | "partial" | "none"; label: { ar: string; en: string } };
+}
+
+const COMPARISON_ROWS: ComparisonRow[] = [
+  {
+    name: { ar: "الصدام الأمامي والأنوار والكشافات", en: "Front Bumper & Headlights" },
+    front: { status: "full", label: { ar: "مشمول بالكامل", en: "Full Coverage" } },
+    half: { status: "full", label: { ar: "مشمول بالكامل", en: "Full Coverage" } },
+    full: { status: "full", label: { ar: "مشمول بالكامل", en: "Full Coverage" } },
+  },
+  {
+    name: { ar: "الكبوت الأمامي", en: "Front Hood" },
+    front: { status: "partial", label: { ar: "40 سم أمامي", en: "Front 40cm" } },
+    half: { status: "full", label: { ar: "كامل الكبوت", en: "Full Hood" } },
+    full: { status: "full", label: { ar: "كامل الكبوت", en: "Full Hood" } },
+  },
+  {
+    name: { ar: "الرفارف الأمامية", en: "Front Fenders" },
+    front: { status: "partial", label: { ar: "40 سم أمامي", en: "Front 40cm" } },
+    half: { status: "full", label: { ar: "كاملة", en: "Full Fenders" } },
+    full: { status: "full", label: { ar: "كاملة", en: "Full Fenders" } },
+  },
+  {
+    name: { ar: "مرايا السيارة وقوائم الزجاج (الأكتاف)", en: "Side Mirrors & A-Pillars" },
+    front: { status: "full", label: { ar: "مشمولة", en: "Included" } },
+    half: { status: "full", label: { ar: "مشمولة", en: "Included" } },
+    full: { status: "full", label: { ar: "مشمولة", en: "Included" } },
+  },
+  {
+    name: { ar: "مساكات الأبواب وأطراف الأبواب", en: "Door Cups & Door Edges" },
+    front: { status: "full", label: { ar: "مشمولة", en: "Included" } },
+    half: { status: "full", label: { ar: "مشمولة", en: "Included" } },
+    full: { status: "full", label: { ar: "مشمولة", en: "Included" } },
+  },
+  {
+    name: { ar: "غطاء تانك البنزين", en: "Fuel Tank Flap" },
+    front: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    half: { status: "full", label: { ar: "مشمول", en: "Included" } },
+    full: { status: "full", label: { ar: "مشمول", en: "Included" } },
+  },
+  {
+    name: { ar: "الأبواب الجانبية بالكامل (4 أبواب)", en: "Full Side Doors (4 Doors)" },
+    front: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    half: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    full: { status: "full", label: { ar: "مشمولة بالكامل", en: "Full Coverage" } },
+  },
+  {
+    name: { ar: "الرفارف الخلفية وأكتاف السقف", en: "Rear Quarters & Pillars" },
+    front: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    half: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    full: { status: "full", label: { ar: "مشمولة بالكامل", en: "Full Coverage" } },
+  },
+  {
+    name: { ar: "سقف السيارة والشنطة الخلفية", en: "Roof & Trunk Lid" },
+    front: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    half: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    full: { status: "full", label: { ar: "مشمولة بالكامل", en: "Full Coverage" } },
+  },
+  {
+    name: { ar: "الصدام الخلفي وحافة التحميل", en: "Rear Bumper & Trunk Lip" },
+    front: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    half: { status: "none", label: { ar: "غير مشمول", en: "Not Included" } },
+    full: { status: "full", label: { ar: "مشمول بالكامل", en: "Full Coverage" } },
+  },
+  {
+    name: { ar: "الضمان المفتوح مدى الحياة", en: "Open Lifetime PPF Warranty" },
+    isWarranty: true,
+    front: { status: "full", label: { ar: "معتمد رسمياً", en: "Official Lifetime" } },
+    half: { status: "full", label: { ar: "معتمد رسمياً", en: "Official Lifetime" } },
+    full: { status: "full", label: { ar: "معتمد رسمياً", en: "Official Lifetime" } },
+  },
+  {
+    name: { ar: "ضمان سلامة بوية الوكالة 100% عند الفك", en: "Safe OEM Paint Removal Guarantee" },
+    isWarranty: true,
+    front: { status: "full", label: { ar: "مضمون 100%", en: "100% Guaranteed" } },
+    half: { status: "full", label: { ar: "مضمون 100%", en: "100% Guaranteed" } },
+    full: { status: "full", label: { ar: "مضمون 100%", en: "100% Guaranteed" } },
+  },
+  {
+    name: { ar: "ميزة ضمان الحوادث 50% (تحمل نصف تكلفة التغيير للقطعة المتضررة كالصدام أو الرفرف أو الباب)", en: "50% Accident Replacement (Pay 50% on damaged panels)" },
+    isWarranty: true,
+    front: { status: "full", label: { ar: "50% فقط للقطعة المتضررة", en: "50% Only on Damaged Part" } },
+    half: { status: "full", label: { ar: "50% فقط للقطعة المتضررة", en: "50% Only on Damaged Part" } },
+    full: { status: "full", label: { ar: "50% فقط للقطعة المتضررة", en: "50% Only on Damaged Part" } },
+  },
+];
+
+function StatusBadge({
+  status,
+  text,
+  isHighlight = false,
+}: {
+  status: "full" | "partial" | "none";
+  text: string;
+  isHighlight?: boolean;
+}) {
+  if (status === "full") {
+    return (
+      <span
+        className={cn(
+          "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-bold",
+          isHighlight
+            ? "bg-[#FBE90A] text-[#060608] shadow-[0_2px_8px_rgba(251,233,10,0.3)]"
+            : "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"
+        )}
+      >
+        <Check className="h-3.5 w-3.5 shrink-0" />
+        <span>{text}</span>
+      </span>
+    );
+  }
+  if (status === "partial") {
+    return (
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 px-2.5 py-1 text-[11px] font-bold text-amber-600 dark:text-amber-400">
+        <Minus className="h-3.5 w-3.5 shrink-0" />
+        <span>{text}</span>
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--bg-canvas)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-muted)]">
+      <X className="h-3.5 w-3.5 shrink-0 opacity-60" />
+      <span>{text}</span>
+    </span>
+  );
+}
 
 interface PpfPackagesShowcaseProps {
   locale: Locale;
@@ -430,6 +562,126 @@ export function PpfPackagesShowcase({
           );
         })}
       </div>
+
+      {/* Detailed Coverage Comparison Matrix (Inclusions vs Exclusions) */}
+      <Reveal delay={0.12} className="mt-14 sm:mt-20">
+        <div className="overflow-hidden rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] shadow-[var(--shadow-card)]">
+          {/* Header */}
+          <div className="border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)]/60 px-6 py-6 sm:px-8">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-[#FBE90A]/40 bg-[#FBE90A]/10 px-3 py-0.5 text-[11px] font-bold text-[var(--brand-accent-label)]">
+                  <ShieldCheck className="h-3.5 w-3.5" />
+                  <span>{locale === "ar" ? "مقارنة شفافة ومعتمدة" : "Verified Comparison"}</span>
+                </span>
+                <h4 className="mt-2 font-display text-xl font-extrabold text-[var(--text-primary)] sm:text-2xl">
+                  {locale === "ar"
+                    ? "جدول مقارنة باقات الحماية (ما تشمله وما لا تشمله كل باقة)"
+                    : "Detailed Coverage Comparison Matrix (Inclusions vs Exclusions)"}
+                </h4>
+                <p className="mt-1 text-xs text-[var(--text-secondary)] sm:text-sm">
+                  {locale === "ar"
+                    ? "تحديد دقيق لأجزاء السيارة المشمولة في كل باقة، مع بيان مزايا الضمان الذهبي وضمان الحوادث 50% المشمولة في كافة الباقات."
+                    : "Clear breakdown of covered vehicle zones across all packages, highlighting our open lifetime warranty and 50% accident care."}
+                </p>
+              </div>
+
+              {/* Legend */}
+              <div className="flex flex-wrap items-center gap-3 text-xs">
+                <span className="inline-flex items-center gap-1.5 font-semibold text-emerald-500">
+                  <Check className="h-4 w-4" />
+                  <span>{locale === "ar" ? "مشمول بالكامل" : "Full Coverage"}</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 font-semibold text-amber-500">
+                  <Minus className="h-4 w-4" />
+                  <span>{locale === "ar" ? "مشمول جزئياً" : "Partial"}</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 font-semibold text-[var(--text-muted)]">
+                  <X className="h-4 w-4" />
+                  <span>{locale === "ar" ? "غير مشمول" : "Not Included"}</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Responsive Scrollable Comparison Table */}
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[640px] text-start text-xs sm:text-sm">
+              <thead>
+                <tr className="border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)]/40 text-[var(--text-secondary)]">
+                  <th scope="col" className="p-4 sm:p-5 text-start font-bold">
+                    {locale === "ar" ? "القطعة / ميزة الضمان" : "Panel / Warranty Feature"}
+                  </th>
+                  <th scope="col" className="p-4 sm:p-5 text-center font-bold">
+                    <span className="block text-[var(--text-primary)] font-extrabold">{dict.packages.front.title}</span>
+                    <span className="text-[11px] text-[var(--text-muted)]">{dict.packages.front.badge}</span>
+                  </th>
+                  <th scope="col" className="p-4 sm:p-5 text-center font-bold bg-[#FBE90A]/5 border-x border-[#FBE90A]/20">
+                    <span className="block text-[var(--brand-accent-label)] font-extrabold">{dict.packages.half.title}</span>
+                    <span className="text-[11px] text-[#FBE90A]">{dict.packages.half.badge}</span>
+                  </th>
+                  <th scope="col" className="p-4 sm:p-5 text-center font-bold">
+                    <span className="block text-[var(--text-primary)] font-extrabold">{dict.packages.full.title}</span>
+                    <span className="text-[11px] text-[var(--text-muted)]">{dict.packages.full.badge}</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[var(--border-subtle)]">
+                {COMPARISON_ROWS.map((row, rIdx) => {
+                  const isWarrantyRow = row.isWarranty;
+                  return (
+                    <tr
+                      key={rIdx}
+                      className={cn(
+                        "transition-colors hover:bg-[var(--bg-canvas)]/50",
+                        isWarrantyRow && "bg-[var(--brand-accent)]/5 font-semibold"
+                      )}
+                    >
+                      <td className="p-4 sm:p-5 font-medium text-[var(--text-primary)]">
+                        <div className="flex items-center gap-2">
+                          {isWarrantyRow ? (
+                            <ShieldCheck className="h-4 w-4 shrink-0 text-[var(--brand-accent-label)]" />
+                          ) : (
+                            <span className="h-1.5 w-1.5 rounded-full bg-[var(--text-muted)]" />
+                          )}
+                          <span>{locale === "ar" ? row.name.ar : row.name.en}</span>
+                        </div>
+                      </td>
+
+                      {/* Front Package */}
+                      <td className="p-4 sm:p-5 text-center">
+                        <StatusBadge status={row.front.status} text={locale === "ar" ? row.front.label.ar : row.front.label.en} />
+                      </td>
+
+                      {/* Half-Front Package (Popular - Highlighted) */}
+                      <td className="p-4 sm:p-5 text-center bg-[#FBE90A]/5 border-x border-[#FBE90A]/20">
+                        <StatusBadge status={row.half.status} text={locale === "ar" ? row.half.label.ar : row.half.label.en} isHighlight />
+                      </td>
+
+                      {/* Full Body Package */}
+                      <td className="p-4 sm:p-5 text-center">
+                        <StatusBadge status={row.full.status} text={locale === "ar" ? row.full.label.ar : row.full.label.en} />
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Footer note on the 50% accident discount */}
+          <div className="border-t border-[var(--border-subtle)] bg-[var(--bg-canvas)]/40 p-4 sm:p-5 text-xs text-[var(--text-secondary)]">
+            <p className="flex items-start gap-2">
+              <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-[#FBE90A]" />
+              <span>
+                {locale === "ar"
+                  ? "ملاحظة مهمة: ميزة ضمان الحوادث 50% تضمن لك في حال تضرر أي جزء من الحماية (كالصدام أو الرفرف أو الباب) بسبب صدمة أو حادث لا قدر الله، دفع 50% فقط من تكلفة إعادة تركيب وتغيير الفيلم للقطعة المتضررة دون تحميلك التكلفة كاملة."
+                  : "Important: Our 50% Accident Care ensures that if any protected panel (such as a bumper, fender, or door) is damaged in a collision, you pay only 50% of the replacement installation fee for that specific panel."}
+              </span>
+            </p>
+          </div>
+        </div>
+      </Reveal>
     </div>
   );
 }

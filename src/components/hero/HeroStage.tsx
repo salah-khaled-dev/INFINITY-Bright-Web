@@ -106,7 +106,7 @@ export function HeroStage({
   }, [onSceneReady, reducedMotion]);
 
   // Frame Loop: Smooth theme cross-fade, cursor tracking light, and particle motion
-  useFrame(({ pointer, clock }, delta) => {
+  useFrame(({ pointer }, delta) => {
     // 1. Smooth theme transition (lerp over ~400ms)
     const targetThemeProgress = isLight ? 1 : 0;
     themeProgressRef.current = THREE.MathUtils.damp(
@@ -134,7 +134,7 @@ export function HeroStage({
 
     // 3. Gentle atmospheric particle drift
     if (particlesRef.current && !reducedMotion) {
-      const time = clock.getElapsedTime() * 0.12;
+      const time = (typeof performance !== "undefined" ? performance.now() * 0.001 : 0) * 0.12;
       const positions = particlesRef.current.geometry.attributes.position.array as Float32Array;
       const count = positions.length / 3;
 

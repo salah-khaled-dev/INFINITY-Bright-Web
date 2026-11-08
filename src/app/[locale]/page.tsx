@@ -9,6 +9,7 @@ import { HomeTrustStrip } from "@/components/home/HomeTrustStrip";
 import { HomeServicesGate } from "@/components/home/HomeServicesGate";
 import { HomeInteractiveTeasers } from "@/components/home/HomeInteractiveTeasers";
 import { HomeWarrantiesQuick } from "@/components/home/HomeWarrantiesQuick";
+import { GoogleReviewsSection } from "@/components/sections/GoogleReviewsSection";
 import { HomeBranchesQuick } from "@/components/home/HomeBranchesQuick";
 import { HomeQuickContact } from "@/components/home/HomeQuickContact";
 
@@ -52,10 +53,13 @@ export default async function HomePage({
       {/* 5. Official Warranties & Corporate Heritage (+15 Years in KSA) */}
       <HomeWarrantiesQuick locale={typedLocale} dict={dict.homeLight.warranties} />
 
-      {/* 6. Riyadh Flagship Showroom & 3M Branches with Google Maps & Working Hours */}
+      {/* 6. Authentic Verified Google Customer Reviews (4.6 ★ Across 40 Reviews, 4-5 Stars Filtered Testimonials) */}
+      <GoogleReviewsSection locale={typedLocale} />
+
+      {/* 7. Riyadh Flagship Showroom & 3M Branches with Google Maps & Working Hours */}
       <HomeBranchesQuick locale={typedLocale} dict={dict.homeLight.branches} />
 
-      {/* 7. Fast Direct WhatsApp & Phone Concierge for Saudi Clientele */}
+      {/* 8. Fast Direct WhatsApp & Phone Concierge for Saudi Clientele */}
       <HomeQuickContact locale={typedLocale} dict={dict.homeLight.quickContact} />
     </>
   );

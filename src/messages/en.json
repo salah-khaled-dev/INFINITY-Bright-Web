@@ -10,7 +10,7 @@
     },
     "services": {
       "title": "Services | Lifetime PPF, 10-Year Ultra Core 85% & Core Plus 65% Tinting — INFINITE BRIGHT",
-      "description": "Explore our six specialized disciplines backed by an Open Lifetime PPF Warranty, Safe Removal Paint Guarantee, 50% Accident Care, and 10-Year Thermal Insulation Warranty."
+      "description": "Explore our seven specialized disciplines backed by an Open Lifetime PPF Warranty, Safe Removal Paint Guarantee, 50% Accident Care, and 10-Year Thermal Insulation Warranty."
     },
     "gallery": {
       "title": "Before & After Gallery | INFINITE BRIGHT Riyadh",
@@ -468,7 +468,7 @@
       {
         "code": "GUARANTEE 03",
         "title": "50% Accident Replacement Benefit",
-        "detail": "Following any collision or impact, replacing protection on repaired panels costs the client only 50% of the service fee."
+        "detail": "If any protected panel (such as a bumper, fender, or door) is damaged in an accident, the client pays only 50% of the replacement installation cost for that specific panel."
       }
     ],
     "cta": "Configure Lifetime PPF Consultation"
@@ -570,7 +570,7 @@
       {
         "metric": "50% ONLY",
         "title": "Accident Replacement Advantage",
-        "detail": "Exclusive client privilege: after any collision or impact, replacing the protective film on affected panels costs you only 50% of the service price.",
+        "detail": "Exclusive client privilege: when replacing protective film on any accident-damaged panel (such as a bumper, fender, or door), you pay only 50% of the replacement installation cost.",
         "tag": "Post-Collision Client Care"
       }
     ]
@@ -924,7 +924,7 @@
   "servicesPage": {
     "eyebrow": "COMPLETE SERVICE ARCHITECTURE",
     "headline": "Lifetime PPF Protection & 10-Year Warranted Thermal Glazing.",
-    "intro": "Explore all six core INFINITE BRIGHT disciplines alongside our Ultra Core (85% all shades) & Core Plus (65%) thermal series and our Golden Warranty advantages.",
+    "intro": "Explore all seven core INFINITE BRIGHT disciplines alongside our Ultra Core (85% IR rejection) & Core Plus (65%) thermal series and our Golden Warranty advantages.",
     "processHeading": "Execution Protocol",
     "idealForHeading": "Recommended Profile",
     "bookThisService": "Consult via WhatsApp"
@@ -962,7 +962,7 @@
       },
       {
         "title": "Exclusive 50% Accident Replacement Client Advantage",
-        "body": "As a dedicated privilege for INFINITE BRIGHT clients, if a protected vehicle experiences any collision or impact requiring replacement of Paint Protection Film on repaired or affected panels, the client pays only 50% of the standard service cost for those panels."
+        "body": "As a dedicated privilege for INFINITE BRIGHT clients, if a vehicle suffers an accident or collision requiring PPF re-installation on any damaged part (such as a bumper, fender, or door), the client pays only 50% of the replacement installation cost for that specific part rather than the full cost, and we cover the remaining 50%."
       },
       {
         "title": "Vehicle Inspection & Official Support",
@@ -1092,7 +1092,7 @@
         },
         {
           "title": "50% Accident Replacement Coverage",
-          "desc": "In unfortunate accidents, clients pay only 50% of the replacement film reapplication cost."
+          "desc": "In unfortunate accidents, clients pay only 50% of the replacement installation cost for damaged panels like bumpers, fenders, or doors."
         }
       ],
       "aboutCta": "About Our Heritage (+15 Years in KSA)",

@@ -91,16 +91,17 @@ export function HeroMobile({
           </div>
         </div>
 
-        {/* Mobile Headline — Refined, bold, unclipped */}
-        <h1
+        {/* Mobile Headline — Refined, bold, unclipped (Semantic H1 is canonically declared on Desktop HeroContent to prevent duplicate DOM announcements) */}
+        <p
           data-mobile-reveal
+          aria-hidden="true"
           className={cn(
             "font-display text-[1.65rem] font-extrabold leading-[1.22] tracking-tight sm:text-3xl",
             isLight ? "text-[#09090b]" : "text-white"
           )}
         >
           {dict.headline}
-        </h1>
+        </p>
 
         {/* Mobile Description — Shorter readable lines, softer secondary tone */}
         <p

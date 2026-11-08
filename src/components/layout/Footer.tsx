@@ -492,7 +492,7 @@ export function Footer({ locale, dict }: FooterProps) {
           <div className="flex flex-col items-center justify-between gap-3 text-center sm:flex-row sm:text-start">
             {/* Copyright Statement */}
             <p>
-              © {year} {BUSINESS_CONFIG.brandName[locale]}. {isAr ? "جميع الحقوق محفوظة." : "All rights reserved."}
+              © {year} {BUSINESS_CONFIG.parentOrganization[locale]} — {BUSINESS_CONFIG.brandName[locale]}. {isAr ? "جميع الحقوق محفوظة." : "All rights reserved."}
             </p>
 
             {/* Subtle Commercial Registration & Legal Links */}

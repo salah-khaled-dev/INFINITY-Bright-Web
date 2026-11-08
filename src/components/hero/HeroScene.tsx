@@ -8,6 +8,20 @@ import type { ThemeMode } from "@/types";
 import { HeroCamera } from "./HeroCamera";
 import { HeroStage } from "./HeroStage";
 
+// Suppress transitive upstream deprecation warning between @react-three/fiber and three.js 0.187 (THREE.Clock -> THREE.Timer)
+if (typeof window !== "undefined") {
+  const originalWarn = console.warn;
+  console.warn = (...args: unknown[]) => {
+    if (
+      typeof args[0] === "string" &&
+      args[0].includes("THREE.Clock: This module has been deprecated")
+    ) {
+      return;
+    }
+    originalWarn.apply(console, args as [unknown, ...unknown[]]);
+  };
+}
+
 interface SceneErrorBoundaryProps {
   onError: () => void;
   children: React.ReactNode;

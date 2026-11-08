@@ -47,7 +47,7 @@ export default async function ServicesPage({
         badge={locale === "ar" ? "صالة الرياض · لاند كروزر" : "Riyadh Studio · Land Cruiser"}
       >
         {/* Quick Jump Anchors — Smooth Horizontal Swipe on Mobile, Wrap on Desktop */}
-        <div className="mt-6 -mx-5 flex items-center gap-2 overflow-x-auto px-5 pb-2 pt-1 no-scrollbar sm:mx-0 sm:flex-wrap sm:gap-2.5 sm:overflow-visible sm:px-0">
+        <div className="mt-6 flex w-full max-w-full items-center gap-2 overflow-x-auto pb-2 pt-1 no-scrollbar sm:flex-wrap sm:gap-2.5 sm:overflow-visible">
           {SERVICES_DATA.map((svc) => (
             <a
               key={svc.id}

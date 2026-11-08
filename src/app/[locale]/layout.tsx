@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "@/app/globals.css";
@@ -118,10 +119,15 @@ export default async function LocaleLayout({
       lang={locale}
       dir={dir}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`${montserrat.variable} ${plusJakartaSans.variable} ${cairo.variable}`}
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
+        />
         <link
           rel="preload"
           as="image"
@@ -139,11 +145,11 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen antialiased selection:bg-[#FBE90A] selection:text-[#060608]">
+      <body className="min-h-screen antialiased selection:bg-[#FBE90A] selection:text-[#060608] overflow-x-hidden max-w-[100vw] w-full">
         <ThemeProvider locale={locale} dir={dir}>
-          <div className="flex min-h-screen flex-col">
+          <div className="flex min-h-screen flex-col overflow-x-hidden max-w-[100vw] w-full">
             <Navbar locale={locale} dict={dict.nav} />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 overflow-x-hidden max-w-[100vw] w-full">{children}</main>
             <Footer locale={locale} dict={dict} />
           </div>
           <FloatingWhatsApp tooltip={dict.footer.floatingWhatsappTooltip} />

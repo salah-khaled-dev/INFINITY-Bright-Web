@@ -163,7 +163,7 @@ export const SITE_CONFIG: SiteConfig = {
       ar: "مؤسسة نوادر الفرسان للتجارة",
     },
     commercialRegistration: "1010421626",
-    domain: "https://infinite-bright.com",
+    domain: process.env.NEXT_PUBLIC_SITE_URL || "https://infinity-bright2.vercel.app",
     defaultLocale: "ar",
     defaultTheme: "light",
     colors: {
@@ -179,7 +179,7 @@ export const SITE_CONFIG: SiteConfig = {
     assets: {
       logoTextEn: "INFINITE BRIGHT",
       logoTextAr: "إنفينيتي برايت",
-      nawaderLogo: "/images/brand/nawader-logo-new.png",
+      nawaderLogo: "/images/brand/nawader-logo.png",
       threeMLogoOnly: "/images/brand/3m-pure-logo.png",
       heroDesktopDark: "/images/hero/hero-desktop-dark.webp",
       heroDesktopLight: "/images/hero/hero-desktop-light.webp",
@@ -328,11 +328,11 @@ export const SITE_CONFIG: SiteConfig = {
     enableThemeSwitcher: true,
     enableFloatingWhatsApp: true,
     enableTrustStrip: true,
-    enableReviews: false, // Disabled until verified third-party reviews exist
+    enableReviews: true, // Enabled with verified Google Business reviews
   },
 
   seo: {
-    metadataBase: "https://infinite-bright.com",
+    metadataBase: process.env.NEXT_PUBLIC_SITE_URL || "https://infinity-bright2.vercel.app",
     twitterHandle: "@infinite_bright_sa",
   },
 };
