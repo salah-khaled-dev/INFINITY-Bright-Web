@@ -28,8 +28,8 @@ export function ServiceDetailChapter({
 }: ServiceDetailChapterProps) {
   const waHref = buildWhatsAppUrl(
     locale === "ar"
-      ? `مرحباً إنفينيتي برايت، أود حجز استشارة لخدمة: ${copy.title}`
-      : `Hello INFINITE BRIGHT, I would like to request a consultation for: ${copy.title}`
+      ? `مرحباً إنفينيتي برايت، أود حجز موعد لخدمة: ${copy.title}`
+      : `Hello INFINITE BRIGHT, I would like to book an appointment for: ${copy.title}`
   );
 
   return (
@@ -78,11 +78,15 @@ export function ServiceDetailChapter({
                       ? "فيديو تركيب عملي مباشر"
                       : service.id === "ceramic-coating"
                       ? "تطبيق سيراميك (نيسان باترول 2026)"
+                      : service.id === "heat-insulation"
+                      ? "تركيب عازل حراري (لاند كروزر 2026)"
                       : "فيديو تلميع مباشر"
                     : service.id === "ppf"
                     ? "Live PPF Installation"
                     : service.id === "ceramic-coating"
                     ? "Nissan Patrol 2026 Ceramic"
+                    : service.id === "heat-insulation"
+                    ? "Land Cruiser 2026 Thermal Glazing"
                     : "Live Craftsmanship"}
                 </span>
               </div>

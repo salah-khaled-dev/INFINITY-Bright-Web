@@ -115,7 +115,9 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
       index: "02",
       data: dict.cards.tinting,
       image: "/images/services/window-tinting.jpg",
-      href: `${localizedHref(locale, "services")}#window-tinting`,
+      video: "/videos/Technician_installing_window_film_ae402102_1080p.mp4",
+      videoPoster: "/images/services/window-tinting.jpg",
+      href: `${localizedHref(locale, "services")}#heat-insulation`,
       icon: SunMedium,
       highlights: isAr
         ? [
@@ -261,7 +263,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                   aria-selected={isActive}
                   onClick={() => setActiveKey(item.key)}
                   className={cn(
-                    "group relative flex shrink-0 items-center gap-3 rounded-2xl border px-4 py-3.5 text-start transition-all duration-300 sm:w-full",
+                    "group relative flex shrink-0 items-center gap-2 rounded-2xl border px-3 py-2.5 text-start transition-all duration-300 sm:w-full sm:gap-2 sm:px-2.5 sm:py-3 lg:gap-2.5 lg:px-3 lg:py-3.5 xl:gap-3 xl:px-4",
                     isActive
                       ? "border-[#FBE90A] bg-[var(--bg-surface)] shadow-[0_8px_24px_rgba(251,233,10,0.18)]"
                       : "border-[var(--border-subtle)] bg-[var(--bg-surface)]/60 hover:border-[var(--border-strong)] hover:bg-[var(--bg-surface)]"
@@ -269,19 +271,19 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                 >
                   <span
                     className={cn(
-                      "flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-all duration-300",
+                      "flex h-8 w-8 shrink-0 items-center justify-center rounded-xl transition-all duration-300 sm:h-7.5 sm:w-7.5 lg:h-8.5 lg:w-8.5 xl:h-9 xl:w-9",
                       isActive
                         ? "bg-[#FBE90A] text-[#060608] shadow-sm"
                         : "border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-muted)] group-hover:text-[var(--text-primary)]"
                     )}
                   >
-                    <TabIcon className="h-4.5 w-4.5" />
+                    <TabIcon className="h-4 w-4 sm:h-3.5 sm:w-3.5 lg:h-4 lg:w-4 xl:h-4.5 xl:w-4.5" />
                   </span>
 
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span
                       className={cn(
-                        "block font-mono text-[10px] font-bold tracking-wider uppercase",
+                        "block truncate font-mono text-[9px] font-bold tracking-wider uppercase xl:text-[10px]",
                         isActive
                           ? "text-[var(--brand-accent-label)]"
                           : "text-[var(--text-muted)]"
@@ -291,7 +293,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                     </span>
                     <span
                       className={cn(
-                        "block truncate text-xs font-extrabold sm:text-sm",
+                        "block text-xs font-extrabold leading-tight transition-colors sm:text-[11px] lg:text-[12px] xl:text-[13px]",
                         isActive
                           ? "text-[var(--text-primary)]"
                           : "text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]"
@@ -431,7 +433,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                 >
                   <WhatsAppIcon className="h-4.5 w-4.5 text-white" />
                   <span>
-                    {isAr ? "احجز استشارة فورية عبر واتساب" : "Instant WhatsApp Booking"}
+                    {isAr ? "احجز موعد عبر واتساب" : "Book Appointment via WhatsApp"}
                   </span>
                 </a>
 

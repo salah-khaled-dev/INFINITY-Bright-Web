@@ -40,7 +40,7 @@
     "colorStudio": "Color Studio",
     "gallery": "Gallery",
     "contact": "Contact",
-    "contactCta": "Book Consultation",
+    "contactCta": "Book Appointment",
     "whatsapp": "WhatsApp",
     "callUs": "Call Direct",
     "switchToAr": "العربية",
@@ -180,8 +180,8 @@
       "idealFor": "Drivers seeking sleek OEM+ privacy, warranted thermal relief, and crystal night visibility."
     },
     "heat-insulation": {
-      "title": "Heat Insulation (10-Year Warranty)",
-      "shortDesc": "High-rejection solar barriers backed by a 10-Year Warranty: Ultra Core (85% rejection, all shades) and Core Plus (65% rejection).",
+      "title": "Thermal Insulation & Window Glazing (10-Yr Warranty)",
+      "shortDesc": "Professional thermal glazing backed by a 10-year warranty in two tiers: Ultra Core 85% and Core Plus 65%.",
       "fullDesc": "Engineered specifically to conquer intense Saudi summer heat with a 10-Year Official Warranty. Choose our flagship Ultra Core tier (85% heat insulation, available in all shades including clear windshield film) or Core Plus (65% heat insulation) to protect fine cabin interiors.",
       "process": [
         "Full glazing evaluation including panoramic roof and front windscreen",
@@ -460,7 +460,7 @@
         "detail": "If any protected panel (such as a bumper, fender, or door) is damaged in an accident, the client pays only 50% of the replacement installation cost for that specific panel."
       }
     ],
-    "cta": "Configure Lifetime PPF Consultation"
+    "cta": "Book Lifetime PPF Appointment"
   },
   "heatExperience": {
     "eyebrow": "04 // THERMAL GLAZING — 10-YEAR WARRANTY",
@@ -506,7 +506,11 @@
         "detail": "Shields dashboard leather, contrast stitching, and carbon inlays from fading and cracking."
       }
     ],
-    "cta": "Compare Ultra Core & Core Plus"
+    "cta": "Compare Ultra Core & Core Plus",
+    "videoHeading": "See How Thermal Insulation Is Installed",
+    "videoDescription": "Professional interior installation with complete protection of your vehicle's cabin.",
+    "videoBadge": "Live Process Video · Land Cruiser 2026",
+    "videoTag": "Full Interior & Dashboard Shielding"
   },
   "ceramicExperience": {
     "eyebrow": "05 // NANO CERAMIC EXPERIENCE",
@@ -738,7 +742,7 @@
     "directionsLabel": "Click for Location"
   },
   "contactSection": {
-    "eyebrow": "10 // PRIVATE CONSULTATION",
+    "eyebrow": "10 // BOOK APPOINTMENT",
     "headline": "Commission Your Vehicle's Protection.",
     "description": "Speak directly with our specialists via phone or WhatsApp, or visit our Al Murooj flagship showroom or any of our 4 official 3M branches in Riyadh.",
     "directCallLabel": "Official Telephone",
@@ -751,8 +755,8 @@
     "hoursLabel": "Hours",
     "configurableHint": "Al Murooj — Imam Saud Rd",
     "form": {
-      "title": "Prepare a Tailored Inquiry",
-      "subtitle": "Complete your vehicle details below to launch a structured consultation message directly on WhatsApp.",
+      "title": "Book an Appointment",
+      "subtitle": "Complete your vehicle details below to confirm your appointment directly on WhatsApp.",
       "nameLabel": "Full Name",
       "namePlaceholder": "Enter your name",
       "phoneLabel": "Mobile Number",
@@ -774,8 +778,8 @@
       "notesLabel": "Preferred Branch or Shade Notes (Optional)",
       "notesPlaceholder": "Preferred branch (Al Murooj / Laban / Al Narjis / Khurais / Al Shifa), tint shade, or questions...",
       "submitWhatsapp": "Send Inquiry via WhatsApp",
-      "successTitle": "WhatsApp Consultation Ready",
-      "successBody": "Your tailored inquiry has been opened in WhatsApp. You may also call us directly anytime at +966 53 442 2257.",
+      "successTitle": "WhatsApp Appointment Ready",
+      "successBody": "Your tailored appointment details have been opened in WhatsApp. You may also call us directly anytime at +966 53 442 2257.",
       "resetButton": "Prepare Another Inquiry",
       "errors": {
         "nameMin": "Please enter your name (at least 2 characters).",
@@ -784,7 +788,7 @@
         "serviceRequired": "Please select a service discipline."
       },
       "whatsappTemplate": {
-        "greeting": "Hello INFINITE BRIGHT, I would like to request a vehicle protection consultation:",
+        "greeting": "Hello INFINITE BRIGHT, I would like to book an appointment for my vehicle:",
         "name": "Name",
         "phone": "Mobile",
         "vehicle": "Vehicle",
@@ -916,7 +920,7 @@
     "intro": "Explore all six core INFINITE BRIGHT disciplines alongside our Ultra Core (85% IR rejection) & Core Plus (65%) thermal series and bespoke protection packages.",
     "processHeading": "Execution Protocol",
     "idealForHeading": "Recommended Profile",
-    "bookThisService": "Consult via WhatsApp"
+    "bookThisService": "Book Appointment via WhatsApp"
   },
   "galleryPage": {
     "eyebrow": "BEFORE & AFTER PORTFOLIO",
@@ -966,7 +970,7 @@
     "sections": [
       {
         "title": "Information Voluntarily Provided",
-        "body": "When preparing a consultation request through our website form, you enter your name, mobile number, vehicle model, and preferred service solely to format and initiate a direct WhatsApp conversation with our specialist team."
+        "body": "When preparing an appointment booking request through our website form, you enter your name, mobile number, vehicle model, and preferred service solely to format and initiate a direct WhatsApp conversation with our specialist team."
       },
       {
         "title": "Purpose of Using Client Information",
@@ -1024,28 +1028,28 @@
           "cta": "View PPF Packages & Warranty"
         },
         "tinting": {
-          "title": "Ultra Core Thermal Insulation",
+          "title": "Thermal Tinting & Glazing",
           "tag": "85% Heat Rejection — 10-Yr Warranty",
           "badge": "Ultra Core & Core Plus",
           "description": "Superior solar heat rejection calibrated for Saudi summer heat across all shades (85%), plus Core Plus tier (65%).",
           "cta": "View Tint Shades & Heat Specs"
         },
         "ceramic": {
-          "title": "Interior & Exterior Nano Ceramic",
+          "title": "Nano Ceramic Coating",
           "tag": "9H Hardness & Deep Gloss",
           "badge": "Advanced Surface Defense",
           "description": "Hydrophobic liquid-glass coatings imparting deep mirror-finish gloss, chemical resistance, and interior leather protection.",
           "cta": "View Nano Ceramic Details"
         },
         "detailing": {
-          "title": "Automotive Polishing & Detailing",
+          "title": "Polishing & Detailing",
           "tag": "Multi-Stage Paint Correction",
           "badge": "Showroom Restoration",
           "description": "Precision machine correction removing swirl marks, micro-marring, and oxidation alongside bespoke interior upholstery preservation.",
           "cta": "Explore Detailing Services"
         },
         "bundles": {
-          "title": "Exclusive VIP Bundles (35% OFF)",
+          "title": "Exclusive VIP Bundles",
           "tag": "Protection + Tint + Ceramic + Gift",
           "badge": "Limited Time Offer",
           "description": "All-in-one VIP package: full vehicle PPF, Ultra Core heat rejection, interior nano protection, wheels, and free special gift.",
@@ -1116,7 +1120,7 @@
       "whatsappButton": "Chat with Us on WhatsApp Now",
       "callButton": "Call Us Directly",
       "detailedFormPrompt": "Prefer submitting custom vehicle details?",
-      "detailedFormLink": "Go to Detailed Consultation Form"
+      "detailedFormLink": "Go to Dedicated Booking Form"
     }
   }
 }
