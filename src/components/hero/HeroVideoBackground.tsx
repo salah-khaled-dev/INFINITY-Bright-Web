@@ -65,13 +65,11 @@ export function HeroVideoBackground({
 
   const shouldSkipVideo = reducedMotion || saveData;
 
-  // Active asset configuration based strictly on device orientation & resolution
-  const activeVideoSrc = isMobile
-    ? "/videos/Detailer_polishing_car_hood_4c33bcd6_1080p.mp4"
-    : "/videos/Range_Rover_commercial_in_showroom_e0e83c1a_1080p.mp4";
+  // Active asset configuration: Range Rover Commercial for both Desktop & Mobile
+  const activeVideoSrc = "/videos/Range_Rover_commercial_in_showroom_e0e83c1a_1080p.mp4";
 
   const activePosterSrc = isMobile
-    ? "/videos/hero-mobile-detailer-poster.webp"
+    ? "/videos/hero-video-poster-mobile.webp"
     : "/videos/hero-video-poster.webp";
 
   // Attempt seamless autoplay with full browser policy protection
@@ -153,10 +151,9 @@ export function HeroVideoBackground({
           sizes="100vw"
           className={cn(
             "object-cover transition-[object-position] duration-500",
-            // Mobile: perfectly frames the detailer & hood reflections in the upper 46svh window
-            // Desktop: full-bleed 16:9 showroom composition
+            // Mobile & Desktop: center-framed Range Rover in showroom
             isMobile
-              ? "object-[50%_36%]"
+              ? "object-[50%_50%]"
               : isAr
               ? "object-[48%_48%] lg:object-[50%_48%]"
               : "object-[52%_48%] lg:object-[50%_48%]"
@@ -178,7 +175,7 @@ export function HeroVideoBackground({
           className={cn(
             "absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-out",
             isMobile
-              ? "object-[50%_36%]"
+              ? "object-[50%_50%]"
               : isAr
               ? "object-[48%_48%] lg:object-[50%_48%]"
               : "object-[52%_48%] lg:object-[50%_48%]",

@@ -70,9 +70,17 @@ export function ServiceDetailChapter({
               {service.index}
             </div>
             {service.video && (
-              <div className="absolute bottom-4 end-4 z-10 inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1 text-[11px] font-bold text-white backdrop-blur-md">
+              <div className="absolute bottom-4 end-4 z-10 inline-flex items-center gap-1.5 rounded-full bg-black/65 px-3 py-1 text-[11px] font-bold text-white backdrop-blur-md border border-white/10">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>{locale === "ar" ? "فيديو عملي مباشر" : "Live Detailing"}</span>
+                <span>
+                  {locale === "ar"
+                    ? service.id === "ppf"
+                      ? "فيديو تركيب عملي مباشر"
+                      : "فيديو تلميع مباشر"
+                    : service.id === "ppf"
+                    ? "Live PPF Installation"
+                    : "Live Craftsmanship"}
+                </span>
               </div>
             )}
           </ImageReveal>

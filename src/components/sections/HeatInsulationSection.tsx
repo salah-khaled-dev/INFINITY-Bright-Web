@@ -1,24 +1,20 @@
 import React from "react";
-import Image from "next/image";
 import { ArrowUpRight, Award, CheckCircle2, ShieldCheck, Sparkles, SunMedium } from "lucide-react";
 import { BUSINESS_CONFIG, buildWhatsAppUrl } from "@/config/business";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/types";
-import { ImageReveal, Reveal } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { LuxuryIconBadge } from "@/components/ui/LuxuryIconBadge";
-import { TintShadeSimulator } from "@/components/sections/TintShadeSimulator";
 
 interface HeatInsulationSectionProps {
   locale: Locale;
   dict: Dictionary["heatExperience"];
-  tintSimulatorDict: Dictionary["tintSimulator"];
 }
 
 export function HeatInsulationSection({
   locale,
   dict,
-  tintSimulatorDict,
 }: HeatInsulationSectionProps) {
   const waGeneralHref = buildWhatsAppUrl(
     locale === "ar"
@@ -211,26 +207,6 @@ export function HeatInsulationSection({
             </Reveal>
           </div>
         </div>
-
-        {/* Interactive Live Window Tint Shade Simulator */}
-        <TintShadeSimulator locale={locale} dict={tintSimulatorDict} />
-
-        {/* Wide Cabin Thermal Sanctuary Showcase */}
-        <ImageReveal className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#070709] shadow-[var(--shadow-elevated)]">
-          <Image
-            src="/images/services/heat-insulation.jpg"
-            alt="Thermally insulated luxury coupe cabin inside INFINITE BRIGHT showroom"
-            fill
-            sizes="(max-width: 1280px) 100vw, 1200px"
-            className="object-cover"
-          />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
-          <div className="absolute bottom-5 start-5 end-5 flex flex-wrap items-center justify-between gap-3">
-            <span className="rounded-full border border-white/15 bg-black/65 px-4 py-1.5 font-mono text-[11px] tracking-[0.16em] text-[#FBE90A] uppercase backdrop-blur-md">
-              ULTRA CORE 85% · CORE PLUS 65%
-            </span>
-          </div>
-        </ImageReveal>
 
         {/* 4 Architectural Thermal Pillars */}
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

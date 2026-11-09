@@ -85,11 +85,10 @@ export default async function ServicesPage({
         </div>
       </section>
 
-      {/* Dedicated Ultra Core (85% All Shades) & Core Plus (65%) + Live Tint Simulator */}
+      {/* Dedicated Ultra Core (85% All Shades) & Core Plus (65%) */}
       <HeatInsulationSection
         locale={locale}
         dict={dict.heatExperience}
-        tintSimulatorDict={dict.tintSimulator}
       />
 
       <ContactCtaSection
