@@ -417,6 +417,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                         if (el) {
                           el.defaultMuted = true;
                           el.muted = true;
+                          (el as unknown as { playsInline?: boolean }).playsInline = true;
                           el.play().catch(() => {});
                         }
                       }}

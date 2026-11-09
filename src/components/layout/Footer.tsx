@@ -36,7 +36,7 @@ export function Footer({ locale, dict }: FooterProps) {
     { href: localizedHref(locale, ""), label: isAr ? "الرئيسية" : "Home" },
     { href: localizedHref(locale, "about"), label: isAr ? "من نحن" : "About Us" },
     { href: localizedHref(locale, "services"), label: isAr ? "خدماتنا" : "Services" },
-    { href: localizedHref(locale, "color-studio"), label: isAr ? "استوديو الألوان" : "Color Studio" },
+    { href: localizedHref(locale, "color-studio"), label: isAr ? "الاستوديو" : "Studio" },
     { href: localizedHref(locale, "gallery"), label: isAr ? "المعرض" : "Gallery" },
     { href: localizedHref(locale, "contact"), label: isAr ? "تواصل معنا" : "Contact" },
     { href: localizedHref(locale, "terms"), label: dict.footer.termsLink },
@@ -205,6 +205,7 @@ export function Footer({ locale, dict }: FooterProps) {
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 transition-all hover:bg-[#25D366] hover:text-[#042813]"
               >
                 <WhatsAppIcon className="h-4 w-4" />
+                <span className="sr-only">WhatsApp</span>
               </a>
 
               {BUSINESS_CONFIG.social.instagram && (
@@ -216,6 +217,7 @@ export function Footer({ locale, dict }: FooterProps) {
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-pink-500/30 bg-pink-500/10 text-[#E1306C] transition-all hover:bg-[#E1306C] hover:text-white"
                 >
                   <InstagramIcon className="h-4 w-4" />
+                  <span className="sr-only">Instagram</span>
                 </a>
               )}
 
@@ -228,6 +230,7 @@ export function Footer({ locale, dict }: FooterProps) {
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-600 dark:text-cyan-300 transition-all hover:bg-black hover:text-white"
                 >
                   <TikTokIcon className="h-4 w-4" />
+                  <span className="sr-only">TikTok</span>
                 </a>
               )}
             </div>
@@ -343,6 +346,7 @@ export function Footer({ locale, dict }: FooterProps) {
                     className="flex h-11 w-11 items-center justify-center rounded-full bg-pink-500/10 text-[#E1306C]"
                   >
                     <InstagramIcon className="h-4 w-4" />
+                    <span className="sr-only">Instagram</span>
                   </a>
                 )}
                 {BUSINESS_CONFIG.social.tiktok && (
@@ -354,6 +358,7 @@ export function Footer({ locale, dict }: FooterProps) {
                     className="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-300"
                   >
                     <TikTokIcon className="h-4 w-4" />
+                    <span className="sr-only">TikTok</span>
                   </a>
                 )}
               </div>

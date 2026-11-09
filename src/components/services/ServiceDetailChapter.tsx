@@ -21,12 +21,18 @@ function ChapterVideo({ src, poster }: { src: string; poster: string }) {
 
     video.defaultMuted = true;
     video.muted = true;
+    (video as unknown as { playsInline?: boolean }).playsInline = true;
+
+    const attemptPlay = () => {
+      video.muted = true;
+      video.play().catch(() => {});
+    };
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            video.play().catch(() => {});
+            attemptPlay();
           } else {
             video.pause();
           }
@@ -36,7 +42,21 @@ function ChapterVideo({ src, poster }: { src: string; poster: string }) {
     );
 
     observer.observe(container);
-    return () => observer.disconnect();
+
+    const handleGesture = () => {
+      if (video && video.paused) {
+        attemptPlay();
+      }
+    };
+
+    window.addEventListener("touchstart", handleGesture, { once: true, passive: true });
+    window.addEventListener("scroll", handleGesture, { once: true, passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("touchstart", handleGesture);
+      window.removeEventListener("scroll", handleGesture);
+    };
   }, []);
 
   return (

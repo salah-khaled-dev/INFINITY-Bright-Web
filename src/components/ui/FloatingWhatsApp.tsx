@@ -54,6 +54,7 @@ export function FloatingWhatsApp({ tooltip }: FloatingWhatsAppProps) {
             className="pointer-events-none absolute inset-x-2.5 top-1 h-[1.5px] rounded-full bg-white/40"
           />
           <WhatsAppIcon className="h-6 w-6 text-white transition-transform duration-300 group-hover:scale-110" />
+          <span className="sr-only">{tooltip}</span>
         </motion.a>
       </div>
     </div>
