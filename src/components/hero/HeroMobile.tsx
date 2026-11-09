@@ -91,9 +91,8 @@ export function HeroMobile({
           </div>
         </div>
 
-        {/* Mobile Headline — Refined, bold, unclipped (Semantic H1 is canonically declared on Desktop HeroContent to prevent duplicate DOM announcements) */}
+        {/* Mobile Headline — Immediate High-Priority Paint for Instant Core Web Vitals LCP */}
         <p
-          data-mobile-reveal
           aria-hidden="true"
           className={cn(
             "font-display text-[1.65rem] font-extrabold leading-[1.22] tracking-tight sm:text-3xl",

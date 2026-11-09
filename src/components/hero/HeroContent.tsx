@@ -40,15 +40,15 @@ export function HeroContent({
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
       tl.fromTo(
         "[data-hero-brand]",
-        { opacity: 0, y: 14 },
-        { opacity: 1, y: 0, duration: 0.6 },
-        0.3
+        { opacity: 0.2, y: 10 },
+        { opacity: 1, y: 0, duration: 0.5 },
+        0.1
       )
         .fromTo(
           "[data-hero-headline]",
-          { opacity: 0, y: 18 },
-          { opacity: 1, y: 0, duration: 0.75 },
-          0.42
+          { opacity: 0.6, y: 10 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          0.15
         )
         .fromTo(
           "[data-hero-desc]",
