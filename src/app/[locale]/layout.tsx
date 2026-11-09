@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "@/app/globals.css";
@@ -13,8 +12,9 @@ import {
 } from "@/lib/i18n";
 import { buildPageMetadata } from "@/lib/seo";
 import {
-  THEME_INIT_SCRIPT,
+  JsonLdScript,
   ThemeProvider,
+  ThemeScript,
 } from "@/components/providers/ThemeProvider";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -123,11 +123,8 @@ export default async function LocaleLayout({
       className={`${montserrat.variable} ${plusJakartaSans.variable} ${cairo.variable}`}
     >
       <head>
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
-        />
+        <ThemeScript />
+        <JsonLdScript data={jsonLd} />
         <link
           rel="preload"
           as="image"
@@ -141,10 +138,6 @@ export default async function LocaleLayout({
           href="/videos/hero-mobile-detailer-poster.webp"
           type="image/webp"
           media="(max-width: 767px)"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-screen antialiased selection:bg-[#FBE90A] selection:text-[#060608] overflow-x-hidden max-w-[100vw] w-full">

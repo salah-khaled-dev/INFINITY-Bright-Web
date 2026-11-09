@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Sparkles,
   SunMedium,
+  Wrench,
 } from "lucide-react";
 import { buildWhatsAppUrl } from "@/config/business";
 import { localizedHref } from "@/lib/i18n";
@@ -48,6 +49,13 @@ interface HomeServicesGateProps {
         description: string;
         cta: string;
       };
+      detailing: {
+        title: string;
+        tag: string;
+        badge: string;
+        description: string;
+        cta: string;
+      };
       bundles: {
         title: string;
         tag: string;
@@ -59,7 +67,7 @@ interface HomeServicesGateProps {
   };
 }
 
-type ServiceKey = "ppf" | "tinting" | "ceramic" | "bundles";
+type ServiceKey = "ppf" | "tinting" | "ceramic" | "detailing" | "bundles";
 
 export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
   const isAr = locale === "ar";
@@ -149,8 +157,32 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
         : "Hello INFINITE BRIGHT, I would like to inquire about Nano Ceramic packages.",
     },
     {
-      key: "bundles",
+      key: "detailing",
       index: "04",
+      data: dict.cards.detailing,
+      image: "/images/services/car-detailing.jpg",
+      video: "/videos/Detailer_polishing_car_hood_4c33bcd6_1080p.mp4",
+      videoPoster: "/videos/hero-mobile-detailer-poster.webp",
+      href: `${localizedHref(locale, "services")}#car-detailing`,
+      icon: Wrench,
+      highlights: isAr
+        ? [
+            "تلميع آلي احترافي متعدد المراحل لإزالة الدوائر والبهتان بالكامل",
+            "استعادة بريق الوكالة المرآوي والعمق اللوني للطلاء",
+            "عناية فائقة وتطهير وتعقيم عميق للفرش الداخلي والجلود",
+          ]
+        : [
+            "Multi-stage precision machine polishing removing swirl marks",
+            "Showroom mirror clarity and depth restoration",
+            "Deep interior conditioning, leather care, and sanitization",
+          ],
+      waMessage: isAr
+        ? "مرحباً إنفينيتي برايت، أود الاستفسار وحجز خدمة التلميع والتفصيل الفاخر (Car Detailing)."
+        : "Hello INFINITE BRIGHT, I would like to inquire about Automotive Polishing & Detailing.",
+    },
+    {
+      key: "bundles",
+      index: "05",
       data: dict.cards.bundles,
       image: "/images/services/paint-protection.jpg",
       href: `${localizedHref(locale, "services")}#bundles`,
@@ -216,7 +248,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
           <div
             role="tablist"
             aria-label={dict.headline}
-            className="flex items-center gap-2.5 overflow-x-auto pb-2 pt-1 no-scrollbar sm:grid sm:grid-cols-4 sm:gap-3"
+            className="flex items-center gap-2.5 overflow-x-auto pb-2 pt-1 no-scrollbar sm:grid sm:grid-cols-5 sm:gap-2.5 lg:gap-3"
           >
             {services.map((item) => {
               const isActive = item.key === activeKey;

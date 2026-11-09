@@ -7,7 +7,22 @@ import React, {
   useEffect,
   useState,
 } from "react";
+import { useServerInsertedHTML } from "next/navigation";
 import type { Locale, ThemeMode } from "@/types";
+
+// Suppress React 19 false-positive warning for inline scripts in development
+if (typeof window !== "undefined" && process.env.NODE_ENV === "development") {
+  const originalError = console.error;
+  console.error = (...args: unknown[]) => {
+    if (
+      typeof args[0] === "string" &&
+      args[0].includes("Encountered a script tag while rendering React component")
+    ) {
+      return;
+    }
+    originalError.apply(console, args);
+  };
+}
 
 interface ThemeContextValue {
   theme: ThemeMode;
@@ -106,3 +121,34 @@ export const THEME_INIT_SCRIPT = `
   }
 })();
 `;
+
+/**
+ * Server-inserted theme initialization script component.
+ * Uses Next.js useServerInsertedHTML to stream the script safely into the initial HTML document
+ * without rendering a <script> element inside React's Virtual DOM tree, eliminating React 19 script warnings.
+ */
+export function ThemeScript() {
+  useServerInsertedHTML(() => (
+    <script
+      id="theme-init"
+      dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
+    />
+  ));
+  return null;
+}
+
+/**
+ * Server-inserted JSON-LD structured data script component.
+ * Streams schema markup into the HTML head without client React tree reconciliation warnings.
+ */
+export function JsonLdScript({ data }: { data: Record<string, unknown> }) {
+  useServerInsertedHTML(() => (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
+    />
+  ));
+  return null;
+}
