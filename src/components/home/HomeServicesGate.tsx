@@ -96,6 +96,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
   const services: Array<{
     key: ServiceKey;
     index: string;
+    shortTitle: string;
     data: (typeof dict.cards)[ServiceKey];
     image: string;
     video?: string;
@@ -108,6 +109,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
     {
       key: "ppf",
       index: "01",
+      shortTitle: isAr ? "حماية PPF" : "PPF Protection",
       data: dict.cards.ppf,
       image: "/images/services/ppf-installation.jpg",
       video: "/videos/Installer_applying_film_to_car_1099074e_1080p.mp4",
@@ -132,6 +134,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
     {
       key: "tinting",
       index: "02",
+      shortTitle: isAr ? "عزل وتظليل" : "Thermal Tinting",
       data: dict.cards.tinting,
       image: "/images/services/window-tinting.jpg",
       video: "/videos/Technician_installing_window_film_ae402102_1080p.mp4",
@@ -156,6 +159,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
     {
       key: "ceramic",
       index: "03",
+      shortTitle: isAr ? "نانو سيراميك" : "Nano Ceramic",
       data: dict.cards.ceramic,
       image: "/images/services/ceramic-coating.jpg",
       video: "/videos/Technician_applying_ceramic_coating_401d402c_1080p.mp4",
@@ -180,6 +184,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
     {
       key: "detailing",
       index: "04",
+      shortTitle: isAr ? "تلميع وتفصيل" : "Car Detailing",
       data: dict.cards.detailing,
       image: "/images/services/car-detailing.jpg",
       video: "/videos/Detailer_polishing_car_hood_4c33bcd6_1080p.mp4",
@@ -204,6 +209,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
     {
       key: "bundles",
       index: "05",
+      shortTitle: isAr ? "باقات VIP" : "VIP Bundles",
       data: dict.cards.bundles,
       image: "/images/services/paint-protection.jpg",
       href: `${localizedHref(locale, "services")}#bundles`,
@@ -264,13 +270,65 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
         </div>
 
         {/* ========================================================================= */}
-        {/* Luxury Automotive Interactive Control Tabs (Mobile Horizontal Swipe & Desktop) */}
+        {/* Luxury Automotive Interactive Control Tabs (Mobile Horizontal Slider & Desktop Grid) */}
         {/* ========================================================================= */}
         <Reveal delay={0.05} className="mb-6 sm:mb-8">
+          {/* 1. Mobile Luxury Horizontal Slider Pills (< sm) */}
           <div
             role="tablist"
             aria-label={dict.headline}
-            className="flex items-center gap-2.5 overflow-x-auto pb-2 pt-1 no-scrollbar sm:grid sm:grid-cols-5 sm:gap-2.5 lg:gap-3"
+            className="flex items-center gap-2 overflow-x-auto pb-2.5 pt-1 no-scrollbar sm:hidden snap-x snap-mandatory px-0.5"
+          >
+            {services.map((item) => {
+              const isActive = item.key === activeKey;
+              const TabIcon = item.icon;
+              return (
+                <button
+                  key={item.key}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={(e) => {
+                    setActiveKey(item.key);
+                    e.currentTarget.scrollIntoView({
+                      behavior: "smooth",
+                      inline: "center",
+                      block: "nearest",
+                    });
+                  }}
+                  className={cn(
+                    "group relative flex h-11 shrink-0 snap-center items-center gap-2 rounded-full border px-3.5 text-xs font-bold whitespace-nowrap transition-all duration-300",
+                    isActive
+                      ? "border-[var(--brand-yellow)] bg-[var(--bg-surface)] text-[var(--text-primary)] shadow-sm ring-1 ring-[var(--brand-yellow)]/30"
+                      : "border-[var(--border-subtle)] bg-[var(--bg-surface)]/70 text-[var(--text-secondary)] hover:border-[var(--border-strong)] hover:text-[var(--text-primary)]"
+                  )}
+                >
+                  <span
+                    className={cn(
+                      "flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-all duration-300",
+                      isActive
+                        ? "bg-[var(--brand-yellow)] text-[#242522]"
+                        : "bg-[var(--bg-canvas)] text-[var(--text-muted)] group-hover:text-[var(--text-primary)]"
+                    )}
+                  >
+                    <TabIcon className="h-3.5 w-3.5" />
+                  </span>
+
+                  <span className="font-mono text-[10px] font-semibold opacity-60">
+                    {item.index}
+                  </span>
+
+                  <span className="text-xs font-bold">{item.shortTitle}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* 2. Desktop 5-Column Grid (≥ sm) */}
+          <div
+            role="tablist"
+            aria-label={dict.headline}
+            className="hidden sm:grid sm:grid-cols-5 sm:gap-2.5 lg:gap-3"
           >
             {services.map((item) => {
               const isActive = item.key === activeKey;
@@ -283,7 +341,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                   aria-selected={isActive}
                   onClick={() => setActiveKey(item.key)}
                   className={cn(
-                    "group relative flex min-h-[54px] shrink-0 items-center gap-2 rounded-2xl border px-3 py-2.5 text-start transition-all duration-300 sm:w-full sm:min-h-[60px] sm:gap-2 sm:px-2.5 sm:py-3 lg:gap-2.5 lg:px-3 lg:py-3.5 xl:gap-3 xl:px-4",
+                    "group relative flex min-h-[64px] w-full items-center gap-2.5 rounded-2xl border px-3 py-3 text-start transition-all duration-300 lg:px-3.5 lg:py-3.5 xl:px-4",
                     isActive
                       ? "border-[var(--brand-yellow)] bg-[var(--bg-surface)] shadow-[var(--shadow-subtle)]"
                       : "border-[var(--border-subtle)] bg-[var(--bg-surface)]/70 hover:border-[var(--border-strong)] hover:bg-[var(--bg-surface)]"
@@ -291,19 +349,19 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                 >
                   <span
                     className={cn(
-                      "flex h-8 w-8 shrink-0 items-center justify-center rounded-xl transition-all duration-300 sm:h-7.5 sm:w-7.5 lg:h-8.5 lg:w-8.5 xl:h-9 xl:w-9",
+                      "flex h-8.5 w-8.5 shrink-0 items-center justify-center rounded-xl transition-all duration-300",
                       isActive
                         ? "bg-[var(--brand-yellow)] text-[#242522] shadow-xs"
                         : "border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-muted)] group-hover:text-[var(--text-primary)]"
                     )}
                   >
-                    <TabIcon className="h-4 w-4 sm:h-3.5 sm:w-3.5 lg:h-4 lg:w-4 xl:h-4.5 xl:w-4.5" />
+                    <TabIcon className="h-4 w-4" />
                   </span>
 
                   <div className="min-w-0 flex-1">
                     <span
                       className={cn(
-                        "block font-mono text-[9px] font-bold tracking-wider uppercase xl:text-[10px]",
+                        "block font-mono text-[9px] font-bold tracking-wider uppercase truncate",
                         isActive
                           ? "text-[var(--brand-accent-label)]"
                           : "text-[var(--text-muted)]"
@@ -313,7 +371,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                     </span>
                     <span
                       className={cn(
-                        "block text-xs font-extrabold leading-snug transition-colors sm:text-[11px] lg:text-[12px] xl:text-[13px]",
+                        "block text-xs font-extrabold leading-snug transition-colors line-clamp-2 lg:text-[13px]",
                         isActive
                           ? "text-[var(--text-primary)]"
                           : "text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]"
