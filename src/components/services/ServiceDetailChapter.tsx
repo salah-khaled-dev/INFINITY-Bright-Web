@@ -76,9 +76,13 @@ export function ServiceDetailChapter({
                   {locale === "ar"
                     ? service.id === "ppf"
                       ? "فيديو تركيب عملي مباشر"
+                      : service.id === "ceramic-coating"
+                      ? "تطبيق سيراميك (نيسان باترول 2026)"
                       : "فيديو تلميع مباشر"
                     : service.id === "ppf"
                     ? "Live PPF Installation"
+                    : service.id === "ceramic-coating"
+                    ? "Nissan Patrol 2026 Ceramic"
                     : "Live Craftsmanship"}
                 </span>
               </div>
