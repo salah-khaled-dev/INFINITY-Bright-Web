@@ -74,15 +74,20 @@ export function HeroVideoBackground({
 
   // Attempt seamless autoplay with full browser policy protection
   useEffect(() => {
-    if (!mounted || shouldSkipVideo) return;
+    if (shouldSkipVideo) return;
 
     const video = videoRef.current;
     if (!video) return;
 
     let isMounted = true;
 
-    const handlePlaying = () => {
-      if (isMounted) setIsVideoPlaying(true);
+    video.muted = true;
+    video.defaultMuted = true;
+
+    const handleReadyToPlay = () => {
+      if (isMounted) {
+        setIsVideoPlaying(true);
+      }
     };
 
     const handleError = () => {
@@ -92,20 +97,28 @@ export function HeroVideoBackground({
       }
     };
 
-    video.addEventListener("playing", handlePlaying);
+    video.addEventListener("playing", handleReadyToPlay);
+    video.addEventListener("play", handleReadyToPlay);
+    video.addEventListener("canplay", handleReadyToPlay);
+    video.addEventListener("timeupdate", handleReadyToPlay);
     video.addEventListener("error", handleError);
 
-    const attemptPlay = async () => {
+    const attemptPlay = () => {
       try {
         video.muted = true;
         video.defaultMuted = true;
         const playPromise = video.play();
         if (playPromise !== undefined) {
-          await playPromise;
-          if (isMounted) setIsVideoPlaying(true);
+          playPromise
+            .then(() => {
+              if (isMounted) setIsVideoPlaying(true);
+            })
+            .catch(() => {
+              // Browser battery saver or strict policy
+              if (isMounted) setIsVideoPlaying(false);
+            });
         }
       } catch {
-        // Autoplay restricted by user policy / battery saver: retain pristine poster
         if (isMounted) setIsVideoPlaying(false);
       }
     };
@@ -114,10 +127,13 @@ export function HeroVideoBackground({
 
     return () => {
       isMounted = false;
-      video.removeEventListener("playing", handlePlaying);
+      video.removeEventListener("playing", handleReadyToPlay);
+      video.removeEventListener("play", handleReadyToPlay);
+      video.removeEventListener("canplay", handleReadyToPlay);
+      video.removeEventListener("timeupdate", handleReadyToPlay);
       video.removeEventListener("error", handleError);
     };
-  }, [mounted, activeVideoSrc, shouldSkipVideo]);
+  }, [activeVideoSrc, shouldSkipVideo]);
 
   return (
     <div
@@ -162,7 +178,7 @@ export function HeroVideoBackground({
       </div>
 
       {/* 3. Cinematic HTML5 Hero Video (Native, Hardware Accelerated, Zero 3D Overhead) */}
-      {mounted && !shouldSkipVideo && !hasVideoError && (
+      {!shouldSkipVideo && !hasVideoError && (
         <video
           key={activeVideoSrc}
           ref={videoRef}
@@ -170,10 +186,10 @@ export function HeroVideoBackground({
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           poster={activePosterSrc}
           className={cn(
-            "absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-out",
+            "absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out",
             isMobile
               ? "object-[50%_50%]"
               : isAr

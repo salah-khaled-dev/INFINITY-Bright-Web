@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { buildWhatsAppUrl } from "@/config/business";
@@ -7,6 +9,52 @@ import { cn } from "@/lib/utils";
 import type { Locale, ServiceItem } from "@/types";
 import { ImageReveal, Reveal } from "@/components/ui/Reveal";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+
+function ChapterVideo({ src, poster }: { src: string; poster: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const container = containerRef.current;
+    if (!video || !container) return;
+
+    video.defaultMuted = true;
+    video.muted = true;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "150px" }
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="h-full w-full">
+      <video
+        ref={videoRef}
+        src={src}
+        poster={poster}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="h-full w-full object-cover"
+      />
+    </div>
+  );
+}
 
 interface ServiceDetailChapterProps {
   locale: Locale;
@@ -47,15 +95,9 @@ export function ServiceDetailChapter({
         >
           <ImageReveal className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#08080a] shadow-[var(--shadow-elevated)]">
             {service.video ? (
-              <video
+              <ChapterVideo
                 src={service.video}
                 poster={service.videoPoster || service.image}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="h-full w-full object-cover"
               />
             ) : (
               <Image

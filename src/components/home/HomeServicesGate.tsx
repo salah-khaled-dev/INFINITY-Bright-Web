@@ -334,6 +334,14 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                 >
                   {current.video ? (
                     <video
+                      key={current.video}
+                      ref={(el) => {
+                        if (el) {
+                          el.defaultMuted = true;
+                          el.muted = true;
+                          el.play().catch(() => {});
+                        }
+                      }}
                       src={current.video}
                       poster={current.videoPoster || current.image}
                       autoPlay
