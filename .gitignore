@@ -22,6 +22,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# untracked duplicate assets
+public/videos/*…*
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
