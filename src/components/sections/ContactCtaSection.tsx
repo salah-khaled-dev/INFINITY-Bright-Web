@@ -158,6 +158,7 @@ export function ContactCtaSection({
           <div className="lg:col-span-7">
             <Reveal delay={0.14}>
               <ContactForm
+                locale={locale}
                 dict={dict.form}
                 servicesCatalog={servicesCatalog}
               />

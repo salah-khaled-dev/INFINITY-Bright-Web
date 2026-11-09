@@ -1,18 +1,13 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { useReducedMotion } from "motion/react";
+import React from "react";
 import {
   ArrowUpRight,
   Award,
   CheckCircle2,
-  Pause,
-  Play,
   ShieldCheck,
   Sparkles,
   SunMedium,
-  Volume2,
-  VolumeX,
 } from "lucide-react";
 import { BUSINESS_CONFIG, buildWhatsAppUrl } from "@/config/business";
 import type { Dictionary } from "@/lib/i18n";
@@ -31,62 +26,7 @@ export function HeatInsulationSection({
   dict,
 }: HeatInsulationSectionProps) {
   const isAr = locale === "ar";
-  const prefersReduced = useReducedMotion();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
 
-  // Playback control
-  const togglePlay = () => {
-    if (!videoRef.current) return;
-    if (isPlaying) {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      videoRef.current
-        .play()
-        .then(() => setIsPlaying(true))
-        .catch(() => setIsPlaying(false));
-    }
-  };
-
-  const toggleMute = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (!videoRef.current) return;
-    const nextMuted = !isMuted;
-    videoRef.current.muted = nextMuted;
-    setIsMuted(nextMuted);
-  };
-
-  // Performance-optimized viewport observer (autoplay muted when in view, pause when out)
-  useEffect(() => {
-    const video = videoRef.current;
-    const container = containerRef.current;
-    if (!video || !container) return;
-
-    if (prefersReduced) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video
-              .play()
-              .then(() => setIsPlaying(true))
-              .catch(() => setIsPlaying(false));
-          } else {
-            video.pause();
-            setIsPlaying(false);
-          }
-        });
-      },
-      { threshold: 0.25, rootMargin: "60px" }
-    );
-
-    observer.observe(container);
-    return () => observer.disconnect();
-  }, [prefersReduced]);
   const waGeneralHref = buildWhatsAppUrl(
     locale === "ar"
       ? "مرحباً إنفينيتي برايت، أود الاستفسار عن أنظمة العزل الحراري وتظليل النوافذ (Ultra Core 85% / Core Plus 65%)."
@@ -137,109 +77,6 @@ export function HeatInsulationSection({
             </a>
           </Reveal>
         </div>
-
-        {/* ========================================================================= */}
-        {/* Dedicated Thermal Insulation Installation Video (Land Cruiser 300 - 2026) */}
-        {/* ========================================================================= */}
-        <Reveal className="mb-20 space-y-6">
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <div className="max-w-2xl space-y-2">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-canvas)] px-3.5 py-1 text-xs font-bold text-[var(--brand-accent-label)]">
-                <span className="h-2 w-2 rounded-full bg-[#FBE90A] animate-pulse" />
-                <span>{dict.videoBadge}</span>
-              </div>
-              <h3 className="font-display text-2xl font-bold tracking-tight text-[var(--text-primary)] sm:text-3xl lg:text-4xl">
-                {dict.videoHeading}
-              </h3>
-              <p className="text-sm leading-relaxed text-[var(--text-secondary)] sm:text-base">
-                {dict.videoDescription}
-              </p>
-            </div>
-
-            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] bg-[var(--bg-canvas)] px-3.5 py-1.5 text-xs font-semibold text-[var(--text-secondary)]">
-              <CheckCircle2 className="h-4 w-4 text-[#FBE90A]" />
-              <span>{dict.videoTag}</span>
-            </span>
-          </div>
-
-          <div
-            ref={containerRef}
-            className="group relative aspect-video w-full overflow-hidden rounded-3xl border border-[var(--border-subtle)] bg-[#07080b] shadow-[var(--shadow-elevated)]"
-          >
-            <video
-              ref={videoRef}
-              src="/videos/Technician_installing_window_film_ae402102_1080p.mp4"
-              poster="/images/services/window-tinting.jpg"
-              playsInline
-              muted={isMuted}
-              loop
-              preload="none"
-              className="h-full w-full object-cover cursor-pointer"
-              onClick={togglePlay}
-            />
-
-            {/* Subtle Gradient Overlays */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/35" />
-
-            {/* Top Corner Live Badges */}
-            <div className="absolute inset-x-5 top-5 z-10 flex items-center justify-between gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/65 px-3.5 py-1.5 text-xs font-bold text-white shadow-sm backdrop-blur-md">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>{isAr ? "تويوتا لاند كروزر 300 (2026)" : "Toyota Land Cruiser 300 (2026)"}</span>
-              </span>
-
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/65 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-md">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#FBE90A]" />
-                <span>{isAr ? "تركيب داخلي محمي 100%" : "Protected Interior Installation"}</span>
-              </span>
-            </div>
-
-            {/* Center Play Button Overlay (when paused) */}
-            {!isPlaying && (
-              <button
-                type="button"
-                onClick={togglePlay}
-                aria-label={isAr ? "تشغيل الفيديو" : "Play video"}
-                className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 transition-colors hover:bg-black/20"
-              >
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#FBE90A] text-[#060608] shadow-[0_8px_32px_rgba(251,233,10,0.45)] transition-transform duration-300 hover:scale-110 sm:h-20 sm:w-20">
-                  <Play className="ms-1 h-8 w-8 fill-current sm:h-9 sm:w-9" />
-                </span>
-              </button>
-            )}
-
-            {/* Bottom Controls Strip */}
-            <div className="absolute inset-x-5 bottom-5 z-10 flex items-center justify-between gap-4">
-              <button
-                type="button"
-                onClick={togglePlay}
-                aria-label={isPlaying ? (isAr ? "إيقاف مؤقت" : "Pause") : (isAr ? "تشغيل الفيديو" : "Play video")}
-                className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-black/70 px-4 py-2 text-xs font-bold text-white backdrop-blur-md transition-all hover:border-[#FBE90A] hover:bg-[#FBE90A] hover:text-[#060608]"
-              >
-                {isPlaying ? (
-                  <>
-                    <Pause className="h-4 w-4" />
-                    <span>{isAr ? "إيقاف مؤقت" : "Pause"}</span>
-                  </>
-                ) : (
-                  <>
-                    <Play className="h-4 w-4 fill-current" />
-                    <span>{isAr ? "تشغيل الفيديو" : "Play Video"}</span>
-                  </>
-                )}
-              </button>
-
-              <button
-                type="button"
-                onClick={toggleMute}
-                aria-label={isMuted ? (isAr ? "تشغيل الصوت" : "Unmute") : (isAr ? "كتم الصوت" : "Mute")}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/70 text-white backdrop-blur-md transition-all hover:border-[#FBE90A] hover:text-[#FBE90A]"
-              >
-                {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-              </button>
-            </div>
-          </div>
-        </Reveal>
 
         {/* Official Thermal Insulation Tiers Comparison: Ultra Core (85%) vs Core Plus (65%) */}
         <div className="mb-14 space-y-6">

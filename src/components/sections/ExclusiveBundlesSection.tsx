@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { CheckCircle2, Gift, Percent, ShieldCheck, Sparkles } from "lucide-react";
 import { buildWhatsAppUrl } from "@/config/business";
-import { SAUDI_POPULAR_MODELS } from "@/data/colorStudioPalette";
 import type { Dictionary } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/types";
@@ -19,8 +18,6 @@ export function ExclusiveBundlesSection({
   locale,
   dict,
 }: ExclusiveBundlesSectionProps) {
-  const [vehicleModel, setVehicleModel] = useState<string>("");
-  const popularModels = SAUDI_POPULAR_MODELS[locale].slice(0, 8);
 
   return (
     <section
@@ -61,19 +58,6 @@ export function ExclusiveBundlesSection({
           </Reveal>
         </div>
 
-        {/* Optional Quick Vehicle Model Tagging Bar for Instant Bundle Quote */}
-        <Reveal delay={0.1} className="mb-10">
-          <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-4 sm:p-5">
-            <input
-              type="text"
-              value={vehicleModel}
-              onChange={(e) => setVehicleModel(e.target.value)}
-              placeholder="اكتب نوع وموديل سيارتك لحجز العرض (مثال: تورس / باترول / لكزس)..."
-              className="w-full rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-canvas)] px-4 py-3 text-xs text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:border-[#FBE90A] focus:outline-none sm:text-sm"
-            />
-          </div>
-        </Reveal>
-
         {/* Three 35% OFF + Free Gift Bundled Packages Grid */}
         <div className="grid grid-cols-1 gap-7 lg:grid-cols-3">
           {dict.bundles.map((bundle, idx) => {
@@ -81,12 +65,8 @@ export function ExclusiveBundlesSection({
 
             const waMsg =
               locale === "ar"
-                ? `مرحباً إنفينيتي برايت، أود الاستفادة من عرض الـ 35% وحجز:\n• الباقة: ${bundle.title} (${bundle.discount} + هدية مجانية)${
-                    vehicleModel.trim() ? `\n• السيارة: ${vehicleModel.trim()}` : ""
-                  }`
-                : `Hello INFINITE BRIGHT, I would like to claim the 35% OFF offer for:\n• Bundle: ${bundle.title} (${bundle.discount} + Complimentary Gift)${
-                    vehicleModel.trim() ? `\n• Vehicle: ${vehicleModel.trim()}` : ""
-                  }`;
+                ? `مرحباً إنفينيتي برايت، أود الاستفادة من عرض الـ 35% وحجز:\n• الباقة: ${bundle.title} (${bundle.discount} + هدية مجانية)`
+                : `Hello INFINITE BRIGHT, I would like to claim the 35% OFF offer for:\n• Bundle: ${bundle.title} (${bundle.discount} + Complimentary Gift)`;
 
             return (
               <Reveal key={bundle.id} delay={0.07 * (idx + 1)}>

@@ -9,27 +9,30 @@ import { buildWhatsAppUrl } from "@/config/business";
 import type { Dictionary } from "@/lib/i18n";
 import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 import { cn } from "@/lib/utils";
+import type { Locale } from "@/types";
 
 interface ContactFormProps {
+  locale?: Locale;
   dict: Dictionary["contactSection"]["form"];
   servicesCatalog?: Dictionary["servicesCatalog"];
 }
 
 const BODY_TYPES = [
-  { id: "jeep", labelAr: "جيب / SUV", labelEn: "Jeep / SUV" },
+  { id: "jeep", labelAr: "جيب / SUV", labelEn: "SUV / Jeep" },
   { id: "saloon", labelAr: "صالون", labelEn: "Saloon" },
   { id: "sedan", labelAr: "سيدان", labelEn: "Sedan" },
 ];
 
 const CORE_SERVICES = [
-  { id: "ppf", labelAr: "حماية (أفلام حماية الطلاء PPF)", labelEn: "Protection (PPF)" },
-  { id: "tinting", labelAr: "تظليل (عزل حراري وتظليل النوافذ)", labelEn: "Window Tinting" },
+  { id: "ppf", labelAr: "حماية (أفلام حماية الطلاء PPF)", labelEn: "Protection (PPF Paint Protection)" },
+  { id: "tinting", labelAr: "تظليل (عزل حراري وتظليل النوافذ)", labelEn: "Thermal Insulation & Tinting" },
   { id: "color-change", labelAr: "تغيير لون (تجليد وتغيير اللون)", labelEn: "Color Change / Wrap" },
-  { id: "ceramic", labelAr: "نانو سيراميك (حماية السيراميك)", labelEn: "Nano Ceramic" },
-  { id: "polishing", labelAr: "تلميع (تصحيح وتلميع ساطع)", labelEn: "Polishing & Detailing" },
+  { id: "ceramic", labelAr: "نانو سيراميك (حماية السيراميك)", labelEn: "Nano Ceramic Coating" },
+  { id: "polishing", labelAr: "تلميع (تصحيح وتلميع ساطع)", labelEn: "Luxury Polishing & Detailing" },
 ];
 
-export function ContactForm({ dict }: ContactFormProps) {
+export function ContactForm({ locale = "ar", dict }: ContactFormProps) {
+  const isAr = locale === "ar";
   const [submitted, setSubmitted] = useState(false);
   const [selectedBodyType, setSelectedBodyType] = useState<string>("jeep");
 
@@ -65,15 +68,24 @@ export function ContactForm({ dict }: ContactFormProps) {
 
   const onSubmit = (values: FormValues) => {
     const bodyTypeObj = BODY_TYPES.find((b) => b.id === selectedBodyType);
-    const bodyTypeLabel = bodyTypeObj ? bodyTypeObj.labelAr : selectedBodyType;
+    const bodyTypeLabel = bodyTypeObj
+      ? isAr
+        ? bodyTypeObj.labelAr
+        : bodyTypeObj.labelEn
+      : selectedBodyType;
     const serviceObj = CORE_SERVICES.find((s) => s.id === values.service);
-    const serviceLabel = serviceObj ? serviceObj.labelAr : values.service;
+    const serviceLabel = serviceObj
+      ? isAr
+        ? serviceObj.labelAr
+        : serviceObj.labelEn
+      : values.service;
+    const bodyTypeFieldLabel = isAr ? "فئة هيكل السيارة" : "Vehicle Body Type";
 
     const lines = [
       dict.whatsappTemplate.greeting,
       `• ${dict.whatsappTemplate.name}: ${values.name}`,
       `• ${dict.whatsappTemplate.phone}: ${values.phone}`,
-      `• فئة هيكل السيارة: ${bodyTypeLabel}`,
+      `• ${bodyTypeFieldLabel}: ${bodyTypeLabel}`,
       `• ${dict.whatsappTemplate.vehicle}: ${values.vehicle}`,
       `• ${dict.whatsappTemplate.service}: ${serviceLabel}`,
     ];
@@ -182,7 +194,7 @@ export function ContactForm({ dict }: ContactFormProps) {
       {/* Vehicle Body Type Selector (جيب / صالون / سيدان) */}
       <div className="space-y-2">
         <label className="block text-xs font-semibold text-[var(--text-primary)]">
-          فئة هيكل السيارة
+          {isAr ? "فئة هيكل السيارة" : "Vehicle Body Type"}
         </label>
         <div className="grid grid-cols-3 gap-2.5">
           {BODY_TYPES.map((type) => {
@@ -199,7 +211,7 @@ export function ContactForm({ dict }: ContactFormProps) {
                     : "border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)] hover:border-[#FBE90A]/50 hover:text-[var(--text-primary)]"
                 )}
               >
-                {type.labelAr}
+                {isAr ? type.labelAr : type.labelEn}
               </button>
             );
           })}
@@ -218,7 +230,12 @@ export function ContactForm({ dict }: ContactFormProps) {
           <input
             id="ib-vehicle"
             type="text"
-            placeholder="اكتب نوع وموديل سيارتك (مثال: تورس 2024 / باترول / S500)"
+            placeholder={
+              dict.vehiclePlaceholder ||
+              (isAr
+                ? "اكتب نوع وموديل سيارتك (مثال: تورس 2024 / باترول / لكزس)"
+                : "Enter vehicle make & model (e.g., Taurus 2024 / Patrol / Lexus)")
+            }
             {...register("vehicle")}
             className={inputBaseClass}
           />
@@ -244,7 +261,7 @@ export function ContactForm({ dict }: ContactFormProps) {
           >
             {CORE_SERVICES.map((svc) => (
               <option key={svc.id} value={svc.id}>
-                {svc.labelAr}
+                {isAr ? svc.labelAr : svc.labelEn}
               </option>
             ))}
           </select>
@@ -267,7 +284,12 @@ export function ContactForm({ dict }: ContactFormProps) {
         <textarea
           id="ib-notes"
           rows={3}
-          placeholder="أي استفسار أو الفرع المفضل (المروج / لبن / النرجس / خريص / الشفاء)..."
+          placeholder={
+            dict.notesPlaceholder ||
+            (isAr
+              ? "أي استفسار أو الفرع المفضل (المروج / لبن / النرجس / خريص / الشفاء)..."
+              : "Preferred branch (Al Murooj / Laban / Al Narjis / Khurais / Al Shifa), tint shade, or questions...")
+          }
           {...register("notes")}
           className={inputBaseClass}
         />

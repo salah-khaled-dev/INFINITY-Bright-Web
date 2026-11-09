@@ -762,7 +762,7 @@
       "phoneLabel": "Mobile Number",
       "phonePlaceholder": "+966 5X XXX XXXX",
       "vehicleLabel": "Vehicle Make & Model",
-      "vehiclePlaceholder": "e.g., Porsche 911 GT3 / Mercedes S-Class / Land Cruiser",
+      "vehiclePlaceholder": "e.g., Taurus 2024 / Patrol / Land Cruiser / Lexus",
       "serviceLabel": "Primary Service of Interest",
       "servicePlaceholder": "Select a service or thermal tier",
       "extraOptions": {
