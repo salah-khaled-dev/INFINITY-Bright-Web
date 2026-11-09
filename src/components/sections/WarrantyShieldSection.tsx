@@ -28,7 +28,7 @@ export function WarrantyShieldSection({
   const waHref = buildWhatsAppUrl(
     locale === "ar"
       ? "مرحباً إنفينيتي برايت، أود الاستفسار عن باقات الحماية والعزل الحراري وتفاصيل الضمان الذهبي وضمان الحوادث."
-      : "Hello INFINITE BRIGHT, I would like to inquire about your protection & thermal packages and your Lifetime / 10-Year & Accident Warranties."
+      : "Hello INFINITY BRIGHT, I would like to inquire about your protection & thermal packages and your Lifetime / 10-Year & Accident Warranties."
   );
 
   return (

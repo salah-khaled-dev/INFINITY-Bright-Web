@@ -30,19 +30,19 @@ export function HeatInsulationSection({
   const waGeneralHref = buildWhatsAppUrl(
     locale === "ar"
       ? "مرحباً إنفينيتي برايت، أود الاستفسار عن أنظمة العزل الحراري وتظليل النوافذ (Ultra Core 85% / Core Plus 65%)."
-      : "Hello INFINITE BRIGHT, I would like to inquire about Window Tinting & Heat Insulation (Ultra Core 85% / Core Plus 65%)."
+      : "Hello INFINITY BRIGHT, I would like to inquire about Window Tinting & Heat Insulation (Ultra Core 85% / Core Plus 65%)."
   );
 
   const waUltraCoreHref = buildWhatsAppUrl(
     locale === "ar"
       ? "مرحباً إنفينيتي برايت، أود الاستفسار وحجز عزل حراري وتظليل فئة Ultra Core (عزل 85% — متاح بجميع درجاته)."
-      : "Hello INFINITE BRIGHT, I would like to inquire about Ultra Core Thermal Insulation (85% heat rejection — all shades)."
+      : "Hello INFINITY BRIGHT, I would like to inquire about Ultra Core Thermal Insulation (85% heat rejection — all shades)."
   );
 
   const waCorePlusHref = buildWhatsAppUrl(
     locale === "ar"
       ? "مرحباً إنفينيتي برايت، أود الاستفسار وحجز عزل حراري وتظليل فئة Core Plus (عزل 65%)."
-      : "Hello INFINITE BRIGHT, I would like to inquire about Core Plus Thermal Insulation (65% heat rejection)."
+      : "Hello INFINITY BRIGHT, I would like to inquire about Core Plus Thermal Insulation (65% heat rejection)."
   );
 
   const ultraShades = BUSINESS_CONFIG.thermalTiers[0].shades;

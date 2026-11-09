@@ -16,7 +16,7 @@ export function NanoCeramicSection({ locale, dict }: NanoCeramicSectionProps) {
   const waHref = buildWhatsAppUrl(
     locale === "ar"
       ? "مرحباً إنفينيتي برايت، أود الاستفسار عن طلاء النانو سيراميك."
-      : "Hello INFINITE BRIGHT, I would like to inquire about Nano Ceramic Coating."
+      : "Hello INFINITY BRIGHT, I would like to inquire about Nano Ceramic Coating."
   );
 
   return (
@@ -56,7 +56,7 @@ export function NanoCeramicSection({ locale, dict }: NanoCeramicSectionProps) {
             >
               <Image
                 src="/images/services/ceramic-coating.jpg"
-                alt="Specialist applying nano ceramic coating inside INFINITE BRIGHT showroom"
+                alt="Specialist applying nano ceramic coating inside INFINITY BRIGHT showroom"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

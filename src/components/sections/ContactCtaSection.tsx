@@ -51,11 +51,11 @@ export function ContactCtaSection({
                 href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-4 rounded-2xl border border-emerald-400/40 bg-[#25D366] p-5 text-white shadow-[0_12px_34px_rgba(37,211,102,0.28)] transition-all duration-300 hover:bg-[#20ba5a]"
+                className="group flex items-center justify-between gap-4 rounded-2xl border border-emerald-400/40 bg-[#25D366] p-5 text-zinc-950 shadow-[0_12px_34px_rgba(37,211,102,0.28)] transition-all duration-300 hover:bg-[#20ba5a]"
               >
                 <div className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/20">
-                    <WhatsAppIcon className="h-6 w-6" />
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black/10">
+                    <WhatsAppIcon className="h-6 w-6 text-zinc-950" />
                   </span>
                   <div>
                     <p className="text-[11px] font-bold tracking-[0.14em] uppercase opacity-90 rtl:tracking-normal">

@@ -151,7 +151,7 @@ export function ServicesShowcaseSection({
                     href={buildWhatsAppUrl(
                       locale === "ar"
                         ? `مرحباً إنفينيتي برايت، أود الاستفسار عن خدمة: ${activeCopy.title}`
-                        : `Hello INFINITE BRIGHT, I would like to inquire about: ${activeCopy.title}`
+                        : `Hello INFINITY BRIGHT, I would like to inquire about: ${activeCopy.title}`
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -254,7 +254,7 @@ export function ServicesShowcaseSection({
                           href={buildWhatsAppUrl(
                             locale === "ar"
                               ? `مرحباً إنفينيتي برايت، أود الاستفسار عن خدمة: ${copy.title}`
-                              : `Hello INFINITE BRIGHT, I would like to inquire about: ${copy.title}`
+                              : `Hello INFINITY BRIGHT, I would like to inquire about: ${copy.title}`
                           )}
                           target="_blank"
                           rel="noopener noreferrer"

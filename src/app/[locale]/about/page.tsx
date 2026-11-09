@@ -44,7 +44,7 @@ export default async function AboutPage({
         headline={dict.aboutPage.headline}
         description={dict.aboutPage.intro}
         imageSrc="/images/about/about-hero.webp"
-        imageAlt={locale === "ar" ? "مرسيدس مايباخ داخل صالة إنفينيتي برايت الفاخرة" : "Mercedes-Maybach inside Infinite Bright luxury showroom"}
+        imageAlt={locale === "ar" ? "مرسيدس مايباخ داخل صالة إنفينيتي برايت الفاخرة" : "Mercedes-Maybach inside Infinity Bright luxury showroom"}
         badge={locale === "ar" ? "صالة الرياض · مايباخ S-Class" : "Riyadh Studio · Maybach S-Class"}
       />
 
@@ -113,7 +113,7 @@ export default async function AboutPage({
               <ImageReveal className="relative aspect-square overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#08080a] shadow-[var(--shadow-elevated)]">
                 <Image
                   src="/images/hero/brand-story-studio.jpg"
-                  alt="INFINITE BRIGHT architectural showroom"
+                  alt="INFINITY BRIGHT architectural showroom"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"

@@ -270,7 +270,7 @@ export function HeroEnvironment({
           />
         </mesh>
 
-        {/* Primary Flush #FBE90A Infinite Bright Floor Halo Ring */}
+        {/* Primary Flush #FBE90A Infinity Bright Floor Halo Ring */}
         <group ref={stageGroupRef} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.0075, 0]}>
           <mesh>
             <ringGeometry args={[2.865, 2.9, 160]} />

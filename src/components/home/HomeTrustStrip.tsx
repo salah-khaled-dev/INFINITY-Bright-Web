@@ -57,12 +57,12 @@ export function HomeTrustStrip({ locale }: HomeTrustStripProps) {
                   idx < trustItems.length - 1 && "lg:pe-6"
                 )}
               >
-                <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-black/10 bg-gradient-to-b from-white to-[#f5f4ed] text-[#bda400] shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:scale-105 hover:border-[#FBE90A] dark:border-white/10 dark:bg-gradient-to-b dark:from-[#1c1d26] dark:to-[#0f1016] dark:text-[#FBE90A] dark:shadow-[0_4px_16px_rgba(0,0,0,0.4)]">
+                <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)] text-[var(--brand-accent-label)] shadow-[var(--shadow-subtle)] transition-transform duration-300 hover:scale-105 hover:border-[var(--brand-yellow)] dark:border-[var(--border-subtle)] dark:bg-[var(--bg-card)] dark:text-[var(--brand-yellow)]">
                   <span
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-1.5 top-0.5 h-[1px] rounded-full bg-gradient-to-r from-transparent via-white/80 to-transparent dark:via-white/30"
+                    className="pointer-events-none absolute inset-x-1.5 top-0.5 h-[1px] rounded-full bg-gradient-to-r from-transparent via-white/80 to-transparent dark:via-white/20"
                   />
-                  <Icon className="relative z-10 h-4 w-4 drop-shadow-[0_1px_4px_rgba(251,233,10,0.3)]" />
+                  <Icon className="relative z-10 h-4 w-4" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-[10px] font-medium tracking-wider text-[var(--text-muted)] uppercase">

@@ -41,13 +41,13 @@ export function LuxuryIconBadge({
       className={cn(
         "group-hover:scale-105 relative inline-flex shrink-0 items-center justify-center transition-all duration-300 ease-out",
         sizeClasses[size],
-        // Light Mode: Frosted Porcelain Ivory with Champagne Gold Rim
-        "border border-black/10 bg-gradient-to-br from-white via-[#fcfbf7] to-[#edebe1] text-[#09090b] shadow-[0_8px_22px_rgba(0,0,0,0.08)]",
-        // Dark Mode: Deep Obsidian Glass with Titanium / Gold Rim
-        "dark:border-white/15 dark:bg-gradient-to-br dark:from-[#1d1e27] dark:via-[#121319] dark:to-[#08090d] dark:text-[#FBE90A] dark:shadow-[0_10px_30px_rgba(0,0,0,0.65)]",
+        // Light Mode: Frosted Porcelain Ivory with Warm Champagne Gold Rim
+        "border border-[#DAD7CE] bg-gradient-to-br from-[#FFFFFF] via-[#F8F7F3] to-[#E9E6DE] text-[#242522] shadow-[0_4px_14px_rgba(36,37,34,0.06)]",
+        // Dark Mode: Layered Charcoal and Graphite with Warm Gold Rim
+        "dark:border-[#393A34] dark:bg-gradient-to-br dark:from-[#2B2C27] dark:via-[#242521] dark:to-[#1E1F1C] dark:text-[#E8C900] dark:shadow-[0_8px_24px_rgba(0,0,0,0.5)]",
         // Interactive Ambient Glow
         glow &&
-          "hover:border-[#FBE90A] hover:shadow-[0_12px_32px_rgba(251,233,10,0.32)] dark:hover:border-[#FBE90A] dark:hover:shadow-[0_14px_38px_rgba(251,233,10,0.45)]",
+          "hover:border-[var(--brand-yellow)]/60 hover:shadow-[0_4px_16px_rgba(232,201,0,0.18)] dark:hover:border-[var(--brand-yellow)]/60 dark:hover:shadow-[0_6px_20px_rgba(232,201,0,0.22)]",
         className
       )}
     >
@@ -60,23 +60,22 @@ export function LuxuryIconBadge({
       {/* 2. Soft Golden Atmospheric Core Glow */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-[inherit] bg-gradient-to-br from-[#FBE90A]/20 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 rounded-[inherit] bg-gradient-to-br from-[var(--brand-yellow)]/12 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90"
       />
 
       {/* 3. Outer Subtle Accent Ring */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -inset-0.5 rounded-[inherit] border border-[#FBE90A]/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-0.5 rounded-[inherit] border border-[var(--brand-yellow)]/15 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       />
 
-      {/* 4. Luxury Icon with Rich Depth and Drop Shadow */}
+      {/* 4. Luxury Icon with Rich Depth */}
       {Icon && (
         <Icon
           className={cn(
             iconSizes[size],
-            "relative z-10 transition-transform duration-300 group-hover:scale-110",
-            "text-[#d4be00] drop-shadow-[0_2px_8px_rgba(212,190,0,0.35)]",
-            "dark:text-[#FBE90A] dark:drop-shadow-[0_2px_12px_rgba(251,233,10,0.65)]"
+            "relative z-10 transition-transform duration-300 group-hover:scale-105",
+            "text-[#857300] dark:text-[#E8C900]"
           )}
         />
       )}

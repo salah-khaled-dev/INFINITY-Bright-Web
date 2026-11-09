@@ -73,6 +73,25 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
   const isAr = locale === "ar";
   const prefersReduced = useReducedMotion();
   const [activeKey, setActiveKey] = useState<ServiceKey>("ppf");
+  const sectionRef = React.useRef<HTMLElement | null>(null);
+  const [isInView, setIsInView] = useState<boolean>(false);
+
+  React.useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsInView(entry.isIntersecting);
+        });
+      },
+      { rootMargin: "0px", threshold: 0.15 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const services: Array<{
     key: ServiceKey;
@@ -108,7 +127,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
           ],
       waMessage: isAr
         ? "مرحباً إنفينيتي برايت، أود الاستفسار وحجز باقة حماية الطلاء PPF (ضمان مفتوح مدى الحياة)."
-        : "Hello INFINITE BRIGHT, I would like to inquire about Paint Protection Film (PPF) packages.",
+        : "Hello INFINITY BRIGHT, I would like to inquire about Paint Protection Film (PPF) packages.",
     },
     {
       key: "tinting",
@@ -132,7 +151,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
           ],
       waMessage: isAr
         ? "مرحباً إنفينيتي برايت، أود الاستفسار عن عزل وتظليل Ultra Core (عزل 85% لجميع الدرجات — ضمان 10 سنوات)."
-        : "Hello INFINITE BRIGHT, I would like to inquire about Ultra Core 85% Thermal Insulation.",
+        : "Hello INFINITY BRIGHT, I would like to inquire about Ultra Core 85% Thermal Insulation.",
     },
     {
       key: "ceramic",
@@ -156,7 +175,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
           ],
       waMessage: isAr
         ? "مرحباً إنفينيتي برايت، أود الاستفسار وحجز خدمة النانو سيراميك الداخلي والخارجي."
-        : "Hello INFINITE BRIGHT, I would like to inquire about Nano Ceramic packages.",
+        : "Hello INFINITY BRIGHT, I would like to inquire about Nano Ceramic packages.",
     },
     {
       key: "detailing",
@@ -180,7 +199,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
           ],
       waMessage: isAr
         ? "مرحباً إنفينيتي برايت، أود الاستفسار وحجز خدمة التلميع والتفصيل الفاخر (Car Detailing)."
-        : "Hello INFINITE BRIGHT, I would like to inquire about Automotive Polishing & Detailing.",
+        : "Hello INFINITY BRIGHT, I would like to inquire about Automotive Polishing & Detailing.",
     },
     {
       key: "bundles",
@@ -202,7 +221,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
           ],
       waMessage: isAr
         ? "مرحباً إنفينيتي برايت، أود الاستفسار عن باقات VIP الحصرية (خصم 35% + هدية خاصة)."
-        : "Hello INFINITE BRIGHT, I would like to inquire about the Exclusive VIP 35% Bundles.",
+        : "Hello INFINITY BRIGHT, I would like to inquire about the Exclusive VIP 35% Bundles.",
     },
   ];
 
@@ -211,15 +230,16 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
 
   return (
     <section
+      ref={sectionRef}
       id="services-overview"
-      className="relative border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)] py-16 sm:py-24"
+      className="relative border-b border-[var(--border-subtle)] bg-[var(--bg-secondary)] py-14 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         {/* Editorial Section Header */}
-        <div className="mb-10 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
+        <div className="mb-8 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end sm:mb-10">
           <Reveal className="max-w-2xl space-y-3">
             <div className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#FBE90A] animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-[var(--brand-yellow)]" />
               <p className="font-mono text-xs font-semibold tracking-[0.2em] text-[var(--brand-accent-label)] uppercase rtl:font-sans rtl:tracking-normal">
                 {dict.eyebrow}
               </p>
@@ -235,10 +255,10 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
           <Reveal delay={0.1}>
             <Link
               href={localizedHref(locale, "services")}
-              className="group inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] bg-[var(--bg-surface)] px-5 py-3 text-xs font-extrabold tracking-wider text-[var(--text-primary)] uppercase transition-all duration-300 hover:border-[#FBE90A] hover:bg-[#FBE90A] hover:text-[#060608]"
+              className="group inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] bg-[var(--bg-surface)] px-5 py-2.5 text-xs font-bold tracking-wider text-[var(--text-primary)] uppercase transition-all duration-300 hover:border-[var(--brand-yellow)] hover:bg-[var(--bg-elevated)]"
             >
               <span>{dict.viewAllServices}</span>
-              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100" />
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100 text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]" />
             </Link>
           </Reveal>
         </div>
@@ -246,7 +266,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
         {/* ========================================================================= */}
         {/* Luxury Automotive Interactive Control Tabs (Mobile Horizontal Swipe & Desktop) */}
         {/* ========================================================================= */}
-        <Reveal delay={0.05} className="mb-8">
+        <Reveal delay={0.05} className="mb-6 sm:mb-8">
           <div
             role="tablist"
             aria-label={dict.headline}
@@ -263,17 +283,17 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                   aria-selected={isActive}
                   onClick={() => setActiveKey(item.key)}
                   className={cn(
-                    "group relative flex shrink-0 items-center gap-2 rounded-2xl border px-3 py-2.5 text-start transition-all duration-300 sm:w-full sm:gap-2 sm:px-2.5 sm:py-3 lg:gap-2.5 lg:px-3 lg:py-3.5 xl:gap-3 xl:px-4",
+                    "group relative flex min-h-[54px] shrink-0 items-center gap-2 rounded-2xl border px-3 py-2.5 text-start transition-all duration-300 sm:w-full sm:min-h-[60px] sm:gap-2 sm:px-2.5 sm:py-3 lg:gap-2.5 lg:px-3 lg:py-3.5 xl:gap-3 xl:px-4",
                     isActive
-                      ? "border-[#FBE90A] bg-[var(--bg-surface)] shadow-[0_8px_24px_rgba(251,233,10,0.18)]"
-                      : "border-[var(--border-subtle)] bg-[var(--bg-surface)]/60 hover:border-[var(--border-strong)] hover:bg-[var(--bg-surface)]"
+                      ? "border-[var(--brand-yellow)] bg-[var(--bg-surface)] shadow-[var(--shadow-subtle)]"
+                      : "border-[var(--border-subtle)] bg-[var(--bg-surface)]/70 hover:border-[var(--border-strong)] hover:bg-[var(--bg-surface)]"
                   )}
                 >
                   <span
                     className={cn(
                       "flex h-8 w-8 shrink-0 items-center justify-center rounded-xl transition-all duration-300 sm:h-7.5 sm:w-7.5 lg:h-8.5 lg:w-8.5 xl:h-9 xl:w-9",
                       isActive
-                        ? "bg-[#FBE90A] text-[#060608] shadow-sm"
+                        ? "bg-[var(--brand-yellow)] text-[#242522] shadow-xs"
                         : "border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-muted)] group-hover:text-[var(--text-primary)]"
                     )}
                   >
@@ -283,7 +303,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                   <div className="min-w-0 flex-1">
                     <span
                       className={cn(
-                        "block truncate font-mono text-[9px] font-bold tracking-wider uppercase xl:text-[10px]",
+                        "block font-mono text-[9px] font-bold tracking-wider uppercase xl:text-[10px]",
                         isActive
                           ? "text-[var(--brand-accent-label)]"
                           : "text-[var(--text-muted)]"
@@ -293,7 +313,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                     </span>
                     <span
                       className={cn(
-                        "block text-xs font-extrabold leading-tight transition-colors sm:text-[11px] lg:text-[12px] xl:text-[13px]",
+                        "block text-xs font-extrabold leading-snug transition-colors sm:text-[11px] lg:text-[12px] xl:text-[13px]",
                         isActive
                           ? "text-[var(--text-primary)]"
                           : "text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]"
@@ -304,7 +324,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                   </div>
 
                   {isActive && (
-                    <span className="absolute bottom-0 start-6 end-6 h-[2px] rounded-full bg-[#FBE90A]" />
+                    <span className="absolute bottom-0 start-6 end-6 h-[2px] rounded-full bg-[var(--brand-yellow)]" />
                   )}
                 </button>
               );
@@ -315,10 +335,10 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
         {/* ========================================================================= */}
         {/* The Central Interactive Stage — Cinematic Visual + High-Converting Story  */}
         {/* ========================================================================= */}
-        <div className="overflow-hidden rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] shadow-[var(--shadow-elevated)] transition-all duration-500">
+        <div className="overflow-hidden rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] shadow-[var(--shadow-elevated)] transition-all duration-500">
           <div className="grid grid-cols-1 items-stretch lg:grid-cols-12">
             {/* 1. Large High-Resolution Automotive Showcase Visual (7 Cols) */}
-            <div className="relative min-h-[320px] overflow-hidden bg-[#07080b] sm:min-h-[420px] lg:col-span-7 lg:min-h-[540px]">
+            <div className="relative min-h-[320px] overflow-hidden bg-[#151614] sm:min-h-[420px] lg:col-span-7 lg:min-h-[540px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.key}
@@ -332,7 +352,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                   transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                   className="absolute inset-0"
                 >
-                  {current.video ? (
+                  {isInView && current.video && !prefersReduced ? (
                     <video
                       key={current.video}
                       ref={(el) => {
@@ -356,7 +376,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                       src={current.image}
                       alt={current.data.title}
                       fill
-                      priority
+                      priority={false}
                       sizes="(max-width: 1024px) 100vw, 60vw"
                       className="object-cover"
                     />
@@ -369,7 +389,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
               {/* Floating Badges inside the Media */}
               <div className="absolute inset-x-5 top-5 z-10 flex items-center justify-between gap-3">
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/65 px-3.5 py-1.5 text-xs font-bold text-white shadow-sm backdrop-blur-md">
-                  <span className="h-2 w-2 rounded-full bg-[#FBE90A] animate-pulse" />
+                  <span className="h-2 w-2 rounded-full bg-[var(--brand-yellow)]" />
                   <span>{current.data.tag}</span>
                 </span>
 
@@ -380,14 +400,14 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                       <span>{isAr ? "فيديو عملي مباشر" : "Live Video"}</span>
                     </span>
                   )}
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/65 text-[#FBE90A] shadow-sm backdrop-blur-md">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/65 text-[var(--brand-yellow)] shadow-sm backdrop-blur-md">
                     <CurrentIcon className="h-4.5 w-4.5" />
                   </span>
                 </div>
               </div>
 
               <div className="absolute bottom-5 start-5 z-10">
-                <span className="inline-flex items-center rounded-md bg-[#FBE90A] px-3 py-1 font-mono text-[11px] font-black tracking-wider text-[#060608] uppercase shadow-md">
+                <span className="inline-flex items-center rounded-md bg-[var(--brand-yellow)] px-3 py-1 font-mono text-[11px] font-black tracking-wider text-[#242522] uppercase shadow-md">
                   {current.data.badge}
                 </span>
               </div>
@@ -423,7 +443,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                         key={i}
                         className="flex items-start gap-2.5 text-xs font-medium text-[var(--text-primary)] sm:text-sm"
                       >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#FBE90A]" />
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand-accent-label)]" />
                         <span>{point}</span>
                       </div>
                     ))}
@@ -437,20 +457,20 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
                   href={buildWhatsAppUrl(current.waMessage)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-5 py-3.5 text-xs font-extrabold text-white uppercase shadow-[0_6px_20px_rgba(37,211,102,0.25)] transition-all duration-300 hover:bg-[#20ba5a] hover:shadow-[0_10px_28px_rgba(37,211,102,0.35)] sm:text-sm"
+                  className="flex min-h-[48px] w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-5 py-3.5 text-xs font-black text-[#042813] uppercase shadow-xs transition-all duration-300 hover:bg-[#20ba5a] hover:shadow-md sm:text-sm"
                 >
-                  <WhatsAppIcon className="h-4.5 w-4.5 text-white" />
-                  <span>
+                  <WhatsAppIcon className="h-4.5 w-4.5 text-[#042813]" />
+                  <span className="font-black text-[#042813]">
                     {isAr ? "احجز موعد عبر واتساب" : "Book Appointment via WhatsApp"}
                   </span>
                 </a>
 
                 <Link
                   href={current.href}
-                  className="group/cta flex w-full items-center justify-between rounded-xl border border-[var(--border-strong)] bg-[var(--bg-elevated)] px-4 py-3 text-xs font-bold text-[var(--text-primary)] transition-all duration-300 hover:border-[#FBE90A] hover:bg-[#FBE90A] hover:text-[#060608] sm:text-sm"
+                  className="group/cta flex min-h-[44px] w-full items-center justify-between rounded-xl border border-[var(--border-strong)] bg-[var(--bg-elevated)] px-4 py-3 text-xs font-bold text-[var(--text-primary)] transition-all duration-300 hover:border-[var(--brand-yellow)] hover:bg-[var(--bg-surface)] sm:text-sm"
                 >
                   <span>{current.data.cta}</span>
-                  <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100 transition-transform group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
+                  <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100 transition-transform group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 text-[var(--text-secondary)] group-hover/cta:text-[var(--text-primary)]" />
                 </Link>
               </div>
             </div>

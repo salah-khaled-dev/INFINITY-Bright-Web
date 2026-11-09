@@ -36,7 +36,7 @@ export default async function GalleryPage({
         headline={dict.galleryPage.headline}
         description={dict.galleryPage.intro}
         imageSrc="/images/gallery/gallery-hero.webp"
-        imageAlt={locale === "ar" ? "رانج روفر داخل صالة إنفينيتي برايت الفاخرة" : "Range Rover inside Infinite Bright luxury studio"}
+        imageAlt={locale === "ar" ? "رانج روفر داخل صالة إنفينيتي برايت الفاخرة" : "Range Rover inside Infinity Bright luxury studio"}
         badge={locale === "ar" ? "صالة الرياض · رانج روفر" : "Riyadh Studio · Range Rover"}
       />
 

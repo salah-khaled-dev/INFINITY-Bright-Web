@@ -77,7 +77,7 @@ export function ServiceDetailChapter({
   const waHref = buildWhatsAppUrl(
     locale === "ar"
       ? `مرحباً إنفينيتي برايت، أود حجز موعد لخدمة: ${copy.title}`
-      : `Hello INFINITE BRIGHT, I would like to book an appointment for: ${copy.title}`
+      : `Hello INFINITY BRIGHT, I would like to book an appointment for: ${copy.title}`
   );
 
   return (

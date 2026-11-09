@@ -37,7 +37,7 @@ export function TintShadeSimulator({ locale, dict }: TintShadeSimulatorProps) {
 
     return locale === "ar"
       ? `مرحباً إنفينيتي برايت، أود حجز باقة العزل الحراري والتظليل (بضمان 10 سنوات):${carLine}\n• الفئة: ${tierName} (عزل ${heatRejection})\n• الدرجة المختارة: ${activeShade.name}`
-      : `Hello INFINITE BRIGHT, I would like to book 10-Year Warranted Window Tinting:${carLine}\n• Series: ${tierName} (${heatRejection} Heat Rejection)\n• Selected Shade: ${activeShade.name}`;
+      : `Hello INFINITY BRIGHT, I would like to book 10-Year Warranted Window Tinting:${carLine}\n• Series: ${tierName} (${heatRejection} Heat Rejection)\n• Selected Shade: ${activeShade.name}`;
   }, [locale, vehicleModel, tierName, heatRejection, activeShade.name]);
 
   const popularModels = SAUDI_POPULAR_MODELS[locale].slice(0, 6);

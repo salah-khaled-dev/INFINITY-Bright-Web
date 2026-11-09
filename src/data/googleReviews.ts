@@ -1,5 +1,5 @@
 /**
- * INFINITE BRIGHT — AUTHENTIC GOOGLE BUSINESS REVIEWS
+ * INFINITY BRIGHT — AUTHENTIC GOOGLE BUSINESS REVIEWS
  * ====================================================
  * Profile: INFINITY BRIGHT | إنفينيتي برايت
  * Official Verified Place ID: ChIJEZgvWSjjLj4R62lmIDiQvvY

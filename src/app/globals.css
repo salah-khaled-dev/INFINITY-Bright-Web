@@ -9,20 +9,28 @@
 }
 
 :root {
-  --bg-canvas: #f8f8f5;
-  --bg-surface: #ffffff;
-  --bg-elevated: #f0f0eb;
-  --bg-glass: rgba(248, 248, 245, 0.84);
-  --text-primary: #09090b;
-  --text-secondary: #45454f;
-  --text-muted: #71717c;
-  --border-subtle: rgba(9, 9, 11, 0.09);
-  --border-strong: rgba(9, 9, 11, 0.18);
-  --brand-yellow: #fbe90a;
-  --brand-yellow-hover: #f2df00;
-  --brand-accent-label: #6e6200;
-  --shadow-elevated: 0 22px 54px -16px rgba(9, 9, 15, 0.08),
-    0 4px 16px -4px rgba(9, 9, 15, 0.04);
+  /* LIGHT MODE — WARM LUXURY */
+  --bg-canvas: #F3F1EC;
+  --bg-secondary: #EAE6DD;
+  --bg-surface: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+  --bg-contrast: #20211D;
+  --bg-glass: rgba(243, 241, 236, 0.88);
+  --text-contrast: #F2EFE8;
+  --text-primary: #1F201D;
+  --text-secondary: #58574F;
+  --text-muted: #7E7C73;
+  --border-subtle: #D6D2C7;
+  --border-strong: #BEB9AC;
+  --brand-yellow: #E8C900;
+  --brand-yellow-hover: #D4B800;
+  --brand-yellow-muted: #BDA900;
+  --brand-accent-label: #705E00;
+  --shadow-subtle: 0 1px 3px 0 rgba(31, 32, 29, 0.05),
+    0 1px 2px -1px rgba(31, 32, 29, 0.05);
+  --shadow-elevated: 0 12px 28px -6px rgba(31, 32, 29, 0.08),
+    0 4px 10px -2px rgba(31, 32, 29, 0.04);
   --active-font-sans: var(--font-jakarta), var(--font-cairo), system-ui, sans-serif;
   --active-font-display: var(--font-montserrat), var(--font-jakarta), sans-serif;
   --active-font-mono: var(--font-montserrat), ui-monospace, monospace;
@@ -30,20 +38,27 @@
 }
 
 .dark {
-  --bg-canvas: #060608;
-  --bg-surface: #0d0d11;
-  --bg-elevated: #14141a;
-  --bg-glass: rgba(8, 8, 11, 0.8);
-  --text-primary: #f6f6f4;
-  --text-secondary: #a6a6b2;
-  --text-muted: #6d6d79;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.17);
-  --brand-yellow: #fbe90a;
-  --brand-yellow-hover: #fff033;
-  --brand-accent-label: #fbe90a;
-  --shadow-elevated: 0 28px 68px -18px rgba(0, 0, 0, 0.78),
-    0 6px 20px -6px rgba(0, 0, 0, 0.55);
+  /* DARK MODE — PREMIUM AUTOMOTIVE */
+  --bg-canvas: #151614;
+  --bg-secondary: #1C1D1A;
+  --bg-surface: #222320;
+  --bg-card: #252622;
+  --bg-elevated: #2D2E29;
+  --bg-contrast: #151614;
+  --bg-glass: rgba(21, 22, 20, 0.88);
+  --text-contrast: #F2EFE8;
+  --text-primary: #F2EFE8;
+  --text-secondary: #BCB9AF;
+  --text-muted: #82837A;
+  --border-subtle: #363731;
+  --border-strong: #4B4C44;
+  --brand-yellow: #E8C900;
+  --brand-yellow-hover: #F0D318;
+  --brand-yellow-muted: #BDA900;
+  --brand-accent-label: #E8C900;
+  --shadow-subtle: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
+  --shadow-elevated: 0 20px 48px -12px rgba(0, 0, 0, 0.8),
+    0 4px 16px -4px rgba(0, 0, 0, 0.55);
   color-scheme: dark;
 }
 
@@ -145,8 +160,8 @@ html[dir="ltr"] {
   }
 
   ::selection {
-    background-color: #fbe90a;
-    color: #060608;
+    background-color: var(--brand-yellow);
+    color: #242522;
   }
 }
 

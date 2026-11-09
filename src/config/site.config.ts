@@ -1,9 +1,9 @@
 /**
  * ============================================================================
- * INFINITE BRIGHT — MASTER SITE CONFIGURATION
+ * INFINITY BRIGHT — MASTER SITE CONFIGURATION
  * ============================================================================
  * Centralized, strongly typed configuration architecture designed for:
- * 1. Infinite Bright production commercial deployment.
+ * 1. Infinity Bright production commercial deployment.
  * 2. Rapid reusability for future client projects and different industries.
  *
  * To rebrand this project for a new client:
@@ -151,7 +151,7 @@ export interface SiteConfig {
 export const SITE_CONFIG: SiteConfig = {
   brand: {
     name: {
-      en: "INFINITE BRIGHT",
+      en: "INFINITY BRIGHT",
       ar: "إنفينيتي برايت",
     },
     tagline: {
@@ -177,7 +177,7 @@ export const SITE_CONFIG: SiteConfig = {
       bgSurfaceDark: "#0d0d11",
     },
     assets: {
-      logoTextEn: "INFINITE BRIGHT",
+      logoTextEn: "INFINITY BRIGHT",
       logoTextAr: "إنفينيتي برايت",
       nawaderLogo: "/images/brand/nawader-logo.png",
       threeMLogoOnly: "/images/brand/3m-pure-logo.png",
@@ -207,7 +207,7 @@ export const SITE_CONFIG: SiteConfig = {
       id: "al-murooj-flagship",
       brand: "infinite-bright",
       name: {
-        en: "INFINITE BRIGHT Flagship Showroom",
+        en: "INFINITY BRIGHT Flagship Showroom",
         ar: "الفرع الرئيسي — صالة إنفينيتي برايت",
       },
       district: {

@@ -142,7 +142,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
             <Link
               href={localizedHref(locale, "")}
               className="group relative flex shrink-0 items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FBE90A]"
-              aria-label="INFINITE BRIGHT"
+              aria-label="INFINITY BRIGHT"
             >
               <BrandLogo
                 forceDarkSurface={overDarkHero}
@@ -167,7 +167,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
                     "relative px-3.5 py-2 text-xs font-semibold tracking-[0.14em] uppercase transition-colors duration-300 xl:px-4 rtl:text-sm rtl:font-medium rtl:tracking-normal",
                     overDarkHero
                       ? active
-                        ? "text-[#FBE90A]"
+                        ? "text-[var(--brand-yellow)]"
                         : "text-white/80 hover:text-white"
                       : active
                         ? "text-[var(--text-primary)]"
@@ -178,7 +178,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
                   {active && (
                     <span
                       aria-hidden="true"
-                      className="absolute inset-x-3.5 -bottom-0.5 h-[2px] bg-[#FBE90A] xl:inset-x-4"
+                      className="absolute inset-x-3.5 -bottom-0.5 h-[2px] bg-[var(--brand-yellow)] xl:inset-x-4"
                     />
                   )}
                 </Link>
@@ -187,14 +187,14 @@ export function Navbar({ locale, dict }: NavbarProps) {
           </nav>
 
           {/* Header Action Buttons */}
-          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-2.5">
             {/* WhatsApp Quick Button (Desktop & Tablet only — mobile uses floating quick chat) */}
             <a
               href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${dict.whatsapp} (${BUSINESS_CONFIG.contact.phoneDisplay})`}
-              className="hidden sm:inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-emerald-500/35 bg-emerald-500/10 text-[#25D366] transition-all duration-300 hover:scale-105 hover:bg-[#25D366] hover:text-white sm:h-10 sm:w-10"
+              className="hidden sm:inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-emerald-500/35 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 transition-all duration-300 hover:scale-105 hover:bg-[#25D366] hover:text-[#042813]"
             >
               <WhatsAppIcon className="h-4 w-4" />
             </a>
@@ -206,7 +206,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram @infinity_bright1"
-                className="hidden h-9 w-9 items-center justify-center rounded-full border border-pink-500/35 bg-pink-500/10 text-[#E1306C] transition-all duration-300 hover:scale-105 hover:bg-[#E1306C] hover:text-white md:inline-flex md:h-10 md:w-10"
+                className="hidden h-10 w-10 items-center justify-center rounded-full border border-pink-500/35 bg-pink-500/10 text-[#E1306C] transition-all duration-300 hover:scale-105 hover:bg-[#E1306C] hover:text-white md:inline-flex"
               >
                 <InstagramIcon className="h-4 w-4" />
               </a>
@@ -219,7 +219,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok @infinity..bright"
-                className="hidden h-9 w-9 items-center justify-center rounded-full border border-cyan-500/35 bg-cyan-500/10 text-cyan-500 dark:text-cyan-300 transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white md:inline-flex md:h-10 md:w-10"
+                className="hidden h-10 w-10 items-center justify-center rounded-full border border-cyan-500/35 bg-cyan-500/10 text-cyan-500 dark:text-cyan-300 transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white md:inline-flex"
               >
                 <TikTokIcon className="h-4 w-4" />
               </a>
@@ -230,9 +230,9 @@ export function Navbar({ locale, dict }: NavbarProps) {
               href={switchedLocalePath}
               aria-label={locale === "en" ? "التبديل إلى العربية" : "Switch to English"}
               className={cn(
-                "inline-flex h-9 shrink-0 items-center gap-1 rounded-full border px-2.5 text-xs font-semibold transition-all duration-300 sm:h-10 sm:px-3.5 sm:gap-1.5",
+                "inline-flex min-h-[44px] shrink-0 items-center gap-1.5 rounded-full border px-3 text-xs font-semibold transition-all duration-300 sm:px-3.5",
                 overDarkHero
-                  ? "border-white/20 bg-white/5 text-white hover:border-[#FBE90A] hover:text-[#FBE90A]"
+                  ? "border-white/20 bg-white/5 text-white hover:border-[var(--brand-yellow)] hover:text-[var(--brand-yellow)]"
                   : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--border-strong)]"
               )}
             >
@@ -248,9 +248,9 @@ export function Navbar({ locale, dict }: NavbarProps) {
                 mounted && theme === "dark" ? dict.lightMode : dict.darkMode
               }
               className={cn(
-                "inline-flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border transition-all duration-300 sm:h-10 sm:w-10",
+                "inline-flex min-h-[44px] min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-full border transition-all duration-300",
                 overDarkHero
-                  ? "border-white/20 bg-white/5 text-white hover:border-[#FBE90A] hover:text-[#FBE90A]"
+                  ? "border-white/20 bg-white/5 text-white hover:border-[var(--brand-yellow)] hover:text-[var(--brand-yellow)]"
                   : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--border-strong)]"
               )}
             >
@@ -264,7 +264,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
             {/* Desktop Contact CTA */}
             <Link
               href={localizedHref(locale, "contact")}
-              className="hidden items-center gap-2 rounded-full bg-[#FBE90A] px-5 py-2.5 text-xs font-bold tracking-[0.12em] text-[#060608] uppercase shadow-[0_6px_24px_rgba(251,233,10,0.22)] transition-all duration-300 hover:bg-[#fff033] hover:shadow-[0_10px_30px_rgba(251,233,10,0.38)] md:inline-flex rtl:text-xs rtl:tracking-normal"
+              className="hidden min-h-[44px] items-center gap-2 rounded-full bg-[var(--brand-yellow)] px-5 py-2.5 text-xs font-bold tracking-[0.12em] text-[#242522] uppercase shadow-xs transition-all duration-300 hover:bg-[var(--brand-yellow-hover)] md:inline-flex rtl:text-xs rtl:tracking-normal"
             >
               <span>{dict.contactCta}</span>
               <ArrowUpRight className="h-3.5 w-3.5 rtl:-scale-x-100" />
@@ -277,9 +277,9 @@ export function Navbar({ locale, dict }: NavbarProps) {
               aria-expanded={mobileOpen}
               aria-label={mobileOpen ? dict.closeMenu : dict.openMenu}
               className={cn(
-                "inline-flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border transition-colors sm:h-10 sm:w-10 lg:hidden",
+                "inline-flex min-h-[44px] min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-full border transition-colors lg:hidden",
                 overDarkHero
-                  ? "border-white/20 bg-white/5 text-white hover:border-[#FBE90A]"
+                  ? "border-white/20 bg-white/5 text-white hover:border-[var(--brand-yellow)]"
                   : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)]"
               )}
             >
@@ -446,15 +446,15 @@ export function Navbar({ locale, dict }: NavbarProps) {
                   href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3.5 text-xs font-extrabold text-white shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a]"
+                  className="flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3.5 text-xs font-black text-[#042813] shadow-xs hover:bg-[#20ba5a]"
                 >
-                  <WhatsAppIcon className="h-4 w-4 text-white" />
-                  <span>{dict.whatsapp}</span>
+                  <WhatsAppIcon className="h-4 w-4 text-[#042813]" />
+                  <span className="font-black text-[#042813]">{dict.whatsapp}</span>
                 </a>
 
                 <a
                   href={BUSINESS_CONFIG.contact.phoneHref}
-                  className="flex items-center justify-center gap-2 rounded-xl border border-[var(--border-strong)] bg-[var(--bg-surface)] py-3.5 text-xs font-bold text-[var(--text-primary)]"
+                  className="flex min-h-[44px] items-center justify-center gap-2 rounded-xl border border-[var(--border-strong)] bg-[var(--bg-surface)] py-3.5 text-xs font-bold text-[var(--text-primary)]"
                 >
                   <Phone className="h-4 w-4" />
                   <span>{dict.callUs}</span>

@@ -31,15 +31,15 @@ export function HomeQuickContact({
   const defaultWaUrl = buildWhatsAppUrl(
     isAr
       ? "مرحباً إنفينيتي برايت، أود الاستفسار وحجز موعد لسيارتي في صالة الرياض."
-      : "Hello INFINITE BRIGHT, I would like to book a consultation for my vehicle."
+      : "Hello INFINITY BRIGHT, I would like to book a consultation for my vehicle."
   );
 
   return (
-    <section className="relative overflow-hidden bg-[var(--bg-elevated)] py-20 sm:py-28">
+    <section className="relative overflow-hidden border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)] py-20 sm:py-28">
       {/* Subtle luxury golden ambient radial glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[400px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FBE90A]/[0.06] blur-3xl"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[400px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--brand-yellow)]/[0.04] blur-3xl"
       />
 
       <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-8">
@@ -59,7 +59,7 @@ export function HomeQuickContact({
 
         {/* Working Hours Badge with Luxury Medallion */}
         <Reveal delay={0.08} className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <div className="group inline-flex items-center gap-3.5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-5 py-2.5 text-xs shadow-sm transition-all hover:border-[#FBE90A]/50">
+          <div className="group inline-flex items-center gap-3.5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-5 py-2.5 text-xs shadow-xs transition-all hover:border-[var(--brand-yellow)]/50">
             <LuxuryIconBadge icon={Clock} size="sm" />
             <div className="text-start">
               <span className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase">
@@ -78,7 +78,7 @@ export function HomeQuickContact({
             href={defaultWaUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-2xl bg-[#FBE90A] px-8 py-4 text-sm font-extrabold text-[#060608] uppercase shadow-[0_12px_36px_rgba(251,233,10,0.3)] transition-all duration-300 hover:bg-[#fff033] hover:shadow-[0_16px_44px_rgba(251,233,10,0.45)] sm:w-auto"
+            className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-2xl bg-[var(--brand-yellow)] px-8 py-4 text-sm font-extrabold text-[#242522] uppercase shadow-xs transition-all duration-300 hover:bg-[var(--brand-yellow-hover)] sm:w-auto"
           >
             <WhatsAppIcon className="h-5 w-5" />
             <span>{dict.whatsappButton}</span>
@@ -87,7 +87,7 @@ export function HomeQuickContact({
 
           <a
             href={BUSINESS_CONFIG.contact.phoneHref}
-            className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-2xl border border-[var(--border-strong)] bg-[var(--bg-surface)] px-8 py-4 text-sm font-extrabold text-[var(--text-primary)] transition-all duration-300 hover:border-[#FBE90A] hover:bg-[var(--bg-canvas)] sm:w-auto"
+            className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-2xl border border-[var(--border-strong)] bg-[var(--bg-surface)] px-8 py-4 text-sm font-extrabold text-[var(--text-primary)] transition-all duration-300 hover:border-[var(--brand-yellow)] hover:bg-[var(--bg-elevated)] sm:w-auto"
           >
             <Phone className="h-4 w-4 text-[var(--brand-accent-label)]" />
             <span>{dict.callButton}</span>
@@ -102,7 +102,7 @@ export function HomeQuickContact({
           <span>{dict.detailedFormPrompt} </span>
           <Link
             href={localizedHref(locale, "contact")}
-            className="font-bold text-[var(--brand-accent-label)] underline decoration-[#FBE90A] underline-offset-4 hover:text-[var(--text-primary)]"
+            className="font-bold text-[var(--brand-accent-label)] underline decoration-[var(--brand-yellow)] underline-offset-4 hover:text-[var(--text-primary)]"
           >
             {dict.detailedFormLink} →
           </Link>

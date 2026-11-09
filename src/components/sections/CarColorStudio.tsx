@@ -1053,7 +1053,7 @@ export function CarColorStudio({
 
     return locale === "ar"
       ? `مرحباً إنفينيتي برايت، أود الاستفسار وحجز خدمة تغيير لون السيارة من استوديو الألوان التفاعلي:${vehiclePart}\n• اللون المختار: ${activeColorName}\n• كود اللون (HEX): ${activeHex} — RGB(${activeRgb.r}, ${activeRgb.g}, ${activeRgb.b})\n• المظهر واللمعة: ${finishTitle}`
-      : `Hello INFINITE BRIGHT, I would like to request a quote from the Car Color Studio:${vehiclePart}\n• Selected Color: ${activeColorName}\n• Color Code: ${activeHex} — RGB(${activeRgb.r}, ${activeRgb.g}, ${activeRgb.b})\n• Surface Finish: ${finishTitle}`;
+      : `Hello INFINITY BRIGHT, I would like to request a quote from the Car Color Studio:${vehiclePart}\n• Selected Color: ${activeColorName}\n• Color Code: ${activeHex} — RGB(${activeRgb.r}, ${activeRgb.g}, ${activeRgb.b})\n• Surface Finish: ${finishTitle}`;
   }, [
     locale,
     vehicleModel,
@@ -1176,7 +1176,7 @@ export function CarColorStudio({
                 {!assetsReady && (
                   <img
                     src="/images/services/color-change-studio.jpg"
-                    alt="INFINITE BRIGHT Car Color Studio"
+                    alt="INFINITY BRIGHT Car Color Studio"
                     className="h-full w-full object-cover"
                   />
                 )}

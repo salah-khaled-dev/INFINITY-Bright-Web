@@ -78,8 +78,8 @@ export function HeroContent({
         className={cn(
           "pointer-events-none absolute inset-x-0 bottom-0 h-[42%] transition-colors duration-500",
           isLight
-            ? "bg-gradient-to-t from-[#f2f2ed] via-[#f2f2ed]/65 to-transparent"
-            : "bg-gradient-to-t from-[#050608] via-[#050608]/75 to-transparent"
+            ? "bg-gradient-to-t from-[#F1EFE9] via-[#F1EFE9]/70 to-transparent"
+            : "bg-gradient-to-t from-[#171816] via-[#171816]/80 to-transparent"
         )}
       />
 
@@ -92,11 +92,11 @@ export function HeroContent({
             className={cn(
               "inline-flex items-center gap-2 rounded-full border px-3.5 py-1 backdrop-blur-md",
               isLight
-                ? "border-black/10 bg-white/70 text-[#09090b] shadow-xs"
-                : "border-white/10 bg-black/50 text-[#FBE90A]"
+                ? "border-[#DAD7CE] bg-[#F8F7F3]/90 text-[#242522] shadow-xs"
+                : "border-[#393A34] bg-[#242521]/90 text-[#F1EFE9]"
             )}
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-[#FBE90A] shadow-[0_0_8px_#FBE90A]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-yellow)]" />
             <span className="text-[11px] font-bold tracking-[0.2em] uppercase rtl:text-xs rtl:tracking-normal">
               {dict.brand}
             </span>
@@ -107,7 +107,7 @@ export function HeroContent({
             data-hero-headline
             className={cn(
               "font-display text-3xl font-black leading-[1.18] tracking-tight sm:text-4xl lg:text-[2.45rem] lg:leading-[1.2] xl:text-[2.85rem] xl:leading-[1.18]",
-              isLight ? "text-[#09090b]" : "text-white"
+              isLight ? "text-[#242522]" : "text-[#F1EFE9]"
             )}
           >
             {dict.headline}
@@ -118,17 +118,17 @@ export function HeroContent({
             data-hero-desc
             className={cn(
               "max-w-xl text-sm leading-relaxed font-normal lg:text-[15px] lg:leading-relaxed",
-              isLight ? "text-zinc-700" : "text-zinc-200/90"
+              isLight ? "text-[#68675F]" : "text-[#B8B6AD]"
             )}
           >
             {dict.description}
           </p>
 
-          {/* 3. Single Primary CTA — Yellow, comfortably padded, subtle hover micro-interaction */}
+          {/* 3. Single Primary CTA — Warm luxury yellow, comfortable padding, subtle refined shadow */}
           <div data-hero-cta className="pointer-events-auto pt-2">
             <Link
               href={localizedHref(locale, "services")}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#FBE90A] px-7 py-3.5 text-xs font-extrabold tracking-[0.12em] text-[#060608] uppercase shadow-[0_8px_24px_rgba(251,233,10,0.28)] transition-all duration-300 hover:scale-[1.02] hover:bg-[#fff033] hover:shadow-[0_12px_32px_rgba(251,233,10,0.4)] rtl:text-xs rtl:tracking-normal"
+              className="group inline-flex items-center gap-3 rounded-full bg-[var(--brand-yellow)] px-7 py-3.5 text-xs font-extrabold tracking-[0.12em] text-[#242522] uppercase shadow-sm transition-all duration-300 hover:scale-[1.02] hover:bg-[var(--brand-yellow-hover)] hover:shadow-md rtl:text-xs rtl:tracking-normal"
             >
               <span>{dict.primaryCta}</span>
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />

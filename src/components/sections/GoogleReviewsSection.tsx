@@ -25,7 +25,7 @@ export function GoogleReviewsSection({ locale }: GoogleReviewsSectionProps) {
       {/* Background Decorative Ambient Gradient */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(251,233,10,0.04),transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(232,201,0,0.04),transparent_60%)]"
       />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
@@ -54,7 +54,7 @@ export function GoogleReviewsSection({ locale }: GoogleReviewsSectionProps) {
               </svg>
               <span>{isAr ? "تقييمات Google المعتمدة" : "Verified Google Reviews"}</span>
               <span className="text-[var(--text-muted)]">·</span>
-              <span className="font-mono text-[#FBE90A]">{overallRating} ★</span>
+              <span className="font-mono text-[var(--brand-accent-label)]">{overallRating} ★</span>
             </div>
 
             <h3 className="font-display text-2xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-3xl lg:text-4xl">
@@ -76,7 +76,7 @@ export function GoogleReviewsSection({ locale }: GoogleReviewsSectionProps) {
                 href={writeReviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FBE90A] px-5 py-3 text-xs font-bold text-[#060608] shadow-[0_6px_20px_rgba(251,233,10,0.24)] transition-all hover:bg-[#fff033] hover:shadow-[0_8px_28px_rgba(251,233,10,0.38)] active:scale-95"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand-yellow)] px-5 py-3 text-xs font-bold text-[#242522] shadow-xs transition-all hover:bg-[var(--brand-yellow-hover)] active:scale-95"
               >
                 <PenLine className="h-3.5 w-3.5" />
                 <span>{isAr ? "أضف تقييمك على Google" : "Write a Google Review"}</span>
@@ -87,7 +87,7 @@ export function GoogleReviewsSection({ locale }: GoogleReviewsSectionProps) {
                 href={mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border-strong)] bg-[var(--bg-surface)] px-5 py-3 text-xs font-bold text-[var(--text-primary)] shadow-xs transition-all hover:border-[#FBE90A] hover:text-[var(--brand-accent-label)] active:scale-95"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border-strong)] bg-[var(--bg-surface)] px-5 py-3 text-xs font-bold text-[var(--text-primary)] shadow-xs transition-all hover:border-[var(--brand-yellow)] hover:text-[var(--brand-accent-label)] hover:bg-[var(--bg-elevated)] active:scale-95"
               >
                 <ExternalLink className="h-3.5 w-3.5" />
                 <span>{isAr ? "شاهد جميع تقييماتنا على Google" : "View All Google Reviews"}</span>
@@ -105,7 +105,7 @@ export function GoogleReviewsSection({ locale }: GoogleReviewsSectionProps) {
                 <span className="text-xs text-[var(--text-muted)]">/ 5.0</span>
               </div>
               <div>
-                <div className="flex items-center gap-1 text-[#FBE90A]">
+                <div className="flex items-center gap-1 text-[var(--brand-yellow)]">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
@@ -139,11 +139,11 @@ export function GoogleReviewsSection({ locale }: GoogleReviewsSectionProps) {
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {featuredReviews.map((rev, idx) => (
             <Reveal key={rev.id} delay={0.1 + idx * 0.08}>
-              <div className="flex h-full flex-col justify-between rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 shadow-[var(--shadow-card)] transition-all hover:border-[#FBE90A]/50">
+              <div className="flex h-full flex-col justify-between rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 shadow-[var(--shadow-card)] transition-all hover:border-[var(--brand-yellow)]/60 hover:shadow-[var(--shadow-elevated)]">
                 <div className="space-y-4">
                   {/* Card Top: Stars & Google Badge */}
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-[#FBE90A]">
+                    <div className="flex items-center gap-1 text-[var(--brand-yellow)]">
                       {[...Array(rev.rating)].map((_, sIdx) => (
                         <Star key={sIdx} className="h-4 w-4 fill-current" />
                       ))}

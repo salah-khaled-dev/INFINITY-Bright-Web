@@ -25,12 +25,7 @@ export function CinematicHero({ locale, dict }: CinematicHeroProps) {
     <section
       ref={sectionRef}
       aria-label={dict.brand}
-      className={cn(
-        "relative min-h-[100svh] w-full overflow-hidden transition-colors duration-500",
-        activeTheme === "light"
-          ? "bg-[#f2f2ed] text-[#09090b]"
-          : "bg-[#050608] text-white"
-      )}
+      className="relative min-h-[100svh] w-full overflow-hidden bg-[var(--bg-canvas)] text-[var(--text-primary)] transition-colors duration-500"
     >
       {/* Cinema-Grade Hero Video Experience */}
       <HeroVideoBackground

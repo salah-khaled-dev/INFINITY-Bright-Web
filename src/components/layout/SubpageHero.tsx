@@ -19,7 +19,7 @@ interface SubpageHeroProps {
 /**
  * Editorial Subpage Hero Header
  * Replaces plain white/empty headers with an ultra-luxurious cinematic showroom backdrop
- * featuring iconic vehicles (Land Cruiser, Range Rover, Maybach, Porsche) inside Infinite Bright's studio.
+ * featuring iconic vehicles (Land Cruiser, Range Rover, Maybach, Porsche) inside Infinity Bright's studio.
  * Uses smart directional scrims to ensure AAA text contrast in both light and dark modes.
  */
 export function SubpageHero({

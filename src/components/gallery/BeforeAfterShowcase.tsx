@@ -41,8 +41,8 @@ export function BeforeAfterShowcase({
       {/* Header & Case Switcher */}
       <div className="mb-8 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#FBE90A]/15 px-3.5 py-1 text-xs font-bold text-[var(--brand-accent-label)]">
-            <span className="h-2 w-2 rounded-full bg-[#FBE90A]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-yellow)]/15 px-3.5 py-1 text-xs font-bold text-[var(--brand-accent-label)]">
+            <span className="h-2 w-2 rounded-full bg-[var(--brand-yellow)]" />
             <span>{dragHint}</span>
           </div>
           <h3 className="font-display text-2xl font-bold text-[var(--text-primary)] sm:text-3xl">
@@ -67,7 +67,7 @@ export function BeforeAfterShowcase({
                 className={cn(
                   "cursor-pointer rounded-full border px-4 py-2 text-xs font-bold transition-all duration-300",
                   active
-                    ? "border-[#FBE90A] bg-[#FBE90A] text-[#060608] shadow-[0_6px_18px_rgba(251,233,10,0.25)]"
+                    ? "border-[var(--brand-yellow)] bg-[var(--brand-yellow)] text-[#242522] shadow-xs"
                     : "border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-secondary)] hover:border-[var(--border-strong)] hover:text-[var(--text-primary)]"
                 )}
               >
@@ -81,7 +81,7 @@ export function BeforeAfterShowcase({
       {/* Interactive Split Comparison Viewport (LTR-normalized coordinates so left=Before & right=After consistently) */}
       <div
         dir="ltr"
-        className="relative aspect-[16/9] w-full select-none overflow-hidden rounded-2xl border border-[var(--border-strong)] bg-[#060608]"
+        className="relative aspect-[16/9] w-full select-none overflow-hidden rounded-2xl border border-[var(--border-strong)] bg-[#151614]"
       >
         {/* Full AFTER Layer Underneath */}
         <Image
@@ -112,7 +112,7 @@ export function BeforeAfterShowcase({
         <div className="pointer-events-none absolute top-4 left-4 z-10 rounded-full border border-white/20 bg-black/75 px-3.5 py-1.5 text-[11px] font-bold tracking-wider text-white/90 uppercase backdrop-blur-md">
           {current.beforeBadge}
         </div>
-        <div className="pointer-events-none absolute top-4 right-4 z-10 rounded-full bg-[#FBE90A] px-3.5 py-1.5 text-[11px] font-bold tracking-wider text-[#060608] uppercase shadow-lg">
+        <div className="pointer-events-none absolute top-4 right-4 z-10 rounded-full bg-[var(--brand-yellow)] px-3.5 py-1.5 text-[11px] font-bold tracking-wider text-[#242522] uppercase shadow-md">
           {current.afterBadge}
         </div>
 
@@ -121,8 +121,8 @@ export function BeforeAfterShowcase({
           style={{ left: `${sliderPos}%` }}
           className="pointer-events-none absolute inset-y-0 z-20 -translate-x-1/2"
         >
-          <div className="h-full w-[3px] bg-[#FBE90A] shadow-[0_0_16px_rgba(251,233,10,0.8)]" />
-          <div className="absolute top-1/2 left-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#060608] bg-[#FBE90A] text-[#060608] shadow-[0_6px_24px_rgba(0,0,0,0.65)]">
+          <div className="h-full w-[3px] bg-[var(--brand-yellow)] shadow-[0_0_12px_rgba(232,201,0,0.5)]" />
+          <div className="absolute top-1/2 left-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#151614] bg-[var(--brand-yellow)] text-[#242522] shadow-[0_6px_24px_rgba(0,0,0,0.5)]">
             <MoveHorizontal className="h-5 w-5" />
           </div>
         </div>

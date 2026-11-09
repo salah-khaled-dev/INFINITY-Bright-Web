@@ -119,7 +119,7 @@ function StatusBadge({
         className={cn(
           "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-bold",
           isHighlight
-            ? "bg-[#FBE90A] text-[#060608] shadow-[0_2px_8px_rgba(251,233,10,0.3)]"
+            ? "bg-[var(--brand-yellow)] text-[#242522] shadow-xs"
             : "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"
         )}
       >
@@ -164,8 +164,8 @@ export function PpfPackagesShowcase({
 
   const packageOrder: PackageKey[] = ["half", "front", "full"];
 
-  const activeFill = "rgba(251, 233, 10, 0.34)";
-  const activeStroke = "#FBE90A";
+  const activeFill = "rgba(232, 201, 0, 0.28)";
+  const activeStroke = "#E8C900";
   const inactiveFill = "rgba(255, 255, 255, 0.03)";
   const inactiveStroke = "rgba(255, 255, 255, 0.16)";
 
@@ -173,7 +173,7 @@ export function PpfPackagesShowcase({
     <div className={cn("w-full", compactTop ? "pt-16 sm:pt-20" : "py-20 sm:py-28")}>
       {/* Header */}
       <Reveal className="mb-10 max-w-3xl space-y-3.5">
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#FBE90A]/40 bg-[#FBE90A]/10 px-3.5 py-1 text-xs font-bold text-[var(--brand-accent-label)]">
+        <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-yellow)]/40 bg-[var(--brand-yellow)]/10 px-3.5 py-1 text-xs font-bold text-[var(--brand-accent-label)]">
           <ShieldCheck className="h-3.5 w-3.5" />
           <span>{dict.eyebrow}</span>
         </div>
@@ -187,10 +187,10 @@ export function PpfPackagesShowcase({
 
       {/* Interactive Top-View GT Coverage Blueprint Stage */}
       <Reveal delay={0.08}>
-        <div className="mb-8 overflow-hidden rounded-3xl border border-[var(--border-strong)] bg-[#07080c] p-5 text-white shadow-[var(--shadow-elevated)] sm:p-8">
+        <div className="mb-8 overflow-hidden rounded-3xl border border-[var(--border-strong)] bg-[#151614] p-5 text-white shadow-[var(--shadow-elevated)] sm:p-8">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-bold tracking-wider text-[#FBE90A] uppercase">
+              <p className="text-xs font-bold tracking-wider text-[var(--brand-yellow)] uppercase">
                 {dict.blueprintTitle}
               </p>
               <p className="mt-1 text-xs text-white/65">{dict.blueprintHint}</p>
@@ -209,8 +209,8 @@ export function PpfPackagesShowcase({
                     className={cn(
                       "cursor-pointer rounded-full px-4 py-2 text-xs font-bold transition-all duration-300",
                       active
-                        ? "bg-[#FBE90A] text-[#060608] shadow-[0_0_24px_rgba(251,233,10,0.38)]"
-                        : "border border-white/15 bg-white/5 text-white/80 hover:border-[#FBE90A]/60 hover:text-white"
+                        ? "bg-[var(--brand-yellow)] text-[#242522] shadow-xs"
+                        : "border border-white/15 bg-white/5 text-white/80 hover:border-[var(--brand-yellow)]/60 hover:text-white"
                     )}
                   >
                     {pkg.title}
@@ -248,7 +248,7 @@ export function PpfPackagesShowcase({
                     dx="0"
                     dy="0"
                     stdDeviation="4"
-                    floodColor="#FBE90A"
+                    floodColor="#E8C900"
                     floodOpacity="0.45"
                   />
                 </filter>
@@ -312,16 +312,16 @@ export function PpfPackagesShowcase({
                     y1="38"
                     x2="176"
                     y2="242"
-                    stroke="#FBE90A"
+                    stroke="#E8C900"
                     strokeWidth="2"
                     strokeDasharray="5 4"
                   />
-                  <rect x="150" y="13" width="52" height="19" rx="9" fill="#FBE90A" />
+                  <rect x="150" y="13" width="52" height="19" rx="9" fill="#E8C900" />
                   <text
                     x="176"
                     y="26"
                     textAnchor="middle"
-                    fill="#060608"
+                    fill="#242522"
                     fontSize="10"
                     fontWeight="800"
                   >
@@ -333,13 +333,13 @@ export function PpfPackagesShowcase({
               {/* 4. HEADLIGHTS (Covered in Front, Half, Full) */}
               <path
                 d="M 78,78 Q 104,66 132,72 Q 124,88 94,92 Z"
-                fill="#FBE90A"
+                fill="#E8C900"
                 stroke="#ffffff"
                 strokeWidth="1.2"
               />
               <path
                 d="M 78,202 Q 104,214 132,208 Q 124,192 94,188 Z"
-                fill="#FBE90A"
+                fill="#E8C900"
                 stroke="#ffffff"
                 strokeWidth="1.2"
               />
@@ -355,19 +355,19 @@ export function PpfPackagesShowcase({
               {/* 5. A-PILLARS / أكتاف السيارة (Covered in Front, Half, Full) */}
               <path
                 d="M 256,84 L 332,74 L 332,83 L 256,91 Z"
-                fill={isFrontCovered ? "#FBE90A" : inactiveFill}
+                fill={isFrontCovered ? "#E8C900" : inactiveFill}
                 className="transition-all duration-300"
               />
               <path
                 d="M 256,196 L 332,206 L 332,197 L 256,189 Z"
-                fill={isFrontCovered ? "#FBE90A" : inactiveFill}
+                fill={isFrontCovered ? "#E8C900" : inactiveFill}
                 className="transition-all duration-300"
               />
 
               {/* Side Mirrors */}
               <path
                 d="M 278,48 Q 292,30 304,38 L 298,54 Z"
-                fill={isFullHoodAndFenders ? activeFill : "rgba(251,233,10,0.22)"}
+                fill={isFullHoodAndFenders ? activeFill : "rgba(232,201,0,0.22)"}
                 stroke={activeStroke}
                 strokeWidth="1.5"
               />
@@ -426,19 +426,19 @@ export function PpfPackagesShowcase({
               />
 
               {/* 7. DOOR HANDLE CUPS (مساكات الأبواب) — Covered in ALL 3 Packages */}
-              <rect x="374" y="54" width="22" height="7" rx="3.5" fill="#FBE90A" />
-              <rect x="374" y="219" width="22" height="7" rx="3.5" fill="#FBE90A" />
+              <rect x="374" y="54" width="22" height="7" rx="3.5" fill="#E8C900" />
+              <rect x="374" y="219" width="22" height="7" rx="3.5" fill="#E8C900" />
 
               {/* 8. DOOR EDGES (أطراف الأبواب) — Covered in ALL 3 Packages */}
-              <line x1="432" y1="48" x2="432" y2="75" stroke="#FBE90A" strokeWidth="3" />
-              <line x1="432" y1="205" x2="432" y2="232" stroke="#FBE90A" strokeWidth="3" />
+              <line x1="432" y1="48" x2="432" y2="75" stroke="#E8C900" strokeWidth="3" />
+              <line x1="432" y1="205" x2="432" y2="232" stroke="#E8C900" strokeWidth="3" />
 
               {/* 9. FUEL TANK FLAP (تانك البنزين) — Covered in Half-Front & Full-Body */}
               <circle
                 cx="512"
                 cy="62"
                 r="8"
-                fill={isFuelFlapCovered ? "#FBE90A" : "rgba(255,255,255,0.06)"}
+                fill={isFuelFlapCovered ? "#E8C900" : "rgba(255,255,255,0.06)"}
                 stroke={isFuelFlapCovered ? "#ffffff" : "rgba(255,255,255,0.2)"}
                 strokeWidth="1.5"
                 className="transition-all duration-300"
@@ -448,7 +448,7 @@ export function PpfPackagesShowcase({
 
           {/* Bottom Warranty Strip inside Blueprint */}
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-white/75">
-            <span className="inline-flex items-center gap-2 font-semibold text-[#FBE90A]">
+            <span className="inline-flex items-center gap-2 font-semibold text-[var(--brand-yellow)]">
               <Sparkles className="h-3.5 w-3.5" />
               <span>{dict.warrantyStrip}</span>
             </span>
@@ -469,7 +469,7 @@ export function PpfPackagesShowcase({
           const waMessage =
             locale === "ar"
               ? `مرحباً إنفينيتي برايت، أود الاستفسار وحجز باقة (${pkg.title}) مع الضمان المفتوح مدى الحياة وضمان البوية.`
-              : `Hello INFINITE BRIGHT, I would like to inquire about booking the (${pkg.title}) PPF package with Open Lifetime Warranty.`;
+              : `Hello INFINITY BRIGHT, I would like to inquire about booking the (${pkg.title}) PPF package with Open Lifetime Warranty.`;
 
           return (
             <Reveal key={key} delay={0.06 * (idx + 1)}>
@@ -486,8 +486,8 @@ export function PpfPackagesShowcase({
                 className={cn(
                   "flex h-full cursor-pointer flex-col justify-between rounded-3xl p-6 transition-all duration-300 sm:p-7",
                   isSelected
-                    ? "border-2 border-[#FBE90A] bg-[var(--bg-surface)] shadow-[0_18px_48px_rgba(251,233,10,0.14)]"
-                    : "border border-[var(--border-subtle)] bg-[var(--bg-surface)]/75 hover:border-[#FBE90A]/55"
+                    ? "border-2 border-[var(--brand-yellow)] bg-[var(--bg-surface)] shadow-[var(--shadow-elevated)]"
+                    : "border border-[var(--border-subtle)] bg-[var(--bg-surface)]/75 hover:border-[var(--brand-yellow)]/55"
                 )}
               >
                 <div className="space-y-4">
@@ -501,7 +501,7 @@ export function PpfPackagesShowcase({
                         className={cn(
                           "inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold",
                           isPopular || isSelected
-                            ? "bg-[#FBE90A] text-[#060608]"
+                            ? "bg-[var(--brand-yellow)] text-[#242522]"
                             : "border border-[var(--border-strong)] bg-[var(--bg-canvas)] text-[var(--text-secondary)]"
                         )}
                       >
@@ -549,8 +549,8 @@ export function PpfPackagesShowcase({
                     className={cn(
                       "inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3.5 text-xs font-bold transition-all duration-300 sm:text-sm",
                       isSelected || isPopular
-                        ? "bg-[#FBE90A] text-[#060608] shadow-[0_8px_24px_rgba(251,233,10,0.22)] hover:bg-[#fff033]"
-                        : "border border-[var(--border-strong)] bg-[var(--bg-canvas)] text-[var(--text-primary)] hover:border-[#FBE90A] hover:bg-[#FBE90A] hover:text-[#060608]"
+                        ? "bg-[var(--brand-yellow)] text-[#242522] shadow-xs hover:bg-[var(--brand-yellow-hover)]"
+                        : "border border-[var(--border-strong)] bg-[var(--bg-canvas)] text-[var(--text-primary)] hover:border-[var(--brand-yellow)] hover:bg-[var(--bg-surface)]"
                     )}
                   >
                     <WhatsAppIcon className="h-4 w-4" />
@@ -570,7 +570,7 @@ export function PpfPackagesShowcase({
           <div className="border-b border-[var(--border-subtle)] bg-[var(--bg-canvas)]/60 px-6 py-6 sm:px-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-[#FBE90A]/40 bg-[#FBE90A]/10 px-3 py-0.5 text-[11px] font-bold text-[var(--brand-accent-label)]">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-yellow)]/40 bg-[var(--brand-yellow)]/10 px-3 py-0.5 text-[11px] font-bold text-[var(--brand-accent-label)]">
                   <ShieldCheck className="h-3.5 w-3.5" />
                   <span>{locale === "ar" ? "مقارنة شفافة ومعتمدة" : "Verified Comparison"}</span>
                 </span>
@@ -616,9 +616,9 @@ export function PpfPackagesShowcase({
                     <span className="block text-[var(--text-primary)] font-extrabold">{dict.packages.front.title}</span>
                     <span className="text-[11px] text-[var(--text-muted)]">{dict.packages.front.badge}</span>
                   </th>
-                  <th scope="col" className="p-4 sm:p-5 text-center font-bold bg-[#FBE90A]/5 border-x border-[#FBE90A]/20">
+                  <th scope="col" className="p-4 sm:p-5 text-center font-bold bg-[var(--brand-yellow)]/5 border-x border-[var(--brand-yellow)]/20">
                     <span className="block text-[var(--brand-accent-label)] font-extrabold">{dict.packages.half.title}</span>
-                    <span className="text-[11px] text-[#FBE90A]">{dict.packages.half.badge}</span>
+                    <span className="text-[11px] text-[var(--brand-accent-label)]">{dict.packages.half.badge}</span>
                   </th>
                   <th scope="col" className="p-4 sm:p-5 text-center font-bold">
                     <span className="block text-[var(--text-primary)] font-extrabold">{dict.packages.full.title}</span>
@@ -654,7 +654,7 @@ export function PpfPackagesShowcase({
                       </td>
 
                       {/* Half-Front Package (Popular - Highlighted) */}
-                      <td className="p-4 sm:p-5 text-center bg-[#FBE90A]/5 border-x border-[#FBE90A]/20">
+                      <td className="p-4 sm:p-5 text-center bg-[var(--brand-yellow)]/5 border-x border-[var(--brand-yellow)]/20">
                         <StatusBadge status={row.half.status} text={locale === "ar" ? row.half.label.ar : row.half.label.en} isHighlight />
                       </td>
 
@@ -672,7 +672,7 @@ export function PpfPackagesShowcase({
           {/* Footer note on the 50% accident discount */}
           <div className="border-t border-[var(--border-subtle)] bg-[var(--bg-canvas)]/40 p-4 sm:p-5 text-xs text-[var(--text-secondary)]">
             <p className="flex items-start gap-2">
-              <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-[#FBE90A]" />
+              <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand-accent-label)]" />
               <span>
                 {locale === "ar"
                   ? "ملاحظة مهمة: ميزة ضمان الحوادث 50% تضمن لك في حال تضرر أي جزء من الحماية (كالصدام أو الرفرف أو الباب) بسبب صدمة أو حادث لا قدر الله، دفع 50% فقط من تكلفة إعادة تركيب وتغيير الفيلم للقطعة المتضررة دون تحميلك التكلفة كاملة."

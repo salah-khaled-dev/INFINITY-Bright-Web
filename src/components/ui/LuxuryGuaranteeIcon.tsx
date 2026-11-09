@@ -16,7 +16,7 @@ interface LuxuryGuaranteeIconProps {
 }
 
 /**
- * Bespoke Ultra-Luxury Automotive Medallions for INFINITE BRIGHT Warranties.
+ * Bespoke Ultra-Luxury Automotive Medallions for INFINITY BRIGHT Warranties.
  * Crafted with precision vector optics, multi-layer metallic gold gradients,
  * specular highlight rings, and Maybach/Aston Martin-level automotive aesthetics.
  */
@@ -42,11 +42,11 @@ export function LuxuryGuaranteeIcon({
       {/* Golden Atmospheric Radiance on Hover */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -inset-1 rounded-2xl bg-gradient-to-tr from-[#FBE90A]/30 via-[#d4be00]/15 to-transparent opacity-60 blur-md transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-1 rounded-2xl bg-gradient-to-tr from-[var(--brand-yellow)]/20 via-[var(--brand-yellow-muted)]/10 to-transparent opacity-50 blur-md transition-opacity duration-300 group-hover:opacity-90"
       />
 
-      {/* 3D Medallion Chassis (Porcelain / Obsidian with Specular Gold Rim) */}
-      <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-black/10 bg-gradient-to-b from-white via-[#fcfbf7] to-[#edebe1] shadow-[0_8px_20px_rgba(0,0,0,0.06),inset_0_1px_1px_rgba(255,255,255,0.9)] transition-transform duration-300 group-hover:scale-105 group-hover:border-[#FBE90A] group-hover:shadow-[0_12px_28px_rgba(251,233,10,0.28)] dark:border-white/15 dark:bg-gradient-to-b dark:from-[#1d1f2b] dark:via-[#13141c] dark:to-[#0a0a0f] dark:shadow-[0_10px_28px_rgba(0,0,0,0.65),inset_0_1px_1px_rgba(255,255,255,0.15)]">
+      {/* 3D Medallion Chassis (Porcelain / Charcoal with Specular Gold Rim) */}
+      <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-2xl border border-[#DAD7CE] bg-gradient-to-b from-[#FFFFFF] via-[#F8F7F3] to-[#E9E6DE] shadow-[0_4px_14px_rgba(36,37,34,0.06),inset_0_1px_1px_rgba(255,255,255,0.9)] transition-transform duration-300 group-hover:scale-105 group-hover:border-[var(--brand-yellow)] group-hover:shadow-[0_8px_20px_rgba(232,201,0,0.18)] dark:border-[#393A34] dark:bg-gradient-to-b dark:from-[#2B2C27] dark:via-[#242521] dark:to-[#1E1F1C] dark:shadow-[0_8px_24px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.08)]">
         {/* Specular Highlight Sheen at Top */}
         <div
           aria-hidden="true"
@@ -56,7 +56,7 @@ export function LuxuryGuaranteeIcon({
         {/* Ambient Gold Core */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-radial from-[#FBE90A]/15 via-transparent to-transparent opacity-80"
+          className="pointer-events-none absolute inset-0 bg-radial from-[var(--brand-yellow)]/10 via-transparent to-transparent opacity-70"
         />
 
         {/* Custom Bespoke Vector Badges */}
@@ -68,9 +68,9 @@ export function LuxuryGuaranteeIcon({
           >
             <defs>
               <linearGradient id="gold-grad-1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#fbe90a" />
-                <stop offset="50%" stopColor="#d4be00" />
-                <stop offset="100%" stopColor="#8c7a00" />
+                <stop offset="0%" stopColor="#E8C900" />
+                <stop offset="50%" stopColor="#BDA900" />
+                <stop offset="100%" stopColor="#705E00" />
               </linearGradient>
             </defs>
             {/* Outer Heraldic Shield */}
@@ -79,7 +79,7 @@ export function LuxuryGuaranteeIcon({
               stroke="url(#gold-grad-1)"
               strokeWidth="2.5"
               strokeLinejoin="round"
-              className="drop-shadow-[0_2px_6px_rgba(212,190,0,0.35)]"
+              className="drop-shadow-[0_2px_4px_rgba(189,169,0,0.3)]"
             />
             {/* Inner Lifetime Infinity Emblem */}
             <path
@@ -87,16 +87,16 @@ export function LuxuryGuaranteeIcon({
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
-              className="text-[#998500] dark:text-[#FBE90A]"
+              className="text-[#705E00] dark:text-[#E8C900]"
             />
             <path
               d="M24 24C24.8 22.8 26.2 22 27.8 22C30.2 22 32.2 23.9 32.2 26.3C32.2 28.7 30.2 30.6 27.8 30.6C26.2 30.6 24.8 29.8 24 28.6"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
-              className="text-[#998500] dark:text-[#FBE90A]"
+              className="text-[#705E00] dark:text-[#E8C900]"
             />
-            <circle cx="24" cy="24" r="1.5" fill="#fbe90a" />
+            <circle cx="24" cy="24" r="1.5" fill="#E8C900" />
           </svg>
         )}
 
@@ -108,9 +108,9 @@ export function LuxuryGuaranteeIcon({
           >
             <defs>
               <linearGradient id="gold-grad-2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#fbe90a" />
-                <stop offset="50%" stopColor="#e5a00d" />
-                <stop offset="100%" stopColor="#8c5800" />
+                <stop offset="0%" stopColor="#E8C900" />
+                <stop offset="50%" stopColor="#BDA900" />
+                <stop offset="100%" stopColor="#705E00" />
               </linearGradient>
             </defs>
             {/* Radiant Sun/Thermal Deflection Array */}
@@ -135,14 +135,14 @@ export function LuxuryGuaranteeIcon({
               x="24"
               y="28"
               textAnchor="middle"
-              className="font-mono text-[11px] font-black fill-[#8c5800] dark:fill-[#FBE90A]"
+              className="font-mono text-[11px] font-black fill-[#705E00] dark:fill-[#E8C900]"
             >
               10Y
             </text>
             {/* Solar Deflector Flairs */}
             <path
               d="M24 4V7M24 41V44M4 24H7M41 24H44"
-              stroke="#fbe90a"
+              stroke="#E8C900"
               strokeWidth="2.5"
               strokeLinecap="round"
             />
@@ -157,7 +157,7 @@ export function LuxuryGuaranteeIcon({
           >
             <defs>
               <linearGradient id="gold-grad-3" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#fbe90a" />
+                <stop offset="0%" stopColor="#E8C900" />
                 <stop offset="50%" stopColor="#22c55e" />
                 <stop offset="100%" stopColor="#15803d" />
               </linearGradient>
@@ -197,7 +197,7 @@ export function LuxuryGuaranteeIcon({
           >
             <defs>
               <linearGradient id="gold-grad-4" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#fbe90a" />
+                <stop offset="0%" stopColor="#E8C900" />
                 <stop offset="50%" stopColor="#f59e0b" />
                 <stop offset="100%" stopColor="#b45309" />
               </linearGradient>
@@ -215,7 +215,7 @@ export function LuxuryGuaranteeIcon({
               x="24"
               y="28"
               textAnchor="middle"
-              className="font-mono text-[11px] font-black fill-[#b45309] dark:fill-[#FBE90A]"
+              className="font-mono text-[11px] font-black fill-[#705E00] dark:fill-[#E8C900]"
             >
               50%
             </text>

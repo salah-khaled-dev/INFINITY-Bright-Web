@@ -64,8 +64,8 @@ export function HeroMobile({
         className={cn(
           "pointer-events-none absolute inset-x-0 bottom-0 h-[52%] transition-colors duration-500",
           isLight
-            ? "bg-gradient-to-t from-[#f2f2ed] via-[#f2f2ed]/80 to-transparent"
-            : "bg-gradient-to-t from-[#050608] via-[#050608]/85 to-transparent"
+            ? "bg-gradient-to-t from-[#F1EFE9] via-[#F1EFE9]/80 to-transparent"
+            : "bg-gradient-to-t from-[#171816] via-[#171816]/85 to-transparent"
         )}
       />
 
@@ -80,11 +80,11 @@ export function HeroMobile({
             className={cn(
               "inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[11px] font-bold backdrop-blur-md",
               isLight
-                ? "border-black/10 bg-white/75 text-[#09090b]"
-                : "border-white/10 bg-black/50 text-[#FBE90A]"
+                ? "border-[#DAD7CE] bg-[#F8F7F3]/90 text-[#242522]"
+                : "border-[#393A34] bg-[#242521]/90 text-[#F1EFE9]"
             )}
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-[#FBE90A]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-yellow)]" />
             <span className="tracking-[0.16em] uppercase rtl:tracking-normal">
               {dict.brand}
             </span>
@@ -97,7 +97,7 @@ export function HeroMobile({
           aria-hidden="true"
           className={cn(
             "font-display text-[1.65rem] font-extrabold leading-[1.22] tracking-tight sm:text-3xl",
-            isLight ? "text-[#09090b]" : "text-white"
+            isLight ? "text-[#242522]" : "text-[#F1EFE9]"
           )}
         >
           {dict.headline}
@@ -108,7 +108,7 @@ export function HeroMobile({
           data-mobile-reveal
           className={cn(
             "mt-2 text-xs leading-relaxed font-normal sm:text-sm line-clamp-2 max-w-sm",
-            isLight ? "text-zinc-700" : "text-zinc-200/90"
+            isLight ? "text-[#68675F]" : "text-[#B8B6AD]"
           )}
         >
           {dict.description}
@@ -118,7 +118,7 @@ export function HeroMobile({
         <div data-mobile-reveal className="mt-4">
           <Link
             href={localizedHref(locale, "services")}
-            className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-between sm:justify-center gap-4 rounded-full bg-[#FBE90A] px-6 py-3.5 text-xs font-extrabold tracking-[0.08em] text-[#060608] uppercase shadow-[0_8px_22px_rgba(251,233,10,0.25)] transition-all active:scale-[0.98] hover:bg-[#fff033] rtl:text-xs rtl:tracking-normal"
+            className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-between sm:justify-center gap-4 rounded-full bg-[var(--brand-yellow)] px-6 py-3.5 text-xs font-extrabold tracking-[0.08em] text-[#242522] uppercase shadow-sm transition-all active:scale-[0.98] hover:bg-[var(--brand-yellow-hover)] rtl:text-xs rtl:tracking-normal"
           >
             <span>{dict.primaryCta}</span>
             <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" />

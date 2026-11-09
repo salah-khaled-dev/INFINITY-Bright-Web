@@ -298,9 +298,9 @@ export function ContactForm({ locale = "ar", dict }: ContactFormProps) {
       {/* WhatsApp Green Submit Action */}
       <button
         type="submit"
-        className="inline-flex w-full cursor-pointer items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-7 py-4 text-xs font-bold tracking-[0.15em] text-white uppercase shadow-[0_10px_30px_rgba(37,211,102,0.3)] transition-all duration-300 hover:bg-[#20ba5a] hover:shadow-[0_14px_38px_rgba(37,211,102,0.45)] hover:scale-[1.01] rtl:text-sm rtl:tracking-normal"
+        className="inline-flex w-full cursor-pointer items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-7 py-4 text-xs font-black tracking-[0.15em] text-zinc-950 uppercase shadow-[0_10px_30px_rgba(37,211,102,0.3)] transition-all duration-300 hover:bg-[#20ba5a] hover:shadow-[0_14px_38px_rgba(37,211,102,0.45)] hover:scale-[1.01] rtl:text-sm rtl:tracking-normal"
       >
-        <WhatsAppIcon className="h-5 w-5 text-white" />
+        <WhatsAppIcon className="h-5 w-5 text-zinc-950" />
         <span>{dict.submitWhatsapp}</span>
       </button>
     </form>

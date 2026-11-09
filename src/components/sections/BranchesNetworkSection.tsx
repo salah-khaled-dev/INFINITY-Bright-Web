@@ -41,7 +41,7 @@ export function BranchesNetworkSection({
           </p>
         </Reveal>
 
-        {/* 1. INFINITE BRIGHT Flagship Showroom — Al Murooj, Imam Saud Rd */}
+        {/* 1. INFINITY BRIGHT Flagship Showroom — Al Murooj, Imam Saud Rd */}
         <Reveal className="mb-14">
           <div className="overflow-hidden rounded-3xl border border-[#FBE90A]/50 bg-[var(--bg-canvas)] shadow-[var(--shadow-elevated)]">
             <div className="grid grid-cols-1 items-stretch lg:grid-cols-12">
@@ -91,7 +91,7 @@ export function BranchesNetworkSection({
                     href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-5 py-3.5 text-xs font-bold text-[#25D366] transition-all hover:bg-[#25D366] hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-5 py-3.5 text-xs font-bold text-emerald-700 dark:text-emerald-400 transition-all hover:bg-[#25D366] hover:text-zinc-950"
                   >
                     <WhatsAppIcon className="h-4 w-4" />
                     <span dir="ltr">{BUSINESS_CONFIG.contact.phoneDisplay}</span>

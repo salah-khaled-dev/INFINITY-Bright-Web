@@ -61,8 +61,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
   viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8f8f5" },
-    { media: "(prefers-color-scheme: dark)", color: "#060608" },
+    { media: "(prefers-color-scheme: light)", color: "#F1EFE9" },
+    { media: "(prefers-color-scheme: dark)", color: "#171816" },
   ],
 };
 
@@ -131,16 +131,18 @@ export default async function LocaleLayout({
           href="/videos/hero-video-poster.webp"
           type="image/webp"
           media="(min-width: 768px)"
+          fetchPriority="high"
         />
         <link
           rel="preload"
           as="image"
-          href="/videos/hero-mobile-detailer-poster.webp"
+          href="/videos/hero-video-poster-mobile.webp"
           type="image/webp"
           media="(max-width: 767px)"
+          fetchPriority="high"
         />
       </head>
-      <body className="min-h-screen antialiased selection:bg-[#FBE90A] selection:text-[#060608] overflow-x-hidden max-w-[100vw] w-full">
+      <body className="min-h-screen antialiased selection:bg-[var(--brand-yellow)] selection:text-[#242522] overflow-x-hidden max-w-[100vw] w-full">
         <ThemeProvider locale={locale} dir={dir}>
           <div className="flex min-h-screen flex-col overflow-x-hidden max-w-[100vw] w-full">
             <Navbar locale={locale} dict={dict.nav} />

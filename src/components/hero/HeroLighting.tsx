@@ -76,7 +76,7 @@ export function HeroLighting({
         intensity={initial.rimLightIntensity}
       />
 
-      {/* Signature INFINITE BRIGHT #FBE90A Yellow Grazing Accents */}
+      {/* Signature INFINITY BRIGHT #FBE90A Yellow Grazing Accents */}
       <pointLight
         ref={lightRefs.yellowAccentLeft}
         position={[-3.4, 0.95, 1.8]}

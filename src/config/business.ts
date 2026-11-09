@@ -1,5 +1,5 @@
 /**
- * INFINITE BRIGHT — BUSINESS CONFIGURATION ADAPTER
+ * INFINITY BRIGHT — BUSINESS CONFIGURATION ADAPTER
  * ===================================================
  * Harmonized with `src/config/site.config.ts`.
  * Serves as the stable backwards-compatible adapter for existing components,

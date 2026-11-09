@@ -22,7 +22,7 @@ export function PpfExperienceSection({
   const waHref = buildWhatsAppUrl(
     locale === "ar"
       ? "مرحباً إنفينيتي برايت، أود الاستفسار عن باقات أفلام حماية الطلاء (PPF)."
-      : "Hello INFINITE BRIGHT, I would like a consultation regarding Paint Protection Film (PPF)."
+      : "Hello INFINITY BRIGHT, I would like a consultation regarding Paint Protection Film (PPF)."
   );
 
   return (
@@ -91,7 +91,7 @@ export function PpfExperienceSection({
             <ImageReveal className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#08080a] shadow-[var(--shadow-elevated)]">
               <Image
                 src="/images/services/ppf-installation.jpg"
-                alt="Master technician installing Paint Protection Film inside INFINITE BRIGHT bay"
+                alt="Master technician installing Paint Protection Film inside INFINITY BRIGHT bay"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover"
@@ -106,7 +106,7 @@ export function PpfExperienceSection({
               <div className="relative aspect-[16/9] w-full">
                 <Image
                   src="/images/services/paint-protection.jpg"
-                  alt="Swirl-free clearcoat inspection inside INFINITE BRIGHT showroom"
+                  alt="Swirl-free clearcoat inspection inside INFINITY BRIGHT showroom"
                   fill
                   sizes="(max-width: 640px) 100vw, 35vw"
                   className="object-cover"

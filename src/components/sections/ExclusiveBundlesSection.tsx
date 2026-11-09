@@ -66,7 +66,7 @@ export function ExclusiveBundlesSection({
             const waMsg =
               locale === "ar"
                 ? `مرحباً إنفينيتي برايت، أود الاستفادة من عرض الـ 35% وحجز:\n• الباقة: ${bundle.title} (${bundle.discount} + هدية مجانية)`
-                : `Hello INFINITE BRIGHT, I would like to claim the 35% OFF offer for:\n• Bundle: ${bundle.title} (${bundle.discount} + Complimentary Gift)`;
+                : `Hello INFINITY BRIGHT, I would like to claim the 35% OFF offer for:\n• Bundle: ${bundle.title} (${bundle.discount} + Complimentary Gift)`;
 
             return (
               <Reveal key={bundle.id} delay={0.07 * (idx + 1)}>

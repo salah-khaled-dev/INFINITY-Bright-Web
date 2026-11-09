@@ -36,7 +36,7 @@ export default async function ContactPage({
         headline={dict.contactPage.headline}
         description={dict.contactPage.intro}
         imageSrc="/images/contact/contact-hero.webp"
-        imageAlt={locale === "ar" ? "بورشه داخل صالة تسليم إنفينيتي برايت الفاخرة" : "Porsche inside Infinite Bright luxury delivery lounge"}
+        imageAlt={locale === "ar" ? "بورشه داخل صالة تسليم إنفينيتي برايت الفاخرة" : "Porsche inside Infinity Bright luxury delivery lounge"}
         badge={locale === "ar" ? "صالة الرياض · حجز مواعيد وتسليم" : "Riyadh Studio · Appointments & Handover"}
       />
 

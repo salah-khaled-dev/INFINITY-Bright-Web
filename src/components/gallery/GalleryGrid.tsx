@@ -94,7 +94,7 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
     >;
     return (
       itemsMap[translationKey] ?? {
-        title: "INFINITE BRIGHT",
+        title: "INFINITY BRIGHT",
         category: "Studio",
         caption: "",
       }
@@ -133,7 +133,7 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
               className={cn(
                 "cursor-pointer rounded-full border px-4 py-2 text-xs font-bold tracking-[0.12em] uppercase transition-all duration-300 rtl:text-xs rtl:tracking-normal",
                 selected
-                  ? "border-[#FBE90A] bg-[#FBE90A] text-[#060608] shadow-[0_6px_20px_rgba(251,233,10,0.22)]"
+                  ? "border-[var(--brand-yellow)] bg-[var(--brand-yellow)] text-[#242522] shadow-xs"
                   : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:border-[var(--border-strong)] hover:text-[var(--text-primary)]"
               )}
             >
@@ -163,7 +163,7 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
                 exit={prefersReduced ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className={cn(
-                  "group relative aspect-[16/10] overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#08080a] shadow-[var(--shadow-elevated)]",
+                  "group relative aspect-[16/10] overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#151614] shadow-[var(--shadow-elevated)]",
                   spanClass
                 )}
               >
@@ -171,7 +171,7 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
                   type="button"
                   onClick={() => setLightboxIndex(idx)}
                   aria-label={`${dict.openLightbox}: ${copy.title}`}
-                  className="relative block h-full w-full cursor-pointer text-start focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FBE90A]"
+                  className="relative block h-full w-full cursor-pointer text-start focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-yellow)]"
                 >
                   <Image
                     src={item.src}
@@ -185,14 +185,14 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
                   {/* Expand Pill Top-End */}
                   <span
                     aria-hidden="true"
-                    className="absolute top-4 end-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:border-[#FBE90A] group-hover:text-[#FBE90A]"
+                    className="absolute top-4 end-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:border-[var(--brand-yellow)] group-hover:text-[var(--brand-yellow)]"
                   >
                     <Expand className="h-4 w-4" />
                   </span>
 
                   {/* Caption Overlay */}
                   <figcaption className="absolute inset-x-5 bottom-5 space-y-1">
-                    <span className="inline-block font-mono text-[10px] font-bold tracking-[0.18em] text-[#FBE90A] uppercase rtl:font-sans rtl:tracking-normal">
+                    <span className="inline-block font-mono text-[10px] font-bold tracking-[0.18em] text-[var(--brand-yellow)] uppercase rtl:font-sans rtl:tracking-normal">
                       {copy.category}
                     </span>
                     <h3 className="text-lg font-bold text-white sm:text-xl">
@@ -236,7 +236,7 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
                 type="button"
                 onClick={closeLightbox}
                 aria-label={dict.closeLightbox}
-                className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition-colors hover:border-[#FBE90A] hover:text-[#FBE90A]"
+                className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition-colors hover:border-[var(--brand-yellow)] hover:text-[var(--brand-yellow)]"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -251,7 +251,7 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
                 type="button"
                 onClick={showPrev}
                 aria-label={dict.prevImage}
-                className="absolute start-0 z-10 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/65 text-white backdrop-blur-md transition-colors hover:border-[#FBE90A] hover:text-[#FBE90A] sm:start-2"
+                className="absolute start-0 z-10 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/65 text-white backdrop-blur-md transition-colors hover:border-[var(--brand-yellow)] hover:text-[var(--brand-yellow)] sm:start-2"
               >
                 <ChevronLeft className="h-6 w-6 rtl:-scale-x-100" />
               </button>
@@ -271,7 +271,7 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
                 type="button"
                 onClick={showNext}
                 aria-label={dict.nextImage}
-                className="absolute end-0 z-10 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/65 text-white backdrop-blur-md transition-colors hover:border-[#FBE90A] hover:text-[#FBE90A] sm:end-2"
+                className="absolute end-0 z-10 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/65 text-white backdrop-blur-md transition-colors hover:border-[var(--brand-yellow)] hover:text-[var(--brand-yellow)] sm:end-2"
               >
                 <ChevronRight className="h-6 w-6 rtl:-scale-x-100" />
               </button>
@@ -282,7 +282,7 @@ export function GalleryGrid({ locale, dict, limit }: GalleryGridProps) {
               onClick={(e) => e.stopPropagation()}
               className="mx-auto w-full max-w-4xl text-center"
             >
-              <p className="font-mono text-[11px] font-bold tracking-[0.2em] text-[#FBE90A] uppercase rtl:font-sans rtl:tracking-normal">
+              <p className="font-mono text-[11px] font-bold tracking-[0.2em] text-[var(--brand-yellow)] uppercase rtl:font-sans rtl:tracking-normal">
                 {getItemCopy(activeItem.translationKey).category}
               </p>
               <h3 className="mt-1 text-xl font-bold text-white">

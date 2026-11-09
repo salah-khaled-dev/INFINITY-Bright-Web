@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { Locale, ThemeMode } from "@/types";
 
@@ -33,6 +32,7 @@ export function HeroVideoBackground({
   // Responsive device classification (SSR-safe initial default matching desktop, client refines on mount)
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
+  const [canLoadVideo, setCanLoadVideo] = useState<boolean>(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false);
   const [hasVideoError, setHasVideoError] = useState<boolean>(false);
   const [saveData, setSaveData] = useState<boolean>(false);
@@ -58,31 +58,36 @@ export function HeroVideoBackground({
       setSaveData(true);
     }
 
+    // Start loading video promptly after initial frame paint
+    const timerId = setTimeout(() => {
+      setCanLoadVideo(true);
+    }, 50);
+
     return () => {
       mql.removeEventListener("change", handleMediaChange);
+      clearTimeout(timerId);
     };
   }, []);
 
+  // NEVER skip video on mobile — only respect user's system reduced-motion or data-saver preference
   const shouldSkipVideo = reducedMotion || saveData;
 
   // Active asset configuration: Range Rover Commercial for both Desktop & Mobile
   const activeVideoSrc = "/videos/Range_Rover_commercial_in_showroom_e0e83c1a_1080p.mp4";
 
-  const activePosterSrc = isMobile
-    ? "/videos/hero-video-poster-mobile.webp"
-    : "/videos/hero-video-poster.webp";
-
-  // Attempt seamless autoplay with full browser policy protection
+  // Attempt seamless autoplay with full browser policy protection once video is allowed to load
   useEffect(() => {
-    if (shouldSkipVideo) return;
+    if (!canLoadVideo || shouldSkipVideo) return;
 
     const video = videoRef.current;
     if (!video) return;
 
     let isMounted = true;
 
+    // Strict requirements for Mobile Autoplay (iOS Safari & Android Chrome)
     video.muted = true;
     video.defaultMuted = true;
+    (video as unknown as { playsInline?: boolean }).playsInline = true;
 
     const handleReadyToPlay = () => {
       if (isMounted) {
@@ -114,7 +119,7 @@ export function HeroVideoBackground({
               if (isMounted) setIsVideoPlaying(true);
             })
             .catch(() => {
-              // Browser battery saver or strict policy
+              // Blocked by battery saver / iOS Low Power Mode
               if (isMounted) setIsVideoPlaying(false);
             });
         }
@@ -125,6 +130,24 @@ export function HeroVideoBackground({
 
     attemptPlay();
 
+    // Fallback for mobile Low Power Mode (Safari/Chrome):
+    // If strict battery saver blocked zero-interaction autoplay, first touch or scroll immediately plays it
+    const handleFirstInteraction = () => {
+      if (video && video.paused) {
+        video.muted = true;
+        video
+          .play()
+          .then(() => {
+            if (isMounted) setIsVideoPlaying(true);
+          })
+          .catch(() => {});
+      }
+    };
+
+    window.addEventListener("touchstart", handleFirstInteraction, { once: true, passive: true });
+    window.addEventListener("scroll", handleFirstInteraction, { once: true, passive: true });
+    window.addEventListener("click", handleFirstInteraction, { once: true, passive: true });
+
     return () => {
       isMounted = false;
       video.removeEventListener("playing", handleReadyToPlay);
@@ -132,8 +155,11 @@ export function HeroVideoBackground({
       video.removeEventListener("canplay", handleReadyToPlay);
       video.removeEventListener("timeupdate", handleReadyToPlay);
       video.removeEventListener("error", handleError);
+      window.removeEventListener("touchstart", handleFirstInteraction);
+      window.removeEventListener("scroll", handleFirstInteraction);
+      window.removeEventListener("click", handleFirstInteraction);
     };
-  }, [activeVideoSrc, shouldSkipVideo]);
+  }, [canLoadVideo, activeVideoSrc, shouldSkipVideo]);
 
   return (
     <div
@@ -144,41 +170,50 @@ export function HeroVideoBackground({
       <div
         className={cn(
           "absolute inset-0 transition-colors duration-500",
-          isLight ? "bg-[#f2f2ed]" : "bg-[#050608]"
+          isLight ? "bg-[#F1EFE9]" : "bg-[#171816]"
         )}
       />
 
-      {/* 2. Instant Preloaded High-Resolution Poster Image (Zero Layout Shift) */}
-      <div
+      {/* 2. Instant Preloaded High-Resolution Poster Image (Native Zero-Overhead Art-Direction) */}
+      <picture
         className={cn(
           "absolute inset-0 transition-opacity duration-1000 ease-out",
           isVideoPlaying && !hasVideoError ? "opacity-0" : "opacity-100"
         )}
       >
-        <Image
-          src={activePosterSrc}
+        {/* Mobile Viewport (<768px): Matches 29KB WebP Preloaded in HTML Head */}
+        <source
+          media="(max-width: 767px)"
+          srcSet="/videos/hero-video-poster-mobile.webp"
+          type="image/webp"
+        />
+        {/* Desktop Viewport (≥768px): Matches 101KB WebP Preloaded in HTML Head */}
+        <source
+          media="(min-width: 768px)"
+          srcSet="/videos/hero-video-poster.webp"
+          type="image/webp"
+        />
+        <img
+          src="/videos/hero-video-poster.webp"
           alt={
             isAr
               ? "استوديو العناية الفائقة وحماية السيارات في إنفينيتي برايت"
-              : "INFINITE BRIGHT luxury automotive detailing & paint protection studio"
+              : "INFINITY BRIGHT luxury automotive detailing & paint protection studio"
           }
-          fill
-          priority
-          sizes="100vw"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
           className={cn(
-            "object-cover transition-[object-position] duration-500",
-            // Mobile & Desktop: center-framed Range Rover in showroom
-            isMobile
-              ? "object-[50%_50%]"
-              : isAr
-              ? "object-[48%_48%] lg:object-[50%_48%]"
-              : "object-[52%_48%] lg:object-[50%_48%]"
+            "h-full w-full object-cover",
+            isAr
+              ? "object-[50%_50%] md:object-[48%_48%] lg:object-[50%_48%]"
+              : "object-[50%_50%] md:object-[52%_48%] lg:object-[50%_48%]"
           )}
         />
-      </div>
+      </picture>
 
-      {/* 3. Cinematic HTML5 Hero Video (Native, Hardware Accelerated, Zero 3D Overhead) */}
-      {!shouldSkipVideo && !hasVideoError && (
+      {/* 3. Cinematic HTML5 Hero Video (Native, Hardware Accelerated, Zero Network Starvation) */}
+      {canLoadVideo && !shouldSkipVideo && !hasVideoError && (
         <video
           key={activeVideoSrc}
           ref={videoRef}
@@ -187,7 +222,6 @@ export function HeroVideoBackground({
           muted
           playsInline
           preload="auto"
-          poster={activePosterSrc}
           className={cn(
             "absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out",
             isMobile
@@ -211,8 +245,8 @@ export function HeroVideoBackground({
             className={cn(
               "hidden md:block absolute inset-y-0 w-3/5 transition-opacity duration-500 pointer-events-none",
               isAr
-                ? "right-0 bg-gradient-to-l from-[#050608]/85 via-[#050608]/40 to-transparent"
-                : "left-0 bg-gradient-to-r from-[#050608]/85 via-[#050608]/40 to-transparent"
+                ? "right-0 bg-gradient-to-l from-[#171816]/85 via-[#171816]/40 to-transparent"
+                : "left-0 bg-gradient-to-r from-[#171816]/85 via-[#171816]/40 to-transparent"
             )}
           />
         </>
@@ -221,13 +255,13 @@ export function HeroVideoBackground({
       {/* LIGHT MODE: Controlled alabaster ambient veil guaranteeing WCAG contrast for dark text */}
       {isLight && (
         <>
-          <div className="absolute inset-0 bg-[#f2f2ed]/15" />
+          <div className="absolute inset-0 bg-[#F1EFE9]/20" />
           <div
             className={cn(
               "hidden md:block absolute inset-y-0 w-3/5 transition-opacity duration-500 pointer-events-none",
               isAr
-                ? "right-0 bg-gradient-to-l from-[#f2f2ed]/90 via-[#f2f2ed]/45 to-transparent"
-                : "left-0 bg-gradient-to-r from-[#f2f2ed]/90 via-[#f2f2ed]/45 to-transparent"
+                ? "right-0 bg-gradient-to-l from-[#F1EFE9]/90 via-[#F1EFE9]/45 to-transparent"
+                : "left-0 bg-gradient-to-r from-[#F1EFE9]/90 via-[#F1EFE9]/45 to-transparent"
             )}
           />
         </>

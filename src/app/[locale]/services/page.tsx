@@ -41,7 +41,7 @@ export default async function ServicesPage({
         headline={dict.servicesPage.headline}
         description={dict.servicesPage.intro}
         imageSrc="/images/services/services-hero.webp"
-        imageAlt={locale === "ar" ? "لاند كروزر داخل صالة إنفينيتي برايت الفاخرة" : "Land Cruiser inside Infinite Bright luxury studio"}
+        imageAlt={locale === "ar" ? "لاند كروزر داخل صالة إنفينيتي برايت الفاخرة" : "Land Cruiser inside Infinity Bright luxury studio"}
         badge={locale === "ar" ? "صالة الرياض · لاند كروزر" : "Riyadh Studio · Land Cruiser"}
       >
         {/* Quick Jump Anchors — Smooth Horizontal Swipe on Mobile, Wrap on Desktop */}

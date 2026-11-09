@@ -75,7 +75,7 @@ export function Footer({ locale, dict }: FooterProps) {
     <footer className="relative border-t border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] transition-colors">
       {/* Top Subtle Yellow Accent Line */}
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="h-[2px] w-20 bg-[#FBE90A]" />
+        <div className="h-[2px] w-20 bg-[var(--brand-yellow)]" />
       </div>
 
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
@@ -130,7 +130,7 @@ export function Footer({ locale, dict }: FooterProps) {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-block text-xs font-medium text-[var(--text-secondary)] transition-all hover:text-[#d4be00] dark:hover:text-[#FBE90A] hover:translate-x-1 rtl:hover:-translate-x-1"
+                    className="inline-block text-xs font-medium text-[var(--text-secondary)] transition-all hover:text-[var(--brand-accent-label)] dark:hover:text-[var(--brand-yellow)] hover:translate-x-1 rtl:hover:-translate-x-1"
                   >
                     {item.label}
                   </Link>
@@ -149,7 +149,7 @@ export function Footer({ locale, dict }: FooterProps) {
                 <li key={idx}>
                   <Link
                     href={svc.href}
-                    className="inline-block text-xs font-medium text-[var(--text-secondary)] transition-all hover:text-[#d4be00] dark:hover:text-[#FBE90A] hover:translate-x-1 rtl:hover:-translate-x-1"
+                    className="inline-block text-xs font-medium text-[var(--text-secondary)] transition-all hover:text-[var(--brand-accent-label)] dark:hover:text-[var(--brand-yellow)] hover:translate-x-1 rtl:hover:-translate-x-1"
                   >
                     {svc.label}
                   </Link>
@@ -170,9 +170,9 @@ export function Footer({ locale, dict }: FooterProps) {
                 <a
                   href={BUSINESS_CONFIG.contact.phoneHref}
                   dir="ltr"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-primary)] hover:text-[#d4be00] dark:hover:text-[#FBE90A] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[var(--text-primary)] hover:text-[var(--brand-accent-label)] dark:hover:text-[var(--brand-yellow)] transition-colors"
                 >
-                  <Phone className="h-3.5 w-3.5 text-[#d4be00] dark:text-[#FBE90A]" />
+                  <Phone className="h-3.5 w-3.5 text-[var(--brand-accent-label)] dark:text-[var(--brand-yellow)]" />
                   <span>{BUSINESS_CONFIG.contact.phoneDisplay}</span>
                 </a>
               </div>
@@ -182,9 +182,9 @@ export function Footer({ locale, dict }: FooterProps) {
                   href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#25D366] hover:text-[#20ba5a] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-emerald-800 hover:text-emerald-900 dark:text-emerald-300 dark:hover:text-emerald-200 transition-colors"
                 >
-                  <WhatsAppIcon className="h-3.5 w-3.5 text-[#25D366]" />
+                  <WhatsAppIcon className="h-3.5 w-3.5 text-emerald-700 dark:text-emerald-300" />
                   <span>{isAr ? "محادثة فورية عبر واتساب" : "Direct WhatsApp"}</span>
                 </a>
               </div>
@@ -196,15 +196,15 @@ export function Footer({ locale, dict }: FooterProps) {
             </div>
 
             {/* Subtle Social Media Icons */}
-            <div className="flex items-center gap-2 pt-1">
+            <div className="flex items-center gap-2.5 pt-1">
               <a
                 href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-500/10 text-[#25D366] transition-all hover:bg-[#25D366] hover:text-white"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 transition-all hover:bg-[#25D366] hover:text-[#042813]"
               >
-                <WhatsAppIcon className="h-3.5 w-3.5" />
+                <WhatsAppIcon className="h-4 w-4" />
               </a>
 
               {BUSINESS_CONFIG.social.instagram && (
@@ -213,9 +213,9 @@ export function Footer({ locale, dict }: FooterProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="flex h-8 w-8 items-center justify-center rounded-full border border-pink-500/30 bg-pink-500/10 text-[#E1306C] transition-all hover:bg-[#E1306C] hover:text-white"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-pink-500/30 bg-pink-500/10 text-[#E1306C] transition-all hover:bg-[#E1306C] hover:text-white"
                 >
-                  <InstagramIcon className="h-3.5 w-3.5" />
+                  <InstagramIcon className="h-4 w-4" />
                 </a>
               )}
 
@@ -225,9 +225,9 @@ export function Footer({ locale, dict }: FooterProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="TikTok"
-                  className="flex h-8 w-8 items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-600 dark:text-cyan-300 transition-all hover:bg-black hover:text-white"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-600 dark:text-cyan-300 transition-all hover:bg-black hover:text-white"
                 >
-                  <TikTokIcon className="h-3.5 w-3.5" />
+                  <TikTokIcon className="h-4 w-4" />
                 </a>
               )}
             </div>
@@ -312,7 +312,7 @@ export function Footer({ locale, dict }: FooterProps) {
                 href={BUSINESS_CONFIG.contact.phoneHref}
                 className="flex min-h-[44px] items-center justify-center gap-2 rounded-xl border border-[var(--border-strong)] bg-[var(--bg-surface)] px-3 text-xs font-bold text-[var(--text-primary)] transition-colors active:scale-95"
               >
-                <Phone className="h-3.5 w-3.5 text-[#d4be00] dark:text-[#FBE90A]" />
+                <Phone className="h-3.5 w-3.5 text-[var(--brand-accent-label)] dark:text-[var(--brand-yellow)]" />
                 <span>{isAr ? "اتصال هاتفي" : "Call"}</span>
               </a>
 
@@ -320,10 +320,10 @@ export function Footer({ locale, dict }: FooterProps) {
                 href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-[#25D366] px-3 text-xs font-bold text-white shadow-xs transition-colors active:scale-95"
+                className="flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-[#25D366] px-3 text-xs font-black text-[#042813] shadow-xs transition-colors active:scale-95"
               >
-                <WhatsAppIcon className="h-3.5 w-3.5 text-white" />
-                <span>{isAr ? "واتساب" : "WhatsApp"}</span>
+                <WhatsAppIcon className="h-3.5 w-3.5 text-[#042813]" />
+                <span className="font-black text-[#042813]">{isAr ? "واتساب" : "WhatsApp"}</span>
               </a>
             </div>
 
@@ -339,9 +339,10 @@ export function Footer({ locale, dict }: FooterProps) {
                     href={BUSINESS_CONFIG.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-7 w-7 items-center justify-center rounded-full bg-pink-500/10 text-[#E1306C]"
+                    aria-label="Instagram"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-pink-500/10 text-[#E1306C]"
                   >
-                    <InstagramIcon className="h-3 w-3" />
+                    <InstagramIcon className="h-4 w-4" />
                   </a>
                 )}
                 {BUSINESS_CONFIG.social.tiktok && (
@@ -349,9 +350,10 @@ export function Footer({ locale, dict }: FooterProps) {
                     href={BUSINESS_CONFIG.social.tiktok}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-7 w-7 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-300"
+                    aria-label="TikTok"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-300"
                   >
-                    <TikTokIcon className="h-3 w-3" />
+                    <TikTokIcon className="h-4 w-4" />
                   </a>
                 )}
               </div>
@@ -377,12 +379,12 @@ export function Footer({ locale, dict }: FooterProps) {
                 />
               </button>
               {openSection === "nav" && (
-                <ul className="space-y-2 pb-4 pt-1 ps-2">
+                <ul className="space-y-1 pb-4 pt-1 ps-2">
                   {quickNavLinks.map((item) => (
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="block py-1 text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                        className="flex min-h-[44px] items-center py-2 text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                       >
                         {item.label}
                       </Link>
@@ -409,12 +411,12 @@ export function Footer({ locale, dict }: FooterProps) {
                 />
               </button>
               {openSection === "services" && (
-                <ul className="space-y-2 pb-4 pt-1 ps-2">
+                <ul className="space-y-1 pb-4 pt-1 ps-2">
                   {coreServices.map((svc, idx) => (
                     <li key={idx}>
                       <Link
                         href={svc.href}
-                        className="block py-1 text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                        className="flex min-h-[44px] items-center py-2 text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                       >
                         {svc.label}
                       </Link>
@@ -452,7 +454,7 @@ export function Footer({ locale, dict }: FooterProps) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 font-bold text-[var(--text-primary)]"
                     >
-                      <MapPin className="h-3.5 w-3.5 text-[#d4be00] dark:text-[#FBE90A]" />
+                      <MapPin className="h-3.5 w-3.5 text-[var(--brand-accent-label)] dark:text-[var(--brand-yellow)]" />
                       <span>{flagship.name[locale]} ({flagship.district[locale]})</span>
                       <ArrowUpRight className="h-3 w-3 rtl:-scale-x-100" />
                     </a>
@@ -469,7 +471,7 @@ export function Footer({ locale, dict }: FooterProps) {
                           href={b.mapUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-md border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-2.5 py-1"
+                          className="inline-flex min-h-[44px] items-center rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-3 py-2"
                         >
                           {b.district[locale]} ↗
                         </a>
@@ -505,7 +507,7 @@ export function Footer({ locale, dict }: FooterProps) {
 
               <Link
                 href={localizedHref(locale, "terms")}
-                className="hover:text-[var(--text-primary)] underline-offset-4 hover:underline transition-colors"
+                className="inline-flex min-h-[44px] items-center px-1 hover:text-[var(--text-primary)] underline-offset-4 hover:underline transition-colors"
               >
                 {dict.footer.termsLink}
               </Link>
@@ -514,7 +516,7 @@ export function Footer({ locale, dict }: FooterProps) {
 
               <Link
                 href={localizedHref(locale, "privacy")}
-                className="hover:text-[var(--text-primary)] underline-offset-4 hover:underline transition-colors"
+                className="inline-flex min-h-[44px] items-center px-1 hover:text-[var(--text-primary)] underline-offset-4 hover:underline transition-colors"
               >
                 {dict.footer.privacyLink}
               </Link>

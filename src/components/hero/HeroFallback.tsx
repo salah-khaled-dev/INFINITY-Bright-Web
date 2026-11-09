@@ -45,7 +45,7 @@ export function HeroFallback({
         alt={
           locale === "ar"
             ? "سيارة مرسيدس رياضية فاخرة داخل استوديو إنفينيتي برايت"
-            : "Luxury Mercedes sports car inside INFINITE BRIGHT architectural studio"
+            : "Luxury Mercedes sports car inside INFINITY BRIGHT architectural studio"
         }
         fill
         priority
@@ -66,7 +66,7 @@ export function HeroFallback({
         alt={
           locale === "ar"
             ? "فنيو إنفينيتي برايت المحترفون أثناء تركيب أفلام حماية الطلاء PPF بدقة داخل الصالة المضيئة"
-            : "Professional INFINITE BRIGHT master technicians applying PPF protection inside the luxury studio"
+            : "Professional INFINITY BRIGHT master technicians applying PPF protection inside the luxury studio"
         }
         fill
         priority

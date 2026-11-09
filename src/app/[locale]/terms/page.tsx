@@ -39,7 +39,7 @@ export default async function TermsPage({
         headline={dict.termsPage.headline}
         description={dict.termsPage.intro}
         imageSrc="/images/hero/brand-story-studio.jpg"
-        imageAlt="Infinite Bright Warranty & Studio"
+        imageAlt="Infinity Bright Warranty & Studio"
         badge={locale === "ar" ? "الشروط والضمانات الرسمية" : "Official Warranties & Terms"}
       />
 

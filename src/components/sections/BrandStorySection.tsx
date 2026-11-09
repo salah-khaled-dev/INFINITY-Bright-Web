@@ -32,7 +32,7 @@ export function BrandStorySection({ locale, dict }: BrandStorySectionProps) {
             <ImageReveal className="group relative aspect-square overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#0a0a0d] shadow-[var(--shadow-elevated)]">
               <Image
                 src="/images/hero/brand-story-studio.jpg"
-                alt="INFINITE BRIGHT architectural studio sanctuary"
+                alt="INFINITY BRIGHT architectural studio sanctuary"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
