@@ -7,7 +7,6 @@ import { buildPageMetadata } from "@/lib/seo";
 import { ServiceDetailChapter } from "@/components/services/ServiceDetailChapter";
 import { PpfPackagesShowcase } from "@/components/services/PpfPackagesShowcase";
 import { ExclusiveBundlesSection } from "@/components/sections/ExclusiveBundlesSection";
-import { CarColorStudio } from "@/components/sections/CarColorStudio";
 import { HeatInsulationSection } from "@/components/sections/HeatInsulationSection";
 import { ContactCtaSection } from "@/components/sections/ContactCtaSection";
 import { SubpageHero } from "@/components/layout/SubpageHero";
@@ -85,9 +84,6 @@ export default async function ServicesPage({
           <PpfPackagesShowcase locale={locale} dict={dict.ppfPackages} />
         </div>
       </section>
-
-      {/* Interactive Car Paint Color Studio */}
-      <CarColorStudio locale={locale} dict={dict.colorConfigurator} />
 
       {/* Dedicated Ultra Core (85% All Shades) & Core Plus (65%) + Live Tint Simulator */}
       <HeatInsulationSection

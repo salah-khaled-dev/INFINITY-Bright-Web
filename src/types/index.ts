@@ -24,6 +24,8 @@ export interface ServiceItem {
   index: string;
   image: string;
   secondaryImage?: string;
+  video?: string;
+  videoPoster?: string;
   category: Exclude<GalleryCategory, "all" | "before-after">;
   featured?: boolean;
 }

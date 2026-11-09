@@ -38,7 +38,7 @@ export function ServiceDetailChapter({
       className="scroll-mt-28 border-b border-[var(--border-subtle)] py-16 last:border-b-0 sm:py-24"
     >
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-        {/* Showroom Photograph */}
+        {/* Showroom Media (Cinematic Video or Photograph) */}
         <div
           className={cn(
             "lg:col-span-6",
@@ -46,16 +46,35 @@ export function ServiceDetailChapter({
           )}
         >
           <ImageReveal className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#08080a] shadow-[var(--shadow-elevated)]">
-            <Image
-              src={service.image}
-              alt={copy.title}
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-            <div className="absolute top-4 start-4 rounded-full bg-[#FBE90A] px-3.5 py-1 font-mono text-xs font-bold text-[#060608]">
+            {service.video ? (
+              <video
+                src={service.video}
+                poster={service.videoPoster || service.image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <Image
+                src={service.image}
+                alt={copy.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            )}
+            <div className="absolute top-4 start-4 z-10 rounded-full bg-[#FBE90A] px-3.5 py-1 font-mono text-xs font-bold text-[#060608] shadow-md">
               {service.index}
             </div>
+            {service.video && (
+              <div className="absolute bottom-4 end-4 z-10 inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1 text-[11px] font-bold text-white backdrop-blur-md">
+                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>{locale === "ar" ? "فيديو عملي مباشر" : "Live Detailing"}</span>
+              </div>
+            )}
           </ImageReveal>
         </div>
 
