@@ -7,8 +7,6 @@ import type { Locale } from "@/types";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { HomeTrustStrip } from "@/components/home/HomeTrustStrip";
 import { HomeServicesGate } from "@/components/home/HomeServicesGate";
-import { HomeInteractiveTeasers } from "@/components/home/HomeInteractiveTeasers";
-import { HomeWarrantiesQuick } from "@/components/home/HomeWarrantiesQuick";
 import { GoogleReviewsSection } from "@/components/sections/GoogleReviewsSection";
 import { HomeBranchesQuick } from "@/components/home/HomeBranchesQuick";
 import { HomeQuickContact } from "@/components/home/HomeQuickContact";
@@ -47,13 +45,7 @@ export default async function HomePage({
       {/* 3. Fast Core Services Grid ("كل تفصيلة ليها زر تودي عليه") */}
       <HomeServicesGate locale={typedLocale} dict={dict.homeLight.servicesGate} />
 
-      {/* 4. Interactive Tools & Showcase Teasers (Color Studio & Before/After Gallery) */}
-      <HomeInteractiveTeasers locale={typedLocale} dict={dict.homeLight.teasers} />
-
-      {/* 5. Official Warranties & Corporate Heritage (+15 Years in KSA) */}
-      <HomeWarrantiesQuick locale={typedLocale} dict={dict.homeLight.warranties} />
-
-      {/* 6. Authentic Verified Google Customer Reviews (4.6 ★ Across 40 Reviews, 4-5 Stars Filtered Testimonials) */}
+      {/* 4. Authentic Verified Google Customer Reviews (4.6 ★ Across 40 Reviews, 4-5 Stars Filtered Testimonials) */}
       <GoogleReviewsSection locale={typedLocale} />
 
       {/* 7. Riyadh Flagship Showroom & 3M Branches with Google Maps & Working Hours */}

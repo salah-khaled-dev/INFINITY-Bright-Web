@@ -9,7 +9,6 @@ import { PpfPackagesShowcase } from "@/components/services/PpfPackagesShowcase";
 import { ExclusiveBundlesSection } from "@/components/sections/ExclusiveBundlesSection";
 import { CarColorStudio } from "@/components/sections/CarColorStudio";
 import { HeatInsulationSection } from "@/components/sections/HeatInsulationSection";
-import { WarrantyShieldSection } from "@/components/sections/WarrantyShieldSection";
 import { ContactCtaSection } from "@/components/sections/ContactCtaSection";
 import { SubpageHero } from "@/components/layout/SubpageHero";
 import { Reveal } from "@/components/ui/Reveal";
@@ -96,9 +95,6 @@ export default async function ServicesPage({
         dict={dict.heatExperience}
         tintSimulatorDict={dict.tintSimulator}
       />
-
-      {/* Official Warranties: 10-Yr Thermal, Lifetime PPF, Safe Paint Removal, 50% Accident Benefit */}
-      <WarrantyShieldSection locale={locale} dict={dict.warrantySection} />
 
       <ContactCtaSection
         locale={locale}
