@@ -27,7 +27,7 @@ export function NanoCeramicSection({ locale, dict }: NanoCeramicSectionProps) {
           <div className="lg:col-span-7">
             <ImageReveal className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#060608] shadow-[var(--shadow-elevated)]">
               <Image
-                src="/images/services/water-beading.jpg"
+                src="/images/services/.webp"
                 alt="Hydrophobic spherical water droplets beading on ceramic-coated black paint"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
@@ -55,7 +55,7 @@ export function NanoCeramicSection({ locale, dict }: NanoCeramicSectionProps) {
               className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#08080a] shadow-[var(--shadow-elevated)]"
             >
               <Image
-                src="/images/services/ceramic-coating.jpg"
+                src="/images/services/.webp"
                 alt="Specialist applying nano ceramic coating inside INFINITY BRIGHT showroom"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

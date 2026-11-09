@@ -125,6 +125,7 @@ export default async function LocaleLayout({
       <head>
         <ThemeScript />
         <JsonLdScript data={jsonLd} />
+        <link rel="ard" href="/.well-known/ard.json" type="application/json" />
         <link
           rel="preload"
           as="image"

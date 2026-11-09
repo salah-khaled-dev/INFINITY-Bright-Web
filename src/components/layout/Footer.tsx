@@ -130,7 +130,7 @@ export function Footer({ locale, dict }: FooterProps) {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-block text-xs font-medium text-[var(--text-secondary)] transition-all hover:text-[var(--brand-accent-label)] dark:hover:text-[var(--brand-yellow)] hover:translate-x-1 rtl:hover:-translate-x-1"
+                    className="inline-block py-1 text-xs font-medium text-[var(--text-secondary)] transition-all hover:text-[var(--brand-accent-label)] dark:hover:text-[var(--brand-yellow)] hover:translate-x-1 rtl:hover:-translate-x-1"
                   >
                     {item.label}
                   </Link>
@@ -144,12 +144,12 @@ export function Footer({ locale, dict }: FooterProps) {
             <h3 className="mb-4 text-xs font-bold tracking-[0.16em] text-[var(--text-muted)] uppercase">
               {isAr ? "خدماتنا" : "Our Services"}
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {coreServices.map((svc, idx) => (
                 <li key={idx}>
                   <Link
                     href={svc.href}
-                    className="inline-block text-xs font-medium text-[var(--text-secondary)] transition-all hover:text-[var(--brand-accent-label)] dark:hover:text-[var(--brand-yellow)] hover:translate-x-1 rtl:hover:-translate-x-1"
+                    className="inline-block py-1 text-xs font-medium text-[var(--text-secondary)] transition-all hover:text-[var(--brand-accent-label)] dark:hover:text-[var(--brand-yellow)] hover:translate-x-1 rtl:hover:-translate-x-1"
                   >
                     {svc.label}
                   </Link>
@@ -182,9 +182,9 @@ export function Footer({ locale, dict }: FooterProps) {
                   href={BUSINESS_CONFIG.contact.whatsappBaseUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-emerald-800 hover:text-emerald-900 dark:text-emerald-300 dark:hover:text-emerald-200 transition-colors"
+                  className="inline-flex items-center gap-2 py-1 text-xs font-bold text-emerald-900 hover:text-emerald-950 dark:text-emerald-300 dark:hover:text-emerald-200 transition-colors"
                 >
-                  <WhatsAppIcon className="h-3.5 w-3.5 text-emerald-700 dark:text-emerald-300" />
+                  <WhatsAppIcon className="h-3.5 w-3.5 text-emerald-800 dark:text-emerald-300" />
                   <span>{isAr ? "محادثة فورية عبر واتساب" : "Direct WhatsApp"}</span>
                 </a>
               </div>

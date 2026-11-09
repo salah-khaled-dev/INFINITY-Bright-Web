@@ -1,0 +1,28 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "INFINITY BRIGHT",
+    "identifier": "did:web:infinitybright.sa",
+    "documentationUrl": "https://infinitybright.sa/en/services"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:infinitybright.sa:service:automotive-protection",
+      "displayName": "INFINITY BRIGHT Automotive Protection & Detailing",
+      "type": "application/json",
+      "url": "https://infinitybright.sa/en/services",
+      "representativeQueries": [
+        "Paint protection film PPF installation in Riyadh",
+        "Thermal window tinting and heat insulation",
+        "Nano ceramic coating for luxury cars",
+        "Automotive polishing and showroom detailing"
+      ],
+      "capabilities": [
+        "paint-protection-film",
+        "thermal-insulation",
+        "nano-ceramic-coating",
+        "automotive-detailing"
+      ]
+    }
+  ]
+}

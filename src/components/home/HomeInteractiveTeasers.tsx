@@ -64,7 +64,7 @@ export function HomeInteractiveTeasers({
 
                 <div className="relative mb-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-black/40">
                   <Image
-                    src="/images/services/color-change-studio.jpg"
+                    src="/images/services/.webp"
                     alt={dict.colorStudio.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

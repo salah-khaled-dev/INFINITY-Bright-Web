@@ -86,7 +86,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
           setIsInView(entry.isIntersecting);
         });
       },
-      { rootMargin: "0px", threshold: 0.15 }
+      { rootMargin: "0px", threshold: 0.35 }
     );
 
     observer.observe(el);
@@ -111,9 +111,9 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
       index: "01",
       shortTitle: isAr ? "حماية PPF" : "PPF Protection",
       data: dict.cards.ppf,
-      image: "/images/services/ppf-installation.jpg",
+      image: "/images/services/ppf-installation.webp",
       video: "/videos/Installer_applying_film_to_car_1099074e_1080p.mp4",
-      videoPoster: "/images/services/ppf-installation.jpg",
+      videoPoster: "/images/services/ppf-installation.webp",
       href: `${localizedHref(locale, "services")}#ppf`,
       icon: ShieldCheck,
       highlights: isAr
@@ -136,9 +136,9 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
       index: "02",
       shortTitle: isAr ? "عزل وتظليل" : "Thermal Tinting",
       data: dict.cards.tinting,
-      image: "/images/services/window-tinting.jpg",
+      image: "/images/services/window-tinting.webp",
       video: "/videos/Technician_installing_window_film_ae402102_1080p.mp4",
-      videoPoster: "/images/services/window-tinting.jpg",
+      videoPoster: "/images/services/window-tinting.webp",
       href: `${localizedHref(locale, "services")}#heat-insulation`,
       icon: SunMedium,
       highlights: isAr
@@ -161,9 +161,9 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
       index: "03",
       shortTitle: isAr ? "نانو سيراميك" : "Nano Ceramic",
       data: dict.cards.ceramic,
-      image: "/images/services/ceramic-coating.jpg",
+      image: "/images/services/ceramic-coating.webp",
       video: "/videos/Technician_applying_ceramic_coating_401d402c_1080p.mp4",
-      videoPoster: "/images/services/ceramic-coating.jpg",
+      videoPoster: "/images/services/ceramic-coating.webp",
       href: `${localizedHref(locale, "services")}#ceramic-coating`,
       icon: Sparkles,
       highlights: isAr
@@ -186,7 +186,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
       index: "04",
       shortTitle: isAr ? "تلميع وتفصيل" : "Car Detailing",
       data: dict.cards.detailing,
-      image: "/images/services/car-detailing.jpg",
+      image: "/images/services/car-detailing.webp",
       video: "/videos/Detailer_polishing_car_hood_4c33bcd6_1080p.mp4",
       videoPoster: "/videos/hero-mobile-detailer-poster.webp",
       href: `${localizedHref(locale, "services")}#car-detailing`,
@@ -211,7 +211,7 @@ export function HomeServicesGate({ locale, dict }: HomeServicesGateProps) {
       index: "05",
       shortTitle: isAr ? "باقات VIP" : "VIP Bundles",
       data: dict.cards.bundles,
-      image: "/images/services/paint-protection.jpg",
+      image: "/images/services/paint-protection.webp",
       href: `${localizedHref(locale, "services")}#bundles`,
       icon: Percent,
       highlights: isAr

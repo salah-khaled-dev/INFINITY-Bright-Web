@@ -39,7 +39,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "ppf-fender-application",
-    src: "/images/services/ppf-installation.jpg",
+    src: "/images/services/.webp",
     width: 1376,
     height: 768,
     category: "ppf",
@@ -48,7 +48,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "ceramic-suede-glaze",
-    src: "/images/services/ceramic-coating.jpg",
+    src: "/images/services/.webp",
     width: 1376,
     height: 768,
     category: "ceramic",
@@ -57,7 +57,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "hydrophobic-beading-macro",
-    src: "/images/services/water-beading.jpg",
+    src: "/images/services/.webp",
     width: 1376,
     height: 768,
     category: "ceramic",
@@ -66,7 +66,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "inspection-arch-fender",
-    src: "/images/services/paint-protection.jpg",
+    src: "/images/services/.webp",
     width: 1376,
     height: 768,
     category: "ppf",
@@ -102,7 +102,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "satin-coupe-window-tint",
-    src: "/images/services/window-tinting.jpg",
+    src: "/images/services/.webp",
     width: 1408,
     height: 792,
     category: "thermal",
@@ -111,7 +111,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "solar-horizon-insulation",
-    src: "/images/services/heat-insulation.jpg",
+    src: "/images/services/.webp",
     width: 1376,
     height: 768,
     category: "thermal",
@@ -120,7 +120,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "taycan-concourse-wash",
-    src: "/images/services/car-detailing.jpg",
+    src: "/images/services/.webp",
     width: 1408,
     height: 792,
     category: "detailing",

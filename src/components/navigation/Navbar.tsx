@@ -194,7 +194,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${dict.whatsapp} (${BUSINESS_CONFIG.contact.phoneDisplay})`}
-              className="hidden sm:inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-emerald-500/35 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 transition-all duration-300 hover:scale-105 hover:bg-[#25D366] hover:text-[#042813]"
+              className="hidden sm:inline-flex min-h-[44px] min-w-[44px] h-11 w-11 shrink-0 items-center justify-center rounded-full border border-emerald-500/35 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 transition-all duration-300 hover:scale-105 hover:bg-[#25D366] hover:text-[#042813]"
             >
               <WhatsAppIcon className="h-4 w-4" />
             </a>
@@ -206,7 +206,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram @infinity_bright1"
-                className="hidden h-10 w-10 items-center justify-center rounded-full border border-pink-500/35 bg-pink-500/10 text-[#E1306C] transition-all duration-300 hover:scale-105 hover:bg-[#E1306C] hover:text-white md:inline-flex"
+                className="hidden min-h-[44px] min-w-[44px] h-11 w-11 items-center justify-center rounded-full border border-pink-500/35 bg-pink-500/10 text-[#E1306C] transition-all duration-300 hover:scale-105 hover:bg-[#E1306C] hover:text-white md:inline-flex"
               >
                 <InstagramIcon className="h-4 w-4" />
               </a>
@@ -219,7 +219,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok @infinity..bright"
-                className="hidden h-10 w-10 items-center justify-center rounded-full border border-cyan-500/35 bg-cyan-500/10 text-cyan-500 dark:text-cyan-300 transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white md:inline-flex"
+                className="hidden min-h-[44px] min-w-[44px] h-11 w-11 items-center justify-center rounded-full border border-cyan-500/35 bg-cyan-500/10 text-cyan-500 dark:text-cyan-300 transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white md:inline-flex"
               >
                 <TikTokIcon className="h-4 w-4" />
               </a>

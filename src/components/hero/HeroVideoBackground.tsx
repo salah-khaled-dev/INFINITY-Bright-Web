@@ -221,7 +221,7 @@ export function HeroVideoBackground({
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           className={cn(
             "absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out",
             isMobile

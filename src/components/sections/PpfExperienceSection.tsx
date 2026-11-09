@@ -90,7 +90,7 @@ export function PpfExperienceSection({
           <div className="relative lg:col-span-7">
             <ImageReveal className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[#08080a] shadow-[var(--shadow-elevated)]">
               <Image
-                src="/images/services/ppf-installation.jpg"
+                src="/images/services/.webp"
                 alt="Master technician installing Paint Protection Film inside INFINITY BRIGHT bay"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
@@ -105,7 +105,7 @@ export function PpfExperienceSection({
             >
               <div className="relative aspect-[16/9] w-full">
                 <Image
-                  src="/images/services/paint-protection.jpg"
+                  src="/images/services/.webp"
                   alt="Swirl-free clearcoat inspection inside INFINITY BRIGHT showroom"
                   fill
                   sizes="(max-width: 640px) 100vw, 35vw"
