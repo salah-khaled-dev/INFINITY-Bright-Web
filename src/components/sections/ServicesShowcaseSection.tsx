@@ -30,11 +30,6 @@ const GROUP_MEDIA = [
     image: "/images/services/window-tinting.jpg",
   },
   {
-    key: "colorChange" as const,
-    anchor: "color-change",
-    image: "/images/services/color-change-studio.jpg",
-  },
-  {
     key: "ceramic" as const,
     anchor: "ceramic-coating",
     image: "/images/services/ceramic-coating.jpg",

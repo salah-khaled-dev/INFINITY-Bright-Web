@@ -36,6 +36,7 @@ export function Footer({ locale, dict }: FooterProps) {
     { href: localizedHref(locale, ""), label: isAr ? "الرئيسية" : "Home" },
     { href: localizedHref(locale, "about"), label: isAr ? "من نحن" : "About Us" },
     { href: localizedHref(locale, "services"), label: isAr ? "خدماتنا" : "Services" },
+    { href: localizedHref(locale, "color-studio"), label: isAr ? "استوديو الألوان" : "Color Studio" },
     { href: localizedHref(locale, "gallery"), label: isAr ? "المعرض" : "Gallery" },
     { href: localizedHref(locale, "contact"), label: isAr ? "تواصل معنا" : "Contact" },
     { href: localizedHref(locale, "terms"), label: dict.footer.termsLink },
@@ -66,11 +67,7 @@ export function Footer({ locale, dict }: FooterProps) {
     },
     {
       label: isAr ? "التلميع والتفصيل الفاخر" : "Polishing & Detailing",
-      href: `${localizedHref(locale, "services")}#detailing`,
-    },
-    {
-      label: isAr ? "تغيير ألوان السيارة" : "Color Change Studio",
-      href: localizedHref(locale, "color-studio"),
+      href: `${localizedHref(locale, "services")}#car-detailing`,
     },
   ];
 

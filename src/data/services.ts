@@ -49,12 +49,4 @@ export const SERVICES_DATA: ServiceItem[] = [
     category: "detailing",
     featured: true,
   },
-  {
-    id: "color-change",
-    index: "07",
-    image: "/images/services/color-change-studio.jpg",
-    secondaryImage: "/images/services/window-tinting.jpg",
-    category: "ppf",
-    featured: true,
-  },
 ];

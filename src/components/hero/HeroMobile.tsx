@@ -108,7 +108,7 @@ export function HeroMobile({
           data-mobile-reveal
           className={cn(
             "mt-2 text-xs leading-relaxed font-normal sm:text-sm line-clamp-2 max-w-sm",
-            isLight ? "text-zinc-600" : "text-zinc-300/85"
+            isLight ? "text-zinc-700" : "text-zinc-200/90"
           )}
         >
           {dict.description}
@@ -118,7 +118,7 @@ export function HeroMobile({
         <div data-mobile-reveal className="mt-4">
           <Link
             href={localizedHref(locale, "services")}
-            className="inline-flex min-h-[46px] w-full sm:w-auto items-center justify-between sm:justify-center gap-4 rounded-full bg-[#FBE90A] px-6 py-3 text-xs font-extrabold tracking-[0.08em] text-[#060608] uppercase shadow-[0_8px_22px_rgba(251,233,10,0.25)] transition-all active:scale-[0.98] hover:bg-[#fff033] rtl:text-xs rtl:tracking-normal"
+            className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-between sm:justify-center gap-4 rounded-full bg-[#FBE90A] px-6 py-3.5 text-xs font-extrabold tracking-[0.08em] text-[#060608] uppercase shadow-[0_8px_22px_rgba(251,233,10,0.25)] transition-all active:scale-[0.98] hover:bg-[#fff033] rtl:text-xs rtl:tracking-normal"
           >
             <span>{dict.primaryCta}</span>
             <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" />

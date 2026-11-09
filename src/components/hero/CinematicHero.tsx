@@ -7,8 +7,8 @@ import type { Dictionary } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import type { Locale, ThemeMode } from "@/types";
 import { HeroContent } from "./HeroContent";
-import { HeroFallback } from "./HeroFallback";
 import { HeroMobile } from "./HeroMobile";
+import { HeroVideoBackground } from "./HeroVideoBackground";
 
 interface CinematicHeroProps {
   locale: Locale;
@@ -32,11 +32,11 @@ export function CinematicHero({ locale, dict }: CinematicHeroProps) {
           : "bg-[#050608] text-white"
       )}
     >
-      {/* Studio Visual Backdrop (Light Mode: Craftsmen Studio, Dark Mode: Obsidian Studio) */}
-      <HeroFallback
+      {/* Cinema-Grade Hero Video Experience */}
+      <HeroVideoBackground
         theme={activeTheme}
         locale={locale}
-        visible={true}
+        reducedMotion={reducedMotion}
       />
 
       {/* Subtle Frame Guides on Large Monitors */}

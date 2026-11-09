@@ -131,14 +131,16 @@ export default async function LocaleLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/hero/hero-light-craftsmen.jpg"
-          type="image/jpeg"
+          href="/videos/hero-video-poster.webp"
+          type="image/webp"
+          media="(min-width: 768px)"
         />
         <link
           rel="preload"
           as="image"
-          href="/images/hero/hero-desktop-dark.webp"
+          href="/videos/hero-mobile-detailer-poster.webp"
           type="image/webp"
+          media="(max-width: 767px)"
         />
         <script
           type="application/ld+json"

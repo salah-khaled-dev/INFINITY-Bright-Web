@@ -8,6 +8,7 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 import { ImageReveal, Reveal } from "@/components/ui/Reveal";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { LuxuryIconBadge } from "@/components/ui/LuxuryIconBadge";
+import { ThreeMLogo } from "@/components/ui/ThreeMLogo";
 
 interface BranchesNetworkSectionProps {
   locale: Locale;
@@ -139,15 +140,10 @@ export function BranchesNetworkSection({
                   rel="noopener noreferrer"
                   className="group relative flex flex-col items-center justify-between overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#E51937] hover:shadow-[0_18px_40px_rgba(229,25,55,0.16)]"
                 >
-                  {/* Pure Bold 3M Logo Display Area (No Car) */}
-                  <div className="flex h-32 w-full items-center justify-center rounded-xl border border-[#E51937]/20 bg-gradient-to-b from-[#E51937]/[0.06] to-transparent px-4 transition-colors duration-300 group-hover:border-[#E51937]/50 group-hover:from-[#E51937]/[0.12]">
-                    <Image
-                      src={BUSINESS_CONFIG.assets.threeMLogoOnly}
-                      alt={`3M — ${branch.name[locale]}`}
-                      width={190}
-                      height={90}
-                      unoptimized
-                      className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  {/* Pure Bold 3M Logo Display Area (Vector SVG — No Car) */}
+                  <div className="flex h-32 w-full items-center justify-center rounded-xl border border-[#E51937]/20 bg-gradient-to-b from-[#E51937]/[0.06] to-transparent px-6 transition-colors duration-300 group-hover:border-[#E51937]/50 group-hover:from-[#E51937]/[0.12]">
+                    <ThreeMLogo
+                      className="h-16 w-auto max-w-[170px] drop-shadow-[0_2px_10px_rgba(229,25,55,0.25)] transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
 

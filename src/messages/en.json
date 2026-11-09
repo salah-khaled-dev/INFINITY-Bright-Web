@@ -10,7 +10,7 @@
     },
     "services": {
       "title": "Services | Lifetime PPF, 10-Year Ultra Core 85% & Core Plus 65% Tinting — INFINITE BRIGHT",
-      "description": "Explore our seven specialized disciplines backed by an Open Lifetime PPF Warranty, Safe Removal Paint Guarantee, 50% Accident Care, and 10-Year Thermal Insulation Warranty."
+      "description": "Explore our six specialized disciplines backed by an Open Lifetime PPF Warranty, Safe Removal Paint Guarantee, 50% Accident Care, and 10-Year Thermal Insulation Warranty."
     },
     "gallery": {
       "title": "Before & After Gallery | INFINITE BRIGHT Riyadh",
@@ -105,8 +105,8 @@
   },
   "servicesSection": {
     "eyebrow": "02 // CORE DISCIPLINES",
-    "headline": "Seven specialized systems. One uncompromising finish.",
-    "subheadline": "From Full-Body, Half-Front, and 40cm Front-End Lifetime PPF armor to our Interactive Car Color Studio and 10-Year Thermal Glazing.",
+    "headline": "Six specialized systems. One uncompromising finish.",
+    "subheadline": "From Full-Body, Half-Front, and 40cm Front-End Lifetime PPF armor to our 10-Year Thermal Glazing, nano ceramics, and precision detailing.",
     "viewAllCta": "Explore Full Service Specifications",
     "inquireService": "Inquire About This Service",
     "featuredGroups": {
@@ -132,19 +132,8 @@
           "Core Plus Series: 65% heat insulation — signal-safe non-metallized clarity"
         ]
       },
-      "colorChange": {
-        "index": "03",
-        "tag": "NEW — INTERACTIVE LIVE COLOR CONFIGURATOR",
-        "title": "Bespoke Car Color Change",
-        "subtitle": "Transform your vehicle in Mirror Gloss, Satin Matte, or Metallic shades with 100% factory paint safety.",
-        "highlights": [
-          "Interactive studio configurator: enter your car model & preview colors live",
-          "Curated luxury palette in Mirror Gloss, Satin Matte, and Metallic Pearl finishes",
-          "Seamless wrapped edges backed by our Removal & OEM Paint-Safe Guarantee"
-        ]
-      },
       "ceramic": {
-        "index": "04",
+        "index": "03",
         "tag": "MOLECULAR GLOSS MATRIX",
         "title": "Nano Ceramic Coating",
         "subtitle": "Covalent liquid-glass bonding for extreme hydrophobicity and mirror depth.",
@@ -155,7 +144,7 @@
         ]
       },
       "detailing": {
-        "index": "05",
+        "index": "04",
         "tag": "BEFORE & AFTER POLISHING",
         "title": "Automotive Polishing & Paint Protection",
         "subtitle": "Dramatic multi-stage swirl removal, oxidation recovery, and bespoke interior preservation.",
@@ -924,7 +913,7 @@
   "servicesPage": {
     "eyebrow": "COMPLETE SERVICE ARCHITECTURE",
     "headline": "Lifetime PPF Protection & 10-Year Warranted Thermal Glazing.",
-    "intro": "Explore all seven core INFINITE BRIGHT disciplines alongside our Ultra Core (85% IR rejection) & Core Plus (65%) thermal series and our Golden Warranty advantages.",
+    "intro": "Explore all six core INFINITE BRIGHT disciplines alongside our Ultra Core (85% IR rejection) & Core Plus (65%) thermal series and our Golden Warranty advantages.",
     "processHeading": "Execution Protocol",
     "idealForHeading": "Recommended Profile",
     "bookThisService": "Consult via WhatsApp"

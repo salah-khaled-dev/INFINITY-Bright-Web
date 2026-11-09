@@ -118,7 +118,7 @@ export function HeroContent({
             data-hero-desc
             className={cn(
               "max-w-xl text-sm leading-relaxed font-normal lg:text-[15px] lg:leading-relaxed",
-              isLight ? "text-zinc-600" : "text-zinc-300/85"
+              isLight ? "text-zinc-700" : "text-zinc-200/90"
             )}
           >
             {dict.description}
