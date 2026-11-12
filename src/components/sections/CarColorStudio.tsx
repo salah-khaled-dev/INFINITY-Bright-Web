@@ -1037,7 +1037,7 @@ export function CarColorStudio({
     const canvas = canvasRef.current;
     if (!canvas) return;
     const link = document.createElement("a");
-    link.download = `infinite-bright-${activeHex.replace("#", "")}-${finish}.jpg`;
+    link.download = `infinity-bright-${activeHex.replace("#", "")}-${finish}.jpg`;
     link.href = canvas.toDataURL("image/jpeg", 0.94);
     link.click();
   };

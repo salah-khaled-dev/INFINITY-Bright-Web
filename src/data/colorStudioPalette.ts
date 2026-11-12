@@ -267,7 +267,7 @@ export const COLOR_STUDIO_SWATCHES: PaintColorSwatch[] = [
     category: "yellow",
     hex: "#FBE90A",
     code: "IB-YLW-01",
-    name: { en: "Infinite Racing Yellow", ar: "أصفر إنفينيتي برايت" },
+    name: { en: "Infinity Racing Yellow", ar: "أصفر إنفينيتي برايت" },
   },
   {
     id: "signal-yellow",

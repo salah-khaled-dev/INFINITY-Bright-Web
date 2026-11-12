@@ -22,22 +22,22 @@ const GROUP_MEDIA = [
   {
     key: "ppf" as const,
     anchor: "ppf",
-    image: "/images/services/.webp",
+    image: "/images/services/ppf-installation.webp",
   },
   {
     key: "tinting" as const,
     anchor: "window-tinting",
-    image: "/images/services/.webp",
+    image: "/images/services/window-tinting.webp",
   },
   {
     key: "ceramic" as const,
     anchor: "ceramic-coating",
-    image: "/images/services/.webp",
+    image: "/images/services/ceramic-coating.webp",
   },
   {
     key: "detailing" as const,
     anchor: "car-detailing",
-    image: "/images/services/.webp",
+    image: "/images/services/car-detailing.webp",
   },
 ];
 

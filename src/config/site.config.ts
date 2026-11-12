@@ -15,7 +15,7 @@
 
 export interface BranchLocation {
   id: string;
-  brand: "infinite-bright" | "3m" | "partner";
+  brand: "infinity-bright" | "3m" | "partner";
   name: {
     en: string;
     ar: string;
@@ -193,7 +193,7 @@ export const SITE_CONFIG: SiteConfig = {
     phoneHref: "tel:+966534422257",
     whatsappNumber: "+966534422257",
     whatsappBaseUrl: "https://wa.me/966534422257",
-    email: "concierge@infinite-bright.com",
+    email: "concierge@infinity-bright.com",
     workingHours: {
       en: "Daily: 12:00 PM – 10:00 PM",
       ar: "يومياً: 12:00 ظهراً – 10:00 مساءً",
@@ -205,7 +205,7 @@ export const SITE_CONFIG: SiteConfig = {
     },
     flagshipBranch: {
       id: "al-murooj-flagship",
-      brand: "infinite-bright",
+      brand: "infinity-bright",
       name: {
         en: "INFINITY BRIGHT Flagship Showroom",
         ar: "الفرع الرئيسي — صالة إنفينيتي برايت",
@@ -333,7 +333,7 @@ export const SITE_CONFIG: SiteConfig = {
 
   seo: {
     metadataBase: process.env.NEXT_PUBLIC_SITE_URL || "https://infinity-bright2.vercel.app",
-    twitterHandle: "@infinite_bright_sa",
+    twitterHandle: "@infinity_bright_sa",
   },
 };
 
